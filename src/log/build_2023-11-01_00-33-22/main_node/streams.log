@@ -1,0 +1,28 @@
+[1.009s] Invoking command in '/home/cannotflypig/robokonn/build/main_node': PYTHONPATH=/home/cannotflypig/robokonn/build/main_node/prefix_override:/home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/cannotflypig/robokonn/build/main_node/build --no-deps install_data
+[1.230s] running develop
+[1.231s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.231s]   warnings.warn(
+[1.233s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.233s]   warnings.warn(
+[1.374s] running egg_info
+[1.374s] creating main_node.egg-info
+[1.374s] writing main_node.egg-info/PKG-INFO
+[1.374s] writing dependency_links to main_node.egg-info/dependency_links.txt
+[1.374s] writing entry points to main_node.egg-info/entry_points.txt
+[1.375s] writing requirements to main_node.egg-info/requires.txt
+[1.375s] writing top-level names to main_node.egg-info/top_level.txt
+[1.375s] writing manifest file 'main_node.egg-info/SOURCES.txt'
+[1.376s] reading manifest file 'main_node.egg-info/SOURCES.txt'
+[1.377s] writing manifest file 'main_node.egg-info/SOURCES.txt'
+[1.378s] running build_ext
+[1.378s] Creating /home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages/main-node.egg-link (link to .)
+[1.379s] Installing main_node script to /home/cannotflypig/robokonn/install/main_node/lib/main_node
+[1.379s] 
+[1.380s] Installed /home/cannotflypig/robokonn/build/main_node
+[1.380s] running install_data
+[1.380s] creating /home/cannotflypig/robokonn/install/main_node/share/ament_index
+[1.380s] creating /home/cannotflypig/robokonn/install/main_node/share/ament_index/resource_index
+[1.380s] creating /home/cannotflypig/robokonn/install/main_node/share/ament_index/resource_index/packages
+[1.380s] copying resource/main_node -> /home/cannotflypig/robokonn/install/main_node/share/ament_index/resource_index/packages
+[1.380s] copying package.xml -> /home/cannotflypig/robokonn/install/main_node/share/main_node
+[1.459s] Invoked command in '/home/cannotflypig/robokonn/build/main_node' returned '0': PYTHONPATH=/home/cannotflypig/robokonn/build/main_node/prefix_override:/home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/cannotflypig/robokonn/build/main_node/build --no-deps install_data

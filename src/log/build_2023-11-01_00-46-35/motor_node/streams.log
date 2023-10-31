@@ -1,0 +1,26 @@
+[0.797s] Invoking command in '/home/cannotflypig/robokonn/motor_node': PYTHONPATH=/home/cannotflypig/robokonn/build/motor_node/prefix_override:/home/cannotflypig/robokonn/install/motor_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/motor_node build --build-base /home/cannotflypig/robokonn/build/motor_node/build install --record /home/cannotflypig/robokonn/build/motor_node/install.log --single-version-externally-managed
+[0.994s] running egg_info
+[0.995s] writing ../build/motor_node/motor_node.egg-info/PKG-INFO
+[0.995s] writing dependency_links to ../build/motor_node/motor_node.egg-info/dependency_links.txt
+[0.996s] writing entry points to ../build/motor_node/motor_node.egg-info/entry_points.txt
+[0.996s] writing requirements to ../build/motor_node/motor_node.egg-info/requires.txt
+[0.996s] writing top-level names to ../build/motor_node/motor_node.egg-info/top_level.txt
+[0.997s] reading manifest file '../build/motor_node/motor_node.egg-info/SOURCES.txt'
+[0.998s] writing manifest file '../build/motor_node/motor_node.egg-info/SOURCES.txt'
+[0.998s] running build
+[0.998s] running build_py
+[0.999s] copying motor_node/motor_node.py -> /home/cannotflypig/robokonn/build/motor_node/build/lib/motor_node
+[0.999s] running install
+[1.000s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.000s]   warnings.warn(
+[1.000s] running install_lib
+[1.000s] copying /home/cannotflypig/robokonn/build/motor_node/build/lib/motor_node/motor_node.py -> /home/cannotflypig/robokonn/install/motor_node/lib/python3.10/site-packages/motor_node
+[1.001s] byte-compiling /home/cannotflypig/robokonn/install/motor_node/lib/python3.10/site-packages/motor_node/motor_node.py to motor_node.cpython-310.pyc
+[1.002s] running install_data
+[1.002s] running install_egg_info
+[1.003s] removing '/home/cannotflypig/robokonn/install/motor_node/lib/python3.10/site-packages/motor_node-0.0.0-py3.10.egg-info' (and everything under it)
+[1.004s] Copying ../build/motor_node/motor_node.egg-info to /home/cannotflypig/robokonn/install/motor_node/lib/python3.10/site-packages/motor_node-0.0.0-py3.10.egg-info
+[1.005s] running install_scripts
+[1.024s] Installing motor_node script to /home/cannotflypig/robokonn/install/motor_node/lib/motor_node
+[1.025s] writing list of installed files to '/home/cannotflypig/robokonn/build/motor_node/install.log'
+[1.099s] Invoked command in '/home/cannotflypig/robokonn/motor_node' returned '0': PYTHONPATH=/home/cannotflypig/robokonn/build/motor_node/prefix_override:/home/cannotflypig/robokonn/install/motor_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/motor_node build --build-base /home/cannotflypig/robokonn/build/motor_node/build install --record /home/cannotflypig/robokonn/build/motor_node/install.log --single-version-externally-managed

@@ -1,0 +1,40 @@
+[0.890s] Invoking command in '/home/cannotflypig/robokonn/build/main_node': PYTHONPATH=/home/cannotflypig/robokonn/build/main_node/prefix_override:/home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/cannotflypig/robokonn/build/main_node/build
+[1.091s] running develop
+[1.091s] /usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+[1.091s]   warnings.warn(
+[1.094s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.094s]   warnings.warn(
+[1.211s] Removing /home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages/main-node.egg-link (link to .)
+[1.241s] Invoked command in '/home/cannotflypig/robokonn/build/main_node' returned '0': PYTHONPATH=/home/cannotflypig/robokonn/build/main_node/prefix_override:/home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --uninstall --editable --build-directory /home/cannotflypig/robokonn/build/main_node/build
+[1.244s] Invoking command in '/home/cannotflypig/robokonn/main_node': PYTHONPATH=/home/cannotflypig/robokonn/build/main_node/prefix_override:/home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/main_node build --build-base /home/cannotflypig/robokonn/build/main_node/build install --record /home/cannotflypig/robokonn/build/main_node/install.log --single-version-externally-managed
+[1.442s] running egg_info
+[1.443s] writing ../build/main_node/main_node.egg-info/PKG-INFO
+[1.444s] writing dependency_links to ../build/main_node/main_node.egg-info/dependency_links.txt
+[1.444s] writing entry points to ../build/main_node/main_node.egg-info/entry_points.txt
+[1.444s] writing requirements to ../build/main_node/main_node.egg-info/requires.txt
+[1.444s] writing top-level names to ../build/main_node/main_node.egg-info/top_level.txt
+[1.446s] reading manifest file '../build/main_node/main_node.egg-info/SOURCES.txt'
+[1.447s] writing manifest file '../build/main_node/main_node.egg-info/SOURCES.txt'
+[1.447s] running build
+[1.447s] running build_py
+[1.447s] creating /home/cannotflypig/robokonn/build/main_node/build
+[1.448s] creating /home/cannotflypig/robokonn/build/main_node/build/lib
+[1.448s] creating /home/cannotflypig/robokonn/build/main_node/build/lib/main_node
+[1.448s] copying main_node/main_node.py -> /home/cannotflypig/robokonn/build/main_node/build/lib/main_node
+[1.448s] copying main_node/__init__.py -> /home/cannotflypig/robokonn/build/main_node/build/lib/main_node
+[1.449s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.449s]   warnings.warn(
+[1.450s] running install
+[1.450s] running install_lib
+[1.451s] creating /home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages/main_node
+[1.452s] copying /home/cannotflypig/robokonn/build/main_node/build/lib/main_node/main_node.py -> /home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages/main_node
+[1.452s] copying /home/cannotflypig/robokonn/build/main_node/build/lib/main_node/__init__.py -> /home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages/main_node
+[1.452s] byte-compiling /home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages/main_node/main_node.py to main_node.cpython-310.pyc
+[1.452s] byte-compiling /home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages/main_node/__init__.py to __init__.cpython-310.pyc
+[1.453s] running install_data
+[1.453s] running install_egg_info
+[1.454s] Copying ../build/main_node/main_node.egg-info to /home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages/main_node-0.0.0-py3.10.egg-info
+[1.455s] running install_scripts
+[1.475s] Installing main_node script to /home/cannotflypig/robokonn/install/main_node/lib/main_node
+[1.475s] writing list of installed files to '/home/cannotflypig/robokonn/build/main_node/install.log'
+[1.508s] Invoked command in '/home/cannotflypig/robokonn/main_node' returned '0': PYTHONPATH=/home/cannotflypig/robokonn/build/main_node/prefix_override:/home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/main_node build --build-base /home/cannotflypig/robokonn/build/main_node/build install --record /home/cannotflypig/robokonn/build/main_node/install.log --single-version-externally-managed

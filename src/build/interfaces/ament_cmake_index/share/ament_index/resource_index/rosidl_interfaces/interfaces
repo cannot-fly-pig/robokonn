@@ -1,0 +1,4 @@
+srv/GoingCameraData.idl
+srv/GoingCameraData.srv
+srv/GoingCameraData_Request.msg
+srv/GoingCameraData_Response.msg

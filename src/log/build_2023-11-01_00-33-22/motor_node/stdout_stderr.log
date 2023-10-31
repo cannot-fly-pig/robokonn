@@ -1,0 +1,26 @@
+running develop
+/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+  warnings.warn(
+running egg_info
+creating motor_node.egg-info
+writing motor_node.egg-info/PKG-INFO
+writing dependency_links to motor_node.egg-info/dependency_links.txt
+writing entry points to motor_node.egg-info/entry_points.txt
+writing requirements to motor_node.egg-info/requires.txt
+writing top-level names to motor_node.egg-info/top_level.txt
+writing manifest file 'motor_node.egg-info/SOURCES.txt'
+reading manifest file 'motor_node.egg-info/SOURCES.txt'
+writing manifest file 'motor_node.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/cannotflypig/robokonn/install/motor_node/lib/python3.10/site-packages/motor-node.egg-link (link to .)
+Installing motor_node script to /home/cannotflypig/robokonn/install/motor_node/lib/motor_node
+
+Installed /home/cannotflypig/robokonn/build/motor_node
+running install_data
+creating /home/cannotflypig/robokonn/install/motor_node/share/ament_index
+creating /home/cannotflypig/robokonn/install/motor_node/share/ament_index/resource_index
+creating /home/cannotflypig/robokonn/install/motor_node/share/ament_index/resource_index/packages
+copying resource/motor_node -> /home/cannotflypig/robokonn/install/motor_node/share/ament_index/resource_index/packages
+copying package.xml -> /home/cannotflypig/robokonn/install/motor_node/share/motor_node

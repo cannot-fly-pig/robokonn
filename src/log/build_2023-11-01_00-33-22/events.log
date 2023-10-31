@@ -1,0 +1,79 @@
+[0.000000] (-) TimerEvent: {}
+[0.000665] (main_node) JobQueued: {'identifier': 'main_node', 'dependencies': OrderedDict()}
+[0.000872] (motor_node) JobQueued: {'identifier': 'motor_node', 'dependencies': OrderedDict()}
+[0.001102] (main_node) JobStarted: {'identifier': 'main_node'}
+[0.049870] (motor_node) JobStarted: {'identifier': 'motor_node'}
+[0.099568] (-) TimerEvent: {}
+[0.199875] (-) TimerEvent: {}
+[0.300271] (-) TimerEvent: {}
+[0.400595] (-) TimerEvent: {}
+[0.501057] (-) TimerEvent: {}
+[0.601413] (-) TimerEvent: {}
+[0.701795] (-) TimerEvent: {}
+[0.802118] (-) TimerEvent: {}
+[0.902524] (-) TimerEvent: {}
+[1.000468] (motor_node) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/cannotflypig/robokonn/build/motor_node/build', '--no-deps', 'install_data'], 'cwd': '/home/cannotflypig/robokonn/build/motor_node', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'cannotflypig', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/cannotflypig', 'OLDPWD': '/home/cannotflypig/robokonn/main_node', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'cannotflypig', 'NAME': 'DESKTOP-53NAE0H', 'WSL_INTEROP': '/run/WSL/471_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu_2204.2.33.0_x64__79rhkp1fndgsc:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/docum/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/docum/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/cannotflypig/robokonn/build/motor_node', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/cannotflypig/robokonn/build/motor_node/prefix_override:/home/cannotflypig/robokonn/install/motor_node/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': ''}, 'shell': False}
+[1.004784] (-) TimerEvent: {}
+[1.007413] (main_node) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--editable', '--build-directory', '/home/cannotflypig/robokonn/build/main_node/build', '--no-deps', 'install_data'], 'cwd': '/home/cannotflypig/robokonn/build/main_node', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'cannotflypig', 'SHLVL': '2', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/home/cannotflypig', 'OLDPWD': '/home/cannotflypig/robokonn/main_node', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'cannotflypig', 'NAME': 'DESKTOP-53NAE0H', 'WSL_INTEROP': '/run/WSL/471_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.Ubuntu_2204.2.33.0_x64__79rhkp1fndgsc:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/docum/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/docum/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/cannotflypig/robokonn/build/main_node', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/cannotflypig/robokonn/build/main_node/prefix_override:/home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': ''}, 'shell': False}
+[1.104895] (-) TimerEvent: {}
+[1.205190] (-) TimerEvent: {}
+[1.218721] (motor_node) StdoutLine: {'line': b'running develop\n'}
+[1.219334] (motor_node) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[1.219467] (motor_node) StderrLine: {'line': b'  warnings.warn(\n'}
+[1.220909] (motor_node) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[1.221031] (motor_node) StderrLine: {'line': b'  warnings.warn(\n'}
+[1.231585] (main_node) StdoutLine: {'line': b'running develop\n'}
+[1.231957] (main_node) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/easy_install.py:158: EasyInstallDeprecationWarning: easy_install command is deprecated. Use build and pip and other standards-based tools.\n'}
+[1.232098] (main_node) StderrLine: {'line': b'  warnings.warn(\n'}
+[1.234386] (main_node) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[1.234525] (main_node) StderrLine: {'line': b'  warnings.warn(\n'}
+[1.305313] (-) TimerEvent: {}
+[1.362029] (motor_node) StdoutLine: {'line': b'running egg_info\n'}
+[1.362254] (motor_node) StdoutLine: {'line': b'creating motor_node.egg-info\n'}
+[1.362589] (motor_node) StdoutLine: {'line': b'writing motor_node.egg-info/PKG-INFO\n'}
+[1.363006] (motor_node) StdoutLine: {'line': b'writing dependency_links to motor_node.egg-info/dependency_links.txt\n'}
+[1.363541] (motor_node) StdoutLine: {'line': b'writing entry points to motor_node.egg-info/entry_points.txt\n'}
+[1.363746] (motor_node) StdoutLine: {'line': b'writing requirements to motor_node.egg-info/requires.txt\n'}
+[1.363960] (motor_node) StdoutLine: {'line': b'writing top-level names to motor_node.egg-info/top_level.txt\n'}
+[1.364163] (motor_node) StdoutLine: {'line': b"writing manifest file 'motor_node.egg-info/SOURCES.txt'\n"}
+[1.366096] (motor_node) StdoutLine: {'line': b"reading manifest file 'motor_node.egg-info/SOURCES.txt'\n"}
+[1.366813] (motor_node) StdoutLine: {'line': b"writing manifest file 'motor_node.egg-info/SOURCES.txt'\n"}
+[1.368568] (motor_node) StdoutLine: {'line': b'running build_ext\n'}
+[1.368973] (motor_node) StdoutLine: {'line': b'Creating /home/cannotflypig/robokonn/install/motor_node/lib/python3.10/site-packages/motor-node.egg-link (link to .)\n'}
+[1.370412] (motor_node) StdoutLine: {'line': b'Installing motor_node script to /home/cannotflypig/robokonn/install/motor_node/lib/motor_node\n'}
+[1.370859] (motor_node) StdoutLine: {'line': b'\n'}
+[1.371062] (motor_node) StdoutLine: {'line': b'Installed /home/cannotflypig/robokonn/build/motor_node\n'}
+[1.371289] (motor_node) StdoutLine: {'line': b'running install_data\n'}
+[1.371460] (motor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/install/motor_node/share/ament_index\n'}
+[1.371677] (motor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/install/motor_node/share/ament_index/resource_index\n'}
+[1.371777] (motor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/install/motor_node/share/ament_index/resource_index/packages\n'}
+[1.371877] (motor_node) StdoutLine: {'line': b'copying resource/motor_node -> /home/cannotflypig/robokonn/install/motor_node/share/ament_index/resource_index/packages\n'}
+[1.371963] (motor_node) StdoutLine: {'line': b'copying package.xml -> /home/cannotflypig/robokonn/install/motor_node/share/motor_node\n'}
+[1.374688] (main_node) StdoutLine: {'line': b'running egg_info\n'}
+[1.374839] (main_node) StdoutLine: {'line': b'creating main_node.egg-info\n'}
+[1.374978] (main_node) StdoutLine: {'line': b'writing main_node.egg-info/PKG-INFO\n'}
+[1.375315] (main_node) StdoutLine: {'line': b'writing dependency_links to main_node.egg-info/dependency_links.txt\n'}
+[1.375422] (main_node) StdoutLine: {'line': b'writing entry points to main_node.egg-info/entry_points.txt\n'}
+[1.375802] (main_node) StdoutLine: {'line': b'writing requirements to main_node.egg-info/requires.txt\n'}
+[1.375906] (main_node) StdoutLine: {'line': b'writing top-level names to main_node.egg-info/top_level.txt\n'}
+[1.375988] (main_node) StdoutLine: {'line': b"writing manifest file 'main_node.egg-info/SOURCES.txt'\n"}
+[1.377234] (main_node) StdoutLine: {'line': b"reading manifest file 'main_node.egg-info/SOURCES.txt'\n"}
+[1.377818] (main_node) StdoutLine: {'line': b"writing manifest file 'main_node.egg-info/SOURCES.txt'\n"}
+[1.379120] (main_node) StdoutLine: {'line': b'running build_ext\n'}
+[1.379313] (main_node) StdoutLine: {'line': b'Creating /home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages/main-node.egg-link (link to .)\n'}
+[1.380137] (main_node) StdoutLine: {'line': b'Installing main_node script to /home/cannotflypig/robokonn/install/main_node/lib/main_node\n'}
+[1.380555] (main_node) StdoutLine: {'line': b'\n'}
+[1.380765] (main_node) StdoutLine: {'line': b'Installed /home/cannotflypig/robokonn/build/main_node\n'}
+[1.380856] (main_node) StdoutLine: {'line': b'running install_data\n'}
+[1.381074] (main_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/install/main_node/share/ament_index\n'}
+[1.381167] (main_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/install/main_node/share/ament_index/resource_index\n'}
+[1.381396] (main_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/install/main_node/share/ament_index/resource_index/packages\n'}
+[1.381494] (main_node) StdoutLine: {'line': b'copying resource/main_node -> /home/cannotflypig/robokonn/install/main_node/share/ament_index/resource_index/packages\n'}
+[1.381586] (main_node) StdoutLine: {'line': b'copying package.xml -> /home/cannotflypig/robokonn/install/main_node/share/main_node\n'}
+[1.400538] (motor_node) CommandEnded: {'returncode': 0}
+[1.406537] (-) TimerEvent: {}
+[1.458102] (motor_node) JobEnded: {'identifier': 'motor_node', 'rc': 0}
+[1.460106] (main_node) CommandEnded: {'returncode': 0}
+[1.506951] (-) TimerEvent: {}
+[1.517417] (main_node) JobEnded: {'identifier': 'main_node', 'rc': 0}
+[1.518525] (-) EventReactorShutdown: {}
