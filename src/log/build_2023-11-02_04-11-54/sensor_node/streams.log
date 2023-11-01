@@ -1,0 +1,39 @@
+[1.339s] Invoking command in '/home/cannotflypig/robokonn/src/sensor_node': PYTHONPATH=/home/cannotflypig/robokonn/src/build/sensor_node/prefix_override:/home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/sensor_node build --build-base /home/cannotflypig/robokonn/src/build/sensor_node/build install --record /home/cannotflypig/robokonn/src/build/sensor_node/install.log --single-version-externally-managed
+[1.550s] running egg_info
+[1.550s] creating ../build/sensor_node/sensor_node.egg-info
+[1.551s] writing ../build/sensor_node/sensor_node.egg-info/PKG-INFO
+[1.551s] writing dependency_links to ../build/sensor_node/sensor_node.egg-info/dependency_links.txt
+[1.551s] writing entry points to ../build/sensor_node/sensor_node.egg-info/entry_points.txt
+[1.551s] writing requirements to ../build/sensor_node/sensor_node.egg-info/requires.txt
+[1.552s] writing top-level names to ../build/sensor_node/sensor_node.egg-info/top_level.txt
+[1.552s] writing manifest file '../build/sensor_node/sensor_node.egg-info/SOURCES.txt'
+[1.554s] reading manifest file '../build/sensor_node/sensor_node.egg-info/SOURCES.txt'
+[1.555s] writing manifest file '../build/sensor_node/sensor_node.egg-info/SOURCES.txt'
+[1.555s] running build
+[1.555s] running build_py
+[1.555s] creating /home/cannotflypig/robokonn/src/build/sensor_node/build
+[1.556s] creating /home/cannotflypig/robokonn/src/build/sensor_node/build/lib
+[1.556s] creating /home/cannotflypig/robokonn/src/build/sensor_node/build/lib/sensor_node
+[1.556s] copying sensor_node/sensor_node.py -> /home/cannotflypig/robokonn/src/build/sensor_node/build/lib/sensor_node
+[1.557s] copying sensor_node/__init__.py -> /home/cannotflypig/robokonn/src/build/sensor_node/build/lib/sensor_node
+[1.557s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.558s]   warnings.warn(
+[1.558s] running install
+[1.558s] running install_lib
+[1.559s] creating /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node
+[1.560s] copying /home/cannotflypig/robokonn/src/build/sensor_node/build/lib/sensor_node/sensor_node.py -> /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node
+[1.560s] copying /home/cannotflypig/robokonn/src/build/sensor_node/build/lib/sensor_node/__init__.py -> /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node
+[1.562s] byte-compiling /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node/sensor_node.py to sensor_node.cpython-310.pyc
+[1.562s] byte-compiling /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node/__init__.py to __init__.cpython-310.pyc
+[1.562s] running install_data
+[1.563s] creating /home/cannotflypig/robokonn/src/install/sensor_node/share/ament_index
+[1.563s] creating /home/cannotflypig/robokonn/src/install/sensor_node/share/ament_index/resource_index
+[1.563s] creating /home/cannotflypig/robokonn/src/install/sensor_node/share/ament_index/resource_index/packages
+[1.563s] copying resource/sensor_node -> /home/cannotflypig/robokonn/src/install/sensor_node/share/ament_index/resource_index/packages
+[1.564s] copying package.xml -> /home/cannotflypig/robokonn/src/install/sensor_node/share/sensor_node
+[1.564s] running install_egg_info
+[1.565s] Copying ../build/sensor_node/sensor_node.egg-info to /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node-0.0.0-py3.10.egg-info
+[1.566s] running install_scripts
+[1.584s] Installing sensor_node script to /home/cannotflypig/robokonn/src/install/sensor_node/lib/sensor_node
+[1.585s] writing list of installed files to '/home/cannotflypig/robokonn/src/build/sensor_node/install.log'
+[1.613s] Invoked command in '/home/cannotflypig/robokonn/src/sensor_node' returned '0': PYTHONPATH=/home/cannotflypig/robokonn/src/build/sensor_node/prefix_override:/home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/sensor_node build --build-base /home/cannotflypig/robokonn/src/build/sensor_node/build install --record /home/cannotflypig/robokonn/src/build/sensor_node/install.log --single-version-externally-managed

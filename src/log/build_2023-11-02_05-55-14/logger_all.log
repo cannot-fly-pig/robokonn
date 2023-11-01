@@ -1,0 +1,401 @@
+[0.861s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.861s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=16, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7f27646faaa0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7f27646f9300>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7f27646f9300>>)
+[0.896s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.897s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.897s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.897s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.897s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.897s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.897s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/cannotflypig/robokonn/src'
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.897s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.905s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(camera_node) by extensions ['ignore', 'ignore_ament_install']
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(camera_node) by extension 'ignore'
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(camera_node) by extension 'ignore_ament_install'
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(camera_node) by extensions ['colcon_pkg']
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(camera_node) by extension 'colcon_pkg'
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(camera_node) by extensions ['colcon_meta']
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(camera_node) by extension 'colcon_meta'
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(camera_node) by extensions ['ros']
+[0.906s] Level 1:colcon.colcon_core.package_identification:_identify(camera_node) by extension 'ros'
+[0.908s] DEBUG:colcon.colcon_core.package_identification:Package 'camera_node' with type 'ros.ament_python' and name 'camera_node'
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'ignore'
+[0.908s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'ignore_ament_install'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extensions ['colcon_pkg']
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'colcon_pkg'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extensions ['colcon_meta']
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'colcon_meta'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extensions ['ros']
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(interfaces) by extension 'ros'
+[0.909s] DEBUG:colcon.colcon_core.package_identification:Package 'interfaces' with type 'ros.ament_cmake' and name 'interfaces'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.909s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(main_node) by extensions ['ignore', 'ignore_ament_install']
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(main_node) by extension 'ignore'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(main_node) by extension 'ignore_ament_install'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(main_node) by extensions ['colcon_pkg']
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(main_node) by extension 'colcon_pkg'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(main_node) by extensions ['colcon_meta']
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(main_node) by extension 'colcon_meta'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(main_node) by extensions ['ros']
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(main_node) by extension 'ros'
+[0.910s] DEBUG:colcon.colcon_core.package_identification:Package 'main_node' with type 'ros.ament_python' and name 'main_node'
+[0.910s] Level 1:colcon.colcon_core.package_identification:_identify(motor_node) by extensions ['ignore', 'ignore_ament_install']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(motor_node) by extension 'ignore'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(motor_node) by extension 'ignore_ament_install'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(motor_node) by extensions ['colcon_pkg']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(motor_node) by extension 'colcon_pkg'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(motor_node) by extensions ['colcon_meta']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(motor_node) by extension 'colcon_meta'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(motor_node) by extensions ['ros']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(motor_node) by extension 'ros'
+[0.911s] DEBUG:colcon.colcon_core.package_identification:Package 'motor_node' with type 'ros.ament_python' and name 'motor_node'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_node) by extensions ['ignore', 'ignore_ament_install']
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_node) by extension 'ignore'
+[0.911s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_node) by extension 'ignore_ament_install'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_node) by extensions ['colcon_pkg']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_node) by extension 'colcon_pkg'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_node) by extensions ['colcon_meta']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_node) by extension 'colcon_meta'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_node) by extensions ['ros']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(sensor_node) by extension 'ros'
+[0.912s] DEBUG:colcon.colcon_core.package_identification:Package 'sensor_node' with type 'ros.ament_python' and name 'sensor_node'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(test_gazebo) by extensions ['ignore', 'ignore_ament_install']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(test_gazebo) by extension 'ignore'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(test_gazebo) by extension 'ignore_ament_install'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(test_gazebo) by extensions ['colcon_pkg']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(test_gazebo) by extension 'colcon_pkg'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(test_gazebo) by extensions ['colcon_meta']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(test_gazebo) by extension 'colcon_meta'
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(test_gazebo) by extensions ['ros']
+[0.912s] Level 1:colcon.colcon_core.package_identification:_identify(test_gazebo) by extension 'ros'
+[0.913s] DEBUG:colcon.colcon_core.package_identification:Package 'test_gazebo' with type 'ros.ament_cmake' and name 'test_gazebo'
+[0.913s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.913s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.913s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.913s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.913s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.988s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.988s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[1.012s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 6 installed packages in /home/cannotflypig/robokonn/src/install
+[1.024s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 271 installed packages in /opt/ros/humble
+[1.025s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.099s] Level 5:colcon.colcon_core.verb:set package 'camera_node' build argument 'cmake_args' from command line to 'None'
+[1.100s] Level 5:colcon.colcon_core.verb:set package 'camera_node' build argument 'cmake_target' from command line to 'None'
+[1.100s] Level 5:colcon.colcon_core.verb:set package 'camera_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.100s] Level 5:colcon.colcon_core.verb:set package 'camera_node' build argument 'cmake_clean_cache' from command line to 'False'
+[1.100s] Level 5:colcon.colcon_core.verb:set package 'camera_node' build argument 'cmake_clean_first' from command line to 'False'
+[1.100s] Level 5:colcon.colcon_core.verb:set package 'camera_node' build argument 'cmake_force_configure' from command line to 'False'
+[1.100s] Level 5:colcon.colcon_core.verb:set package 'camera_node' build argument 'ament_cmake_args' from command line to 'None'
+[1.100s] Level 5:colcon.colcon_core.verb:set package 'camera_node' build argument 'catkin_cmake_args' from command line to 'None'
+[1.100s] Level 5:colcon.colcon_core.verb:set package 'camera_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.100s] DEBUG:colcon.colcon_core.verb:Building package 'camera_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cannotflypig/robokonn/src/build/camera_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cannotflypig/robokonn/src/install/camera_node', 'merge_install': False, 'path': '/home/cannotflypig/robokonn/src/camera_node', 'symlink_install': False, 'test_result_base': None}
+[1.111s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_args' from command line to 'None'
+[1.111s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_target' from command line to 'None'
+[1.111s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.111s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[1.111s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[1.111s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[1.111s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[1.111s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[1.111s] Level 5:colcon.colcon_core.verb:set package 'interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.111s] DEBUG:colcon.colcon_core.verb:Building package 'interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cannotflypig/robokonn/src/build/interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cannotflypig/robokonn/src/install/interfaces', 'merge_install': False, 'path': '/home/cannotflypig/robokonn/src/interfaces', 'symlink_install': False, 'test_result_base': None}
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'main_node' build argument 'cmake_args' from command line to 'None'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'main_node' build argument 'cmake_target' from command line to 'None'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'main_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'main_node' build argument 'cmake_clean_cache' from command line to 'False'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'main_node' build argument 'cmake_clean_first' from command line to 'False'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'main_node' build argument 'cmake_force_configure' from command line to 'False'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'main_node' build argument 'ament_cmake_args' from command line to 'None'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'main_node' build argument 'catkin_cmake_args' from command line to 'None'
+[1.122s] Level 5:colcon.colcon_core.verb:set package 'main_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.122s] DEBUG:colcon.colcon_core.verb:Building package 'main_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cannotflypig/robokonn/src/build/main_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cannotflypig/robokonn/src/install/main_node', 'merge_install': False, 'path': '/home/cannotflypig/robokonn/src/main_node', 'symlink_install': False, 'test_result_base': None}
+[1.133s] Level 5:colcon.colcon_core.verb:set package 'motor_node' build argument 'cmake_args' from command line to 'None'
+[1.133s] Level 5:colcon.colcon_core.verb:set package 'motor_node' build argument 'cmake_target' from command line to 'None'
+[1.133s] Level 5:colcon.colcon_core.verb:set package 'motor_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.133s] Level 5:colcon.colcon_core.verb:set package 'motor_node' build argument 'cmake_clean_cache' from command line to 'False'
+[1.133s] Level 5:colcon.colcon_core.verb:set package 'motor_node' build argument 'cmake_clean_first' from command line to 'False'
+[1.133s] Level 5:colcon.colcon_core.verb:set package 'motor_node' build argument 'cmake_force_configure' from command line to 'False'
+[1.133s] Level 5:colcon.colcon_core.verb:set package 'motor_node' build argument 'ament_cmake_args' from command line to 'None'
+[1.134s] Level 5:colcon.colcon_core.verb:set package 'motor_node' build argument 'catkin_cmake_args' from command line to 'None'
+[1.134s] Level 5:colcon.colcon_core.verb:set package 'motor_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.134s] DEBUG:colcon.colcon_core.verb:Building package 'motor_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cannotflypig/robokonn/src/build/motor_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cannotflypig/robokonn/src/install/motor_node', 'merge_install': False, 'path': '/home/cannotflypig/robokonn/src/motor_node', 'symlink_install': False, 'test_result_base': None}
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'sensor_node' build argument 'cmake_args' from command line to 'None'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'sensor_node' build argument 'cmake_target' from command line to 'None'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'sensor_node' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'sensor_node' build argument 'cmake_clean_cache' from command line to 'False'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'sensor_node' build argument 'cmake_clean_first' from command line to 'False'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'sensor_node' build argument 'cmake_force_configure' from command line to 'False'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'sensor_node' build argument 'ament_cmake_args' from command line to 'None'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'sensor_node' build argument 'catkin_cmake_args' from command line to 'None'
+[1.145s] Level 5:colcon.colcon_core.verb:set package 'sensor_node' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.145s] DEBUG:colcon.colcon_core.verb:Building package 'sensor_node' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cannotflypig/robokonn/src/build/sensor_node', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cannotflypig/robokonn/src/install/sensor_node', 'merge_install': False, 'path': '/home/cannotflypig/robokonn/src/sensor_node', 'symlink_install': False, 'test_result_base': None}
+[1.158s] Level 5:colcon.colcon_core.verb:set package 'test_gazebo' build argument 'cmake_args' from command line to 'None'
+[1.158s] Level 5:colcon.colcon_core.verb:set package 'test_gazebo' build argument 'cmake_target' from command line to 'None'
+[1.158s] Level 5:colcon.colcon_core.verb:set package 'test_gazebo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.158s] Level 5:colcon.colcon_core.verb:set package 'test_gazebo' build argument 'cmake_clean_cache' from command line to 'False'
+[1.158s] Level 5:colcon.colcon_core.verb:set package 'test_gazebo' build argument 'cmake_clean_first' from command line to 'False'
+[1.158s] Level 5:colcon.colcon_core.verb:set package 'test_gazebo' build argument 'cmake_force_configure' from command line to 'False'
+[1.158s] Level 5:colcon.colcon_core.verb:set package 'test_gazebo' build argument 'ament_cmake_args' from command line to 'None'
+[1.158s] Level 5:colcon.colcon_core.verb:set package 'test_gazebo' build argument 'catkin_cmake_args' from command line to 'None'
+[1.158s] Level 5:colcon.colcon_core.verb:set package 'test_gazebo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.158s] DEBUG:colcon.colcon_core.verb:Building package 'test_gazebo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/cannotflypig/robokonn/src/build/test_gazebo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/cannotflypig/robokonn/src/install/test_gazebo', 'merge_install': False, 'path': '/home/cannotflypig/robokonn/src/test_gazebo', 'symlink_install': False, 'test_result_base': None}
+[1.169s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.180s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.180s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cannotflypig/robokonn/src/camera_node' with build type 'ament_python'
+[1.181s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera_node', 'ament_prefix_path')
+[1.198s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.198s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/camera_node/share/camera_node/hook/ament_prefix_path.ps1'
+[1.199s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/camera_node/share/camera_node/hook/ament_prefix_path.dsv'
+[1.199s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/camera_node/share/camera_node/hook/ament_prefix_path.sh'
+[1.211s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.211s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.249s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cannotflypig/robokonn/src/interfaces' with build type 'ament_cmake'
+[1.250s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cannotflypig/robokonn/src/interfaces'
+[1.266s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.266s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.303s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cannotflypig/robokonn/src/main_node' with build type 'ament_python'
+[1.303s] Level 1:colcon.colcon_core.shell:create_environment_hook('main_node', 'ament_prefix_path')
+[1.315s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/main_node/share/main_node/hook/ament_prefix_path.ps1'
+[1.315s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/main_node/share/main_node/hook/ament_prefix_path.dsv'
+[1.316s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/main_node/share/main_node/hook/ament_prefix_path.sh'
+[1.327s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.327s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.361s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cannotflypig/robokonn/src/motor_node' with build type 'ament_python'
+[1.361s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_node', 'ament_prefix_path')
+[1.373s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/motor_node/share/motor_node/hook/ament_prefix_path.ps1'
+[1.373s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/motor_node/share/motor_node/hook/ament_prefix_path.dsv'
+[1.373s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/motor_node/share/motor_node/hook/ament_prefix_path.sh'
+[1.386s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.386s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.423s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/cannotflypig/robokonn/src/sensor_node' with build type 'ament_python'
+[1.423s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensor_node', 'ament_prefix_path')
+[1.436s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/sensor_node/share/sensor_node/hook/ament_prefix_path.ps1'
+[1.437s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/sensor_node/share/sensor_node/hook/ament_prefix_path.dsv'
+[1.437s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/sensor_node/share/sensor_node/hook/ament_prefix_path.sh'
+[1.448s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.449s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.500s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/cannotflypig/robokonn/src/test_gazebo' with build type 'ament_cmake'
+[1.501s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/cannotflypig/robokonn/src/test_gazebo'
+[1.514s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.514s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.759s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cannotflypig/robokonn/src/camera_node'
+[1.771s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.771s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.813s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cannotflypig/robokonn/src/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/src/install/sensor_node:/home/cannotflypig/robokonn/src/install/motor_node:/home/cannotflypig/robokonn/src/install/main_node:/home/cannotflypig/robokonn/src/install/camera_node:/opt/ros/humble /usr/bin/cmake --build /home/cannotflypig/robokonn/src/build/interfaces -- -j16 -l16
+[2.041s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cannotflypig/robokonn/src/main_node'
+[2.052s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.052s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.289s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cannotflypig/robokonn/src/motor_node'
+[2.301s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.301s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.518s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/cannotflypig/robokonn/src/sensor_node'
+[2.529s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[2.529s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.569s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cannotflypig/robokonn/src/build/test_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/src/install/sensor_node:/home/cannotflypig/robokonn/src/install/motor_node:/home/cannotflypig/robokonn/src/install/main_node:/home/cannotflypig/robokonn/src/install/camera_node:/opt/ros/humble /usr/bin/cmake /home/cannotflypig/robokonn/src/test_gazebo -DCMAKE_INSTALL_PREFIX=/home/cannotflypig/robokonn/src/install/test_gazebo
+[2.581s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cannotflypig/robokonn/src/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/src/install/sensor_node:/home/cannotflypig/robokonn/src/install/motor_node:/home/cannotflypig/robokonn/src/install/main_node:/home/cannotflypig/robokonn/src/install/camera_node:/opt/ros/humble /usr/bin/cmake --build /home/cannotflypig/robokonn/src/build/interfaces -- -j16 -l16
+[2.658s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cannotflypig/robokonn/src/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/src/install/sensor_node:/home/cannotflypig/robokonn/src/install/motor_node:/home/cannotflypig/robokonn/src/install/main_node:/home/cannotflypig/robokonn/src/install/camera_node:/opt/ros/humble /usr/bin/cmake --install /home/cannotflypig/robokonn/src/build/interfaces
+[2.721s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interfaces)
+[2.727s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cannotflypig/robokonn/src/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/src/install/sensor_node:/home/cannotflypig/robokonn/src/install/motor_node:/home/cannotflypig/robokonn/src/install/main_node:/home/cannotflypig/robokonn/src/install/camera_node:/opt/ros/humble /usr/bin/cmake --install /home/cannotflypig/robokonn/src/build/interfaces
+[2.744s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces' for CMake module files
+[2.745s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces' for CMake config files
+[2.746s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'cmake_prefix_path')
+[2.762s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.ps1'
+[2.762s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.dsv'
+[2.762s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.sh'
+[2.763s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces/lib'
+[2.763s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'ld_library_path_lib')
+[2.783s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.ps1'
+[2.783s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.dsv'
+[2.784s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.sh'
+[2.784s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces/bin'
+[2.784s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces/lib/pkgconfig/interfaces.pc'
+[2.785s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces/lib/python3.10/site-packages'
+[2.785s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces/bin'
+[2.803s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/package.ps1'
+[2.804s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/package.dsv'
+[2.805s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/package.sh'
+[2.806s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/package.bash'
+[2.807s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/package.zsh'
+[2.808s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cannotflypig/robokonn/src/install/interfaces/share/colcon-core/packages/interfaces)
+[2.878s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(interfaces)
+[2.898s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces' for CMake module files
+[2.899s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces' for CMake config files
+[2.900s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'cmake_prefix_path')
+[2.915s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.ps1'
+[2.915s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.dsv'
+[2.916s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/hook/cmake_prefix_path.sh'
+[2.916s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces/lib'
+[2.916s] Level 1:colcon.colcon_core.shell:create_environment_hook('interfaces', 'ld_library_path_lib')
+[2.930s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.ps1'
+[2.931s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.dsv'
+[2.932s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/hook/ld_library_path_lib.sh'
+[2.932s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces/bin'
+[2.933s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces/lib/pkgconfig/interfaces.pc'
+[2.933s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces/lib/python3.10/site-packages'
+[2.933s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/interfaces/bin'
+[2.950s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/package.ps1'
+[2.950s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/package.dsv'
+[2.951s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/package.sh'
+[2.951s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/package.bash'
+[2.952s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/package.zsh'
+[2.952s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cannotflypig/robokonn/src/install/interfaces/share/colcon-core/packages/interfaces)
+[2.964s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cannotflypig/robokonn/src/motor_node': PYTHONPATH=/home/cannotflypig/robokonn/src/build/motor_node/prefix_override:/home/cannotflypig/robokonn/src/install/motor_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/motor_node build --build-base /home/cannotflypig/robokonn/src/build/motor_node/build install --record /home/cannotflypig/robokonn/src/build/motor_node/install.log --single-version-externally-managed
+[2.966s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cannotflypig/robokonn/src/sensor_node': PYTHONPATH=/home/cannotflypig/robokonn/src/build/sensor_node/prefix_override:/home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/sensor_node build --build-base /home/cannotflypig/robokonn/src/build/sensor_node/build install --record /home/cannotflypig/robokonn/src/build/sensor_node/install.log --single-version-externally-managed
+[2.967s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cannotflypig/robokonn/src/main_node': PYTHONPATH=/home/cannotflypig/robokonn/src/build/main_node/prefix_override:/home/cannotflypig/robokonn/src/install/main_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/main_node build --build-base /home/cannotflypig/robokonn/src/build/main_node/build install --record /home/cannotflypig/robokonn/src/build/main_node/install.log --single-version-externally-managed
+[2.967s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cannotflypig/robokonn/src/camera_node': PYTHONPATH=/home/cannotflypig/robokonn/src/build/camera_node/prefix_override:/home/cannotflypig/robokonn/src/install/camera_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/camera_node build --build-base /home/cannotflypig/robokonn/src/build/camera_node/build install --record /home/cannotflypig/robokonn/src/build/camera_node/install.log --single-version-externally-managed
+[3.256s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cannotflypig/robokonn/src/sensor_node' returned '0': PYTHONPATH=/home/cannotflypig/robokonn/src/build/sensor_node/prefix_override:/home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/sensor_node build --build-base /home/cannotflypig/robokonn/src/build/sensor_node/build install --record /home/cannotflypig/robokonn/src/build/sensor_node/install.log --single-version-externally-managed
+[3.274s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/sensor_node' for CMake module files
+[3.274s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/sensor_node' for CMake config files
+[3.275s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/sensor_node/lib'
+[3.275s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/sensor_node/bin'
+[3.275s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/sensor_node/lib/pkgconfig/sensor_node.pc'
+[3.275s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages'
+[3.275s] Level 1:colcon.colcon_core.shell:create_environment_hook('sensor_node', 'pythonpath')
+[3.291s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/sensor_node/share/sensor_node/hook/pythonpath.ps1'
+[3.292s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/sensor_node/share/sensor_node/hook/pythonpath.dsv'
+[3.292s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/sensor_node/share/sensor_node/hook/pythonpath.sh'
+[3.293s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/sensor_node/bin'
+[3.293s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(sensor_node)
+[3.314s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/sensor_node/share/sensor_node/package.ps1'
+[3.314s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cannotflypig/robokonn/src/install/sensor_node/share/sensor_node/package.dsv'
+[3.315s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/sensor_node/share/sensor_node/package.sh'
+[3.315s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/sensor_node/share/sensor_node/package.bash'
+[3.316s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/sensor_node/share/sensor_node/package.zsh'
+[3.316s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cannotflypig/robokonn/src/install/sensor_node/share/colcon-core/packages/sensor_node)
+[3.320s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cannotflypig/robokonn/src/main_node' returned '0': PYTHONPATH=/home/cannotflypig/robokonn/src/build/main_node/prefix_override:/home/cannotflypig/robokonn/src/install/main_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/main_node build --build-base /home/cannotflypig/robokonn/src/build/main_node/build install --record /home/cannotflypig/robokonn/src/build/main_node/install.log --single-version-externally-managed
+[3.335s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/main_node' for CMake module files
+[3.336s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/main_node' for CMake config files
+[3.336s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/main_node/lib'
+[3.336s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/main_node/bin'
+[3.336s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/main_node/lib/pkgconfig/main_node.pc'
+[3.337s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/main_node/lib/python3.10/site-packages'
+[3.337s] Level 1:colcon.colcon_core.shell:create_environment_hook('main_node', 'pythonpath')
+[3.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/main_node/share/main_node/hook/pythonpath.ps1'
+[3.353s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/main_node/share/main_node/hook/pythonpath.dsv'
+[3.353s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/main_node/share/main_node/hook/pythonpath.sh'
+[3.354s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/main_node/bin'
+[3.354s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(main_node)
+[3.370s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/main_node/share/main_node/package.ps1'
+[3.371s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cannotflypig/robokonn/src/install/main_node/share/main_node/package.dsv'
+[3.371s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/main_node/share/main_node/package.sh'
+[3.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/main_node/share/main_node/package.bash'
+[3.372s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/main_node/share/main_node/package.zsh'
+[3.372s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cannotflypig/robokonn/src/install/main_node/share/colcon-core/packages/main_node)
+[3.374s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cannotflypig/robokonn/src/motor_node' returned '0': PYTHONPATH=/home/cannotflypig/robokonn/src/build/motor_node/prefix_override:/home/cannotflypig/robokonn/src/install/motor_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/motor_node build --build-base /home/cannotflypig/robokonn/src/build/motor_node/build install --record /home/cannotflypig/robokonn/src/build/motor_node/install.log --single-version-externally-managed
+[3.390s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/motor_node' for CMake module files
+[3.390s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/motor_node' for CMake config files
+[3.391s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/motor_node/lib'
+[3.391s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/motor_node/bin'
+[3.391s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/motor_node/lib/pkgconfig/motor_node.pc'
+[3.391s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/motor_node/lib/python3.10/site-packages'
+[3.391s] Level 1:colcon.colcon_core.shell:create_environment_hook('motor_node', 'pythonpath')
+[3.407s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/motor_node/share/motor_node/hook/pythonpath.ps1'
+[3.408s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/motor_node/share/motor_node/hook/pythonpath.dsv'
+[3.408s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/motor_node/share/motor_node/hook/pythonpath.sh'
+[3.409s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/motor_node/bin'
+[3.409s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(motor_node)
+[3.425s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/motor_node/share/motor_node/package.ps1'
+[3.425s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cannotflypig/robokonn/src/install/motor_node/share/motor_node/package.dsv'
+[3.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/motor_node/share/motor_node/package.sh'
+[3.426s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/motor_node/share/motor_node/package.bash'
+[3.427s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/motor_node/share/motor_node/package.zsh'
+[3.427s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cannotflypig/robokonn/src/install/motor_node/share/colcon-core/packages/motor_node)
+[3.430s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cannotflypig/robokonn/src/camera_node' returned '0': PYTHONPATH=/home/cannotflypig/robokonn/src/build/camera_node/prefix_override:/home/cannotflypig/robokonn/src/install/camera_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/camera_node build --build-base /home/cannotflypig/robokonn/src/build/camera_node/build install --record /home/cannotflypig/robokonn/src/build/camera_node/install.log --single-version-externally-managed
+[3.449s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/camera_node' for CMake module files
+[3.449s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/camera_node' for CMake config files
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/camera_node/lib'
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/camera_node/bin'
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/camera_node/lib/pkgconfig/camera_node.pc'
+[3.450s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/camera_node/lib/python3.10/site-packages'
+[3.450s] Level 1:colcon.colcon_core.shell:create_environment_hook('camera_node', 'pythonpath')
+[3.466s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/camera_node/share/camera_node/hook/pythonpath.ps1'
+[3.467s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/camera_node/share/camera_node/hook/pythonpath.dsv'
+[3.467s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/camera_node/share/camera_node/hook/pythonpath.sh'
+[3.468s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/camera_node/bin'
+[3.468s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(camera_node)
+[3.484s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/camera_node/share/camera_node/package.ps1'
+[3.485s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cannotflypig/robokonn/src/install/camera_node/share/camera_node/package.dsv'
+[3.485s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/camera_node/share/camera_node/package.sh'
+[3.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/camera_node/share/camera_node/package.bash'
+[3.486s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/camera_node/share/camera_node/package.zsh'
+[3.486s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cannotflypig/robokonn/src/install/camera_node/share/colcon-core/packages/camera_node)
+[4.182s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cannotflypig/robokonn/src/build/test_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/src/install/sensor_node:/home/cannotflypig/robokonn/src/install/motor_node:/home/cannotflypig/robokonn/src/install/main_node:/home/cannotflypig/robokonn/src/install/camera_node:/opt/ros/humble /usr/bin/cmake /home/cannotflypig/robokonn/src/test_gazebo -DCMAKE_INSTALL_PREFIX=/home/cannotflypig/robokonn/src/install/test_gazebo
+[4.183s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cannotflypig/robokonn/src/build/test_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/src/install/sensor_node:/home/cannotflypig/robokonn/src/install/motor_node:/home/cannotflypig/robokonn/src/install/main_node:/home/cannotflypig/robokonn/src/install/camera_node:/opt/ros/humble /usr/bin/cmake --build /home/cannotflypig/robokonn/src/build/test_gazebo -- -j16 -l16
+[4.205s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cannotflypig/robokonn/src/build/test_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/src/install/sensor_node:/home/cannotflypig/robokonn/src/install/motor_node:/home/cannotflypig/robokonn/src/install/main_node:/home/cannotflypig/robokonn/src/install/camera_node:/opt/ros/humble /usr/bin/cmake --build /home/cannotflypig/robokonn/src/build/test_gazebo -- -j16 -l16
+[4.219s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/cannotflypig/robokonn/src/build/test_gazebo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/src/install/sensor_node:/home/cannotflypig/robokonn/src/install/motor_node:/home/cannotflypig/robokonn/src/install/main_node:/home/cannotflypig/robokonn/src/install/camera_node:/opt/ros/humble /usr/bin/cmake --install /home/cannotflypig/robokonn/src/build/test_gazebo
+[4.228s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(test_gazebo)
+[4.229s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/cannotflypig/robokonn/src/build/test_gazebo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/src/install/sensor_node:/home/cannotflypig/robokonn/src/install/motor_node:/home/cannotflypig/robokonn/src/install/main_node:/home/cannotflypig/robokonn/src/install/camera_node:/opt/ros/humble /usr/bin/cmake --install /home/cannotflypig/robokonn/src/build/test_gazebo
+[4.239s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/test_gazebo' for CMake module files
+[4.240s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/test_gazebo' for CMake config files
+[4.240s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_gazebo', 'cmake_prefix_path')
+[4.252s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/hook/cmake_prefix_path.ps1'
+[4.253s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/hook/cmake_prefix_path.dsv'
+[4.253s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/hook/cmake_prefix_path.sh'
+[4.254s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/test_gazebo/bin'
+[4.254s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/test_gazebo/lib/pkgconfig/test_gazebo.pc'
+[4.254s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/test_gazebo/lib/python3.10/site-packages'
+[4.254s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/test_gazebo/bin'
+[4.266s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/package.ps1'
+[4.266s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/package.dsv'
+[4.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/package.sh'
+[4.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/package.bash'
+[4.267s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/package.zsh'
+[4.268s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cannotflypig/robokonn/src/install/test_gazebo/share/colcon-core/packages/test_gazebo)
+[4.295s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(test_gazebo)
+[4.309s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/test_gazebo' for CMake module files
+[4.309s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/test_gazebo' for CMake config files
+[4.309s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_gazebo', 'cmake_prefix_path')
+[4.320s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/hook/cmake_prefix_path.ps1'
+[4.320s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/hook/cmake_prefix_path.dsv'
+[4.321s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/hook/cmake_prefix_path.sh'
+[4.321s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/test_gazebo/bin'
+[4.321s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/test_gazebo/lib/pkgconfig/test_gazebo.pc'
+[4.321s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/test_gazebo/lib/python3.10/site-packages'
+[4.322s] Level 1:colcon.colcon_core.environment:checking '/home/cannotflypig/robokonn/src/install/test_gazebo/bin'
+[4.332s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/package.ps1'
+[4.333s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/package.dsv'
+[4.333s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/package.sh'
+[4.333s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/package.bash'
+[4.334s] INFO:colcon.colcon_core.shell:Creating package script '/home/cannotflypig/robokonn/src/install/test_gazebo/share/test_gazebo/package.zsh'
+[4.334s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/cannotflypig/robokonn/src/install/test_gazebo/share/colcon-core/packages/test_gazebo)
+[4.334s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.335s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.335s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.335s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.391s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[4.391s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.392s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.392s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.392s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.FileNotFound: Failed to connect to socket /run/user/1000/bus: No such file or directory
+[4.392s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.403s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cannotflypig/robokonn/src/install/local_setup.ps1'
+[4.404s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cannotflypig/robokonn/src/install/_local_setup_util_ps1.py'
+[4.405s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cannotflypig/robokonn/src/install/setup.ps1'
+[4.416s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cannotflypig/robokonn/src/install/local_setup.sh'
+[4.416s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/cannotflypig/robokonn/src/install/_local_setup_util_sh.py'
+[4.417s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cannotflypig/robokonn/src/install/setup.sh'
+[4.428s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cannotflypig/robokonn/src/install/local_setup.bash'
+[4.428s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cannotflypig/robokonn/src/install/setup.bash'
+[4.442s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/cannotflypig/robokonn/src/install/local_setup.zsh'
+[4.442s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/cannotflypig/robokonn/src/install/setup.zsh'

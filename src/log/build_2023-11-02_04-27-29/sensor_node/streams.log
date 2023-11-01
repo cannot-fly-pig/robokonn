@@ -1,0 +1,26 @@
+[1.495s] Invoking command in '/home/cannotflypig/robokonn/src/sensor_node': PYTHONPATH=/home/cannotflypig/robokonn/src/build/sensor_node/prefix_override:/home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/sensor_node build --build-base /home/cannotflypig/robokonn/src/build/sensor_node/build install --record /home/cannotflypig/robokonn/src/build/sensor_node/install.log --single-version-externally-managed
+[1.717s] running egg_info
+[1.719s] writing ../build/sensor_node/sensor_node.egg-info/PKG-INFO
+[1.719s] writing dependency_links to ../build/sensor_node/sensor_node.egg-info/dependency_links.txt
+[1.719s] writing entry points to ../build/sensor_node/sensor_node.egg-info/entry_points.txt
+[1.719s] writing requirements to ../build/sensor_node/sensor_node.egg-info/requires.txt
+[1.719s] writing top-level names to ../build/sensor_node/sensor_node.egg-info/top_level.txt
+[1.720s] reading manifest file '../build/sensor_node/sensor_node.egg-info/SOURCES.txt'
+[1.721s] writing manifest file '../build/sensor_node/sensor_node.egg-info/SOURCES.txt'
+[1.721s] running build
+[1.721s] running build_py
+[1.721s] copying sensor_node/sensor_node.py -> /home/cannotflypig/robokonn/src/build/sensor_node/build/lib/sensor_node
+[1.722s] running install
+[1.722s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.722s]   warnings.warn(
+[1.723s] running install_lib
+[1.724s] copying /home/cannotflypig/robokonn/src/build/sensor_node/build/lib/sensor_node/sensor_node.py -> /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node
+[1.724s] byte-compiling /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node/sensor_node.py to sensor_node.cpython-310.pyc
+[1.725s] running install_data
+[1.725s] running install_egg_info
+[1.727s] removing '/home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node-0.0.0-py3.10.egg-info' (and everything under it)
+[1.727s] Copying ../build/sensor_node/sensor_node.egg-info to /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node-0.0.0-py3.10.egg-info
+[1.728s] running install_scripts
+[1.749s] Installing sensor_node script to /home/cannotflypig/robokonn/src/install/sensor_node/lib/sensor_node
+[1.749s] writing list of installed files to '/home/cannotflypig/robokonn/src/build/sensor_node/install.log'
+[1.909s] Invoked command in '/home/cannotflypig/robokonn/src/sensor_node' returned '0': PYTHONPATH=/home/cannotflypig/robokonn/src/build/sensor_node/prefix_override:/home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../build/sensor_node build --build-base /home/cannotflypig/robokonn/src/build/sensor_node/build install --record /home/cannotflypig/robokonn/src/build/sensor_node/install.log --single-version-externally-managed
