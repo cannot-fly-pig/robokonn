@@ -1,0 +1,507 @@
+[0.000000] (-) TimerEvent: {}
+[0.000604] (camera_node) JobQueued: {'identifier': 'camera_node', 'dependencies': OrderedDict()}
+[0.000682] (interfaces) JobQueued: {'identifier': 'interfaces', 'dependencies': OrderedDict()}
+[0.000733] (main_node) JobQueued: {'identifier': 'main_node', 'dependencies': OrderedDict()}
+[0.000780] (motor_node) JobQueued: {'identifier': 'motor_node', 'dependencies': OrderedDict()}
+[0.000820] (sensor_node) JobQueued: {'identifier': 'sensor_node', 'dependencies': OrderedDict()}
+[0.000861] (camera_node) JobStarted: {'identifier': 'camera_node'}
+[0.052950] (interfaces) JobStarted: {'identifier': 'interfaces'}
+[0.091271] (main_node) JobStarted: {'identifier': 'main_node'}
+[0.099229] (-) TimerEvent: {}
+[0.142368] (motor_node) JobStarted: {'identifier': 'motor_node'}
+[0.189293] (sensor_node) JobStarted: {'identifier': 'sensor_node'}
+[0.199540] (-) TimerEvent: {}
+[0.299912] (-) TimerEvent: {}
+[0.400307] (-) TimerEvent: {}
+[0.484237] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'cmake'}
+[0.484728] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '/home/cannotflypig/robokonn/src/interfaces', '-DCMAKE_INSTALL_PREFIX=/home/cannotflypig/robokonn/src/install/interfaces'], 'cwd': '/home/cannotflypig/robokonn/src/build/interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cannotflypig'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{51855cb2-8cce-5362-8f54-464b92b32386}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/cannotflypig'), ('OLDPWD', '/home/cannotflypig/robokonn'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cannotflypig'), ('NAME', 'DESKTOP-53NAE0H'), ('WSL_INTEROP', '/run/WSL/362_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/docum/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/docum/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('WT_SESSION', '2a123500-b564-484d-9ffc-6e7d03232b56'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/cannotflypig/robokonn/src/build/interfaces'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.500431] (-) TimerEvent: {}
+[0.600777] (-) TimerEvent: {}
+[0.701213] (-) TimerEvent: {}
+[0.802169] (-) TimerEvent: {}
+[0.902564] (-) TimerEvent: {}
+[1.002938] (-) TimerEvent: {}
+[1.104457] (-) TimerEvent: {}
+[1.204794] (-) TimerEvent: {}
+[1.255440] (interfaces) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[1.304939] (-) TimerEvent: {}
+[1.405293] (-) TimerEvent: {}
+[1.426745] (interfaces) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[1.505427] (-) TimerEvent: {}
+[1.605870] (-) TimerEvent: {}
+[1.647548] (sensor_node) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/sensor_node', 'build', '--build-base', '/home/cannotflypig/robokonn/src/build/sensor_node/build', 'install', '--record', '/home/cannotflypig/robokonn/src/build/sensor_node/install.log', '--single-version-externally-managed'], 'cwd': '/home/cannotflypig/robokonn/src/sensor_node', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'cannotflypig', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'WT_PROFILE_ID': '{51855cb2-8cce-5362-8f54-464b92b32386}', 'MOTD_SHOWN': 'update-motd', 'HOME': '/home/cannotflypig', 'OLDPWD': '/home/cannotflypig/robokonn', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'cannotflypig', 'NAME': 'DESKTOP-53NAE0H', 'WSL_INTEROP': '/run/WSL/362_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/docum/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/docum/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'WT_SESSION': '2a123500-b564-484d-9ffc-6e7d03232b56', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/cannotflypig/robokonn/src/build/sensor_node', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/cannotflypig/robokonn/src/build/sensor_node/prefix_override:/home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}, 'shell': False}
+[1.650290] (main_node) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/main_node', 'build', '--build-base', '/home/cannotflypig/robokonn/src/build/main_node/build', 'install', '--record', '/home/cannotflypig/robokonn/src/build/main_node/install.log', '--single-version-externally-managed'], 'cwd': '/home/cannotflypig/robokonn/src/main_node', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'cannotflypig', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'WT_PROFILE_ID': '{51855cb2-8cce-5362-8f54-464b92b32386}', 'MOTD_SHOWN': 'update-motd', 'HOME': '/home/cannotflypig', 'OLDPWD': '/home/cannotflypig/robokonn', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'cannotflypig', 'NAME': 'DESKTOP-53NAE0H', 'WSL_INTEROP': '/run/WSL/362_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/docum/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/docum/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'WT_SESSION': '2a123500-b564-484d-9ffc-6e7d03232b56', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/cannotflypig/robokonn/src/build/main_node', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/cannotflypig/robokonn/src/build/main_node/prefix_override:/home/cannotflypig/robokonn/src/install/main_node/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}, 'shell': False}
+[1.655072] (motor_node) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/motor_node', 'build', '--build-base', '/home/cannotflypig/robokonn/src/build/motor_node/build', 'install', '--record', '/home/cannotflypig/robokonn/src/build/motor_node/install.log', '--single-version-externally-managed'], 'cwd': '/home/cannotflypig/robokonn/src/motor_node', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'cannotflypig', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'WT_PROFILE_ID': '{51855cb2-8cce-5362-8f54-464b92b32386}', 'MOTD_SHOWN': 'update-motd', 'HOME': '/home/cannotflypig', 'OLDPWD': '/home/cannotflypig/robokonn', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'cannotflypig', 'NAME': 'DESKTOP-53NAE0H', 'WSL_INTEROP': '/run/WSL/362_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/docum/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/docum/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'WT_SESSION': '2a123500-b564-484d-9ffc-6e7d03232b56', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/cannotflypig/robokonn/src/build/motor_node', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/cannotflypig/robokonn/src/build/motor_node/prefix_override:/home/cannotflypig/robokonn/src/install/motor_node/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}, 'shell': False}
+[1.659238] (camera_node) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'egg_info', '--egg-base', '../build/camera_node', 'build', '--build-base', '/home/cannotflypig/robokonn/src/build/camera_node/build', 'install', '--record', '/home/cannotflypig/robokonn/src/build/camera_node/install.log', '--single-version-externally-managed'], 'cwd': '/home/cannotflypig/robokonn/src/camera_node', 'env': {'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'cannotflypig', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'WT_PROFILE_ID': '{51855cb2-8cce-5362-8f54-464b92b32386}', 'MOTD_SHOWN': 'update-motd', 'HOME': '/home/cannotflypig', 'OLDPWD': '/home/cannotflypig/robokonn', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'WSL_DISTRO_NAME': 'Ubuntu', 'WAYLAND_DISPLAY': 'wayland-0', 'ROS_DISTRO': 'humble', 'LOGNAME': 'cannotflypig', 'NAME': 'DESKTOP-53NAE0H', 'WSL_INTEROP': '/run/WSL/362_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', 'ROS_LOCALHOST_ONLY': '0', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/docum/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/docum/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin', 'WT_SESSION': '2a123500-b564-484d-9ffc-6e7d03232b56', 'XDG_RUNTIME_DIR': '/run/user/1000/', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'PWD': '/home/cannotflypig/robokonn/src/build/camera_node', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/cannotflypig/robokonn/src/build/camera_node/prefix_override:/home/cannotflypig/robokonn/src/install/camera_node/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}, 'shell': False}
+[1.705967] (-) TimerEvent: {}
+[1.805919] (interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[1.806075] (-) TimerEvent: {}
+[1.863467] (sensor_node) StdoutLine: {'line': b'running egg_info\n'}
+[1.863999] (sensor_node) StdoutLine: {'line': b'creating ../build/sensor_node/sensor_node.egg-info\n'}
+[1.864274] (sensor_node) StdoutLine: {'line': b'writing ../build/sensor_node/sensor_node.egg-info/PKG-INFO\n'}
+[1.864572] (sensor_node) StdoutLine: {'line': b'writing dependency_links to ../build/sensor_node/sensor_node.egg-info/dependency_links.txt\n'}
+[1.864762] (main_node) StdoutLine: {'line': b'running egg_info\n'}
+[1.864903] (sensor_node) StdoutLine: {'line': b'writing entry points to ../build/sensor_node/sensor_node.egg-info/entry_points.txt\n'}
+[1.865433] (sensor_node) StdoutLine: {'line': b'writing requirements to ../build/sensor_node/sensor_node.egg-info/requires.txt\n'}
+[1.865663] (main_node) StdoutLine: {'line': b'creating ../build/main_node/main_node.egg-info\n'}
+[1.865976] (sensor_node) StdoutLine: {'line': b'writing top-level names to ../build/sensor_node/sensor_node.egg-info/top_level.txt\n'}
+[1.866194] (main_node) StdoutLine: {'line': b'writing ../build/main_node/main_node.egg-info/PKG-INFO\n'}
+[1.866311] (sensor_node) StdoutLine: {'line': b"writing manifest file '../build/sensor_node/sensor_node.egg-info/SOURCES.txt'\n"}
+[1.866385] (main_node) StdoutLine: {'line': b'writing dependency_links to ../build/main_node/main_node.egg-info/dependency_links.txt\n'}
+[1.866504] (main_node) StdoutLine: {'line': b'writing entry points to ../build/main_node/main_node.egg-info/entry_points.txt\n'}
+[1.866568] (main_node) StdoutLine: {'line': b'writing requirements to ../build/main_node/main_node.egg-info/requires.txt\n'}
+[1.866634] (main_node) StdoutLine: {'line': b'writing top-level names to ../build/main_node/main_node.egg-info/top_level.txt\n'}
+[1.866703] (main_node) StdoutLine: {'line': b"writing manifest file '../build/main_node/main_node.egg-info/SOURCES.txt'\n"}
+[1.867414] (sensor_node) StdoutLine: {'line': b"reading manifest file '../build/sensor_node/sensor_node.egg-info/SOURCES.txt'\n"}
+[1.867765] (main_node) StdoutLine: {'line': b"reading manifest file '../build/main_node/main_node.egg-info/SOURCES.txt'\n"}
+[1.868439] (main_node) StdoutLine: {'line': b"writing manifest file '../build/main_node/main_node.egg-info/SOURCES.txt'\n"}
+[1.868535] (sensor_node) StdoutLine: {'line': b"writing manifest file '../build/sensor_node/sensor_node.egg-info/SOURCES.txt'\n"}
+[1.868811] (main_node) StdoutLine: {'line': b'running build\n'}
+[1.868979] (main_node) StdoutLine: {'line': b'running build_py\n'}
+[1.869337] (main_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/build/main_node/build\n'}
+[1.869501] (main_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/build/main_node/build/lib\n'}
+[1.869665] (main_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/build/main_node/build/lib/main_node\n'}
+[1.869810] (sensor_node) StdoutLine: {'line': b'running build\n'}
+[1.869951] (sensor_node) StdoutLine: {'line': b'running build_py\n'}
+[1.870087] (sensor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/build/sensor_node/build\n'}
+[1.870224] (sensor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/build/sensor_node/build/lib\n'}
+[1.870377] (sensor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/build/sensor_node/build/lib/sensor_node\n'}
+[1.870898] (main_node) StdoutLine: {'line': b'copying main_node/main_node.py -> /home/cannotflypig/robokonn/src/build/main_node/build/lib/main_node\n'}
+[1.870999] (main_node) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[1.871288] (main_node) StderrLine: {'line': b'  warnings.warn(\n'}
+[1.871352] (sensor_node) StdoutLine: {'line': b'copying sensor_node/sensor_node.py -> /home/cannotflypig/robokonn/src/build/sensor_node/build/lib/sensor_node\n'}
+[1.871514] (sensor_node) StdoutLine: {'line': b'copying sensor_node/__init__.py -> /home/cannotflypig/robokonn/src/build/sensor_node/build/lib/sensor_node\n'}
+[1.871578] (sensor_node) StdoutLine: {'line': b'running install\n'}
+[1.871628] (sensor_node) StdoutLine: {'line': b'running install_lib\n'}
+[1.871674] (sensor_node) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[1.871731] (sensor_node) StderrLine: {'line': b'  warnings.warn(\n'}
+[1.871777] (main_node) StdoutLine: {'line': b'copying main_node/__init__.py -> /home/cannotflypig/robokonn/src/build/main_node/build/lib/main_node\n'}
+[1.871826] (main_node) StdoutLine: {'line': b'running install\n'}
+[1.871967] (main_node) StdoutLine: {'line': b'running install_lib\n'}
+[1.872100] (main_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/main_node/lib/python3.10/site-packages/main_node\n'}
+[1.872245] (main_node) StdoutLine: {'line': b'copying /home/cannotflypig/robokonn/src/build/main_node/build/lib/main_node/main_node.py -> /home/cannotflypig/robokonn/src/install/main_node/lib/python3.10/site-packages/main_node\n'}
+[1.872405] (main_node) StdoutLine: {'line': b'copying /home/cannotflypig/robokonn/src/build/main_node/build/lib/main_node/__init__.py -> /home/cannotflypig/robokonn/src/install/main_node/lib/python3.10/site-packages/main_node\n'}
+[1.872543] (sensor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node\n'}
+[1.872784] (sensor_node) StdoutLine: {'line': b'copying /home/cannotflypig/robokonn/src/build/sensor_node/build/lib/sensor_node/sensor_node.py -> /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node\n'}
+[1.873089] (main_node) StdoutLine: {'line': b'byte-compiling /home/cannotflypig/robokonn/src/install/main_node/lib/python3.10/site-packages/main_node/main_node.py to main_node.cpython-310.pyc\n'}
+[1.873306] (sensor_node) StdoutLine: {'line': b'copying /home/cannotflypig/robokonn/src/build/sensor_node/build/lib/sensor_node/__init__.py -> /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node\n'}
+[1.873437] (main_node) StdoutLine: {'line': b'byte-compiling /home/cannotflypig/robokonn/src/install/main_node/lib/python3.10/site-packages/main_node/__init__.py to __init__.cpython-310.pyc\n'}
+[1.873673] (main_node) StdoutLine: {'line': b'running install_data\n'}
+[1.873741] (main_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/main_node/share/ament_index\n'}
+[1.873792] (main_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/main_node/share/ament_index/resource_index\n'}
+[1.873949] (main_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/main_node/share/ament_index/resource_index/packages\n'}
+[1.874065] (sensor_node) StdoutLine: {'line': b'byte-compiling /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node/sensor_node.py to sensor_node.cpython-310.pyc\n'}
+[1.874160] (sensor_node) StdoutLine: {'line': b'byte-compiling /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node/__init__.py to __init__.cpython-310.pyc\n'}
+[1.874314] (sensor_node) StdoutLine: {'line': b'running install_data\n'}
+[1.874512] (main_node) StdoutLine: {'line': b'copying resource/main_node -> /home/cannotflypig/robokonn/src/install/main_node/share/ament_index/resource_index/packages\n'}
+[1.874577] (main_node) StdoutLine: {'line': b'copying package.xml -> /home/cannotflypig/robokonn/src/install/main_node/share/main_node\n'}
+[1.874627] (main_node) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.874763] (sensor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/sensor_node/share/ament_index\n'}
+[1.874821] (sensor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/sensor_node/share/ament_index/resource_index\n'}
+[1.874871] (sensor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/sensor_node/share/ament_index/resource_index/packages\n'}
+[1.874973] (sensor_node) StdoutLine: {'line': b'copying resource/sensor_node -> /home/cannotflypig/robokonn/src/install/sensor_node/share/ament_index/resource_index/packages\n'}
+[1.875035] (sensor_node) StdoutLine: {'line': b'copying package.xml -> /home/cannotflypig/robokonn/src/install/sensor_node/share/sensor_node\n'}
+[1.875084] (sensor_node) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.875131] (main_node) StdoutLine: {'line': b'Copying ../build/main_node/main_node.egg-info to /home/cannotflypig/robokonn/src/install/main_node/lib/python3.10/site-packages/main_node-0.0.0-py3.10.egg-info\n'}
+[1.875695] (sensor_node) StdoutLine: {'line': b'Copying ../build/sensor_node/sensor_node.egg-info to /home/cannotflypig/robokonn/src/install/sensor_node/lib/python3.10/site-packages/sensor_node-0.0.0-py3.10.egg-info\n'}
+[1.876259] (main_node) StdoutLine: {'line': b'running install_scripts\n'}
+[1.877268] (sensor_node) StdoutLine: {'line': b'running install_scripts\n'}
+[1.878780] (camera_node) StdoutLine: {'line': b'running egg_info\n'}
+[1.879277] (camera_node) StdoutLine: {'line': b'creating ../build/camera_node/camera_node.egg-info\n'}
+[1.879701] (camera_node) StdoutLine: {'line': b'writing ../build/camera_node/camera_node.egg-info/PKG-INFO\n'}
+[1.880048] (camera_node) StdoutLine: {'line': b'writing dependency_links to ../build/camera_node/camera_node.egg-info/dependency_links.txt\n'}
+[1.880233] (camera_node) StdoutLine: {'line': b'writing entry points to ../build/camera_node/camera_node.egg-info/entry_points.txt\n'}
+[1.880528] (camera_node) StdoutLine: {'line': b'writing requirements to ../build/camera_node/camera_node.egg-info/requires.txt\n'}
+[1.880744] (camera_node) StdoutLine: {'line': b'writing top-level names to ../build/camera_node/camera_node.egg-info/top_level.txt\n'}
+[1.880969] (camera_node) StdoutLine: {'line': b"writing manifest file '../build/camera_node/camera_node.egg-info/SOURCES.txt'\n"}
+[1.882999] (camera_node) StdoutLine: {'line': b"reading manifest file '../build/camera_node/camera_node.egg-info/SOURCES.txt'\n"}
+[1.883995] (camera_node) StdoutLine: {'line': b"writing manifest file '../build/camera_node/camera_node.egg-info/SOURCES.txt'\n"}
+[1.884183] (camera_node) StdoutLine: {'line': b'running build\n'}
+[1.884287] (camera_node) StdoutLine: {'line': b'running build_py\n'}
+[1.884478] (camera_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/build/camera_node/build\n'}
+[1.884617] (camera_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/build/camera_node/build/lib\n'}
+[1.884926] (camera_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/build/camera_node/build/lib/camera_node\n'}
+[1.885152] (camera_node) StdoutLine: {'line': b'copying camera_node/camera_node.py -> /home/cannotflypig/robokonn/src/build/camera_node/build/lib/camera_node\n'}
+[1.885494] (camera_node) StdoutLine: {'line': b'copying camera_node/__init__.py -> /home/cannotflypig/robokonn/src/build/camera_node/build/lib/camera_node\n'}
+[1.885778] (motor_node) StdoutLine: {'line': b'running egg_info\n'}
+[1.885903] (camera_node) StdoutLine: {'line': b'running install\n'}
+[1.886064] (camera_node) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[1.886146] (camera_node) StderrLine: {'line': b'  warnings.warn(\n'}
+[1.886495] (camera_node) StdoutLine: {'line': b'running install_lib\n'}
+[1.886614] (motor_node) StdoutLine: {'line': b'creating ../build/motor_node/motor_node.egg-info\n'}
+[1.887050] (motor_node) StdoutLine: {'line': b'writing ../build/motor_node/motor_node.egg-info/PKG-INFO\n'}
+[1.887365] (camera_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/camera_node/lib/python3.10/site-packages/camera_node\n'}
+[1.887663] (camera_node) StdoutLine: {'line': b'copying /home/cannotflypig/robokonn/src/build/camera_node/build/lib/camera_node/camera_node.py -> /home/cannotflypig/robokonn/src/install/camera_node/lib/python3.10/site-packages/camera_node\n'}
+[1.887744] (motor_node) StdoutLine: {'line': b'writing dependency_links to ../build/motor_node/motor_node.egg-info/dependency_links.txt\n'}
+[1.887943] (camera_node) StdoutLine: {'line': b'copying /home/cannotflypig/robokonn/src/build/camera_node/build/lib/camera_node/__init__.py -> /home/cannotflypig/robokonn/src/install/camera_node/lib/python3.10/site-packages/camera_node\n'}
+[1.888311] (motor_node) StdoutLine: {'line': b'writing entry points to ../build/motor_node/motor_node.egg-info/entry_points.txt\n'}
+[1.888410] (motor_node) StdoutLine: {'line': b'writing requirements to ../build/motor_node/motor_node.egg-info/requires.txt\n'}
+[1.888619] (motor_node) StdoutLine: {'line': b'writing top-level names to ../build/motor_node/motor_node.egg-info/top_level.txt\n'}
+[1.888686] (camera_node) StdoutLine: {'line': b'byte-compiling /home/cannotflypig/robokonn/src/install/camera_node/lib/python3.10/site-packages/camera_node/camera_node.py to camera_node.cpython-310.pyc\n'}
+[1.888740] (motor_node) StdoutLine: {'line': b"writing manifest file '../build/motor_node/motor_node.egg-info/SOURCES.txt'\n"}
+[1.889098] (camera_node) StderrLine: {'line': b'  File "/home/cannotflypig/robokonn/src/install/camera_node/lib/python3.10/site-packages/camera_node/camera_node.py", line 27\n'}
+[1.889263] (camera_node) StderrLine: {'line': b'    def readCameraValue\n'}
+[1.889358] (camera_node) StderrLine: {'line': b'                       ^\n'}
+[1.889442] (camera_node) StderrLine: {'line': b'SyntaxError: invalid syntax\n'}
+[1.889492] (camera_node) StderrLine: {'line': b'\n'}
+[1.889539] (camera_node) StdoutLine: {'line': b'byte-compiling /home/cannotflypig/robokonn/src/install/camera_node/lib/python3.10/site-packages/camera_node/__init__.py to __init__.cpython-310.pyc\n'}
+[1.889773] (camera_node) StdoutLine: {'line': b'running install_data\n'}
+[1.890181] (camera_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/camera_node/share/ament_index\n'}
+[1.890344] (motor_node) StdoutLine: {'line': b"reading manifest file '../build/motor_node/motor_node.egg-info/SOURCES.txt'\n"}
+[1.890530] (camera_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/camera_node/share/ament_index/resource_index\n'}
+[1.890685] (camera_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/camera_node/share/ament_index/resource_index/packages\n'}
+[1.890872] (camera_node) StdoutLine: {'line': b'copying resource/camera_node -> /home/cannotflypig/robokonn/src/install/camera_node/share/ament_index/resource_index/packages\n'}
+[1.891017] (camera_node) StdoutLine: {'line': b'copying package.xml -> /home/cannotflypig/robokonn/src/install/camera_node/share/camera_node\n'}
+[1.891167] (camera_node) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.891392] (motor_node) StdoutLine: {'line': b"writing manifest file '../build/motor_node/motor_node.egg-info/SOURCES.txt'\n"}
+[1.891616] (motor_node) StdoutLine: {'line': b'running build\n'}
+[1.891710] (motor_node) StdoutLine: {'line': b'running build_py\n'}
+[1.891876] (motor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/build/motor_node/build\n'}
+[1.892093] (motor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/build/motor_node/build/lib\n'}
+[1.892156] (motor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/build/motor_node/build/lib/motor_node\n'}
+[1.892211] (motor_node) StdoutLine: {'line': b'copying motor_node/motor_node.py -> /home/cannotflypig/robokonn/src/build/motor_node/build/lib/motor_node\n'}
+[1.892347] (motor_node) StdoutLine: {'line': b'copying motor_node/__init__.py -> /home/cannotflypig/robokonn/src/build/motor_node/build/lib/motor_node\n'}
+[1.892578] (motor_node) StdoutLine: {'line': b'running install\n'}
+[1.892894] (motor_node) StderrLine: {'line': b'/usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.\n'}
+[1.893030] (motor_node) StderrLine: {'line': b'  warnings.warn(\n'}
+[1.893083] (camera_node) StdoutLine: {'line': b'Copying ../build/camera_node/camera_node.egg-info to /home/cannotflypig/robokonn/src/install/camera_node/lib/python3.10/site-packages/camera_node-0.0.0-py3.10.egg-info\n'}
+[1.893249] (motor_node) StdoutLine: {'line': b'running install_lib\n'}
+[1.893863] (camera_node) StdoutLine: {'line': b'running install_scripts\n'}
+[1.893996] (motor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/motor_node/lib/python3.10/site-packages/motor_node\n'}
+[1.894241] (motor_node) StdoutLine: {'line': b'copying /home/cannotflypig/robokonn/src/build/motor_node/build/lib/motor_node/motor_node.py -> /home/cannotflypig/robokonn/src/install/motor_node/lib/python3.10/site-packages/motor_node\n'}
+[1.894422] (motor_node) StdoutLine: {'line': b'copying /home/cannotflypig/robokonn/src/build/motor_node/build/lib/motor_node/__init__.py -> /home/cannotflypig/robokonn/src/install/motor_node/lib/python3.10/site-packages/motor_node\n'}
+[1.895025] (motor_node) StdoutLine: {'line': b'byte-compiling /home/cannotflypig/robokonn/src/install/motor_node/lib/python3.10/site-packages/motor_node/motor_node.py to motor_node.cpython-310.pyc\n'}
+[1.896633] (motor_node) StdoutLine: {'line': b'byte-compiling /home/cannotflypig/robokonn/src/install/motor_node/lib/python3.10/site-packages/motor_node/__init__.py to __init__.cpython-310.pyc\n'}
+[1.896882] (motor_node) StdoutLine: {'line': b'running install_data\n'}
+[1.897643] (motor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/motor_node/share/ament_index\n'}
+[1.897903] (motor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/motor_node/share/ament_index/resource_index\n'}
+[1.898208] (motor_node) StdoutLine: {'line': b'creating /home/cannotflypig/robokonn/src/install/motor_node/share/ament_index/resource_index/packages\n'}
+[1.898482] (motor_node) StdoutLine: {'line': b'copying resource/motor_node -> /home/cannotflypig/robokonn/src/install/motor_node/share/ament_index/resource_index/packages\n'}
+[1.898695] (motor_node) StdoutLine: {'line': b'copying package.xml -> /home/cannotflypig/robokonn/src/install/motor_node/share/motor_node\n'}
+[1.898932] (motor_node) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.899097] (main_node) StdoutLine: {'line': b'Installing main_node script to /home/cannotflypig/robokonn/src/install/main_node/lib/main_node\n'}
+[1.899684] (main_node) StdoutLine: {'line': b"writing list of installed files to '/home/cannotflypig/robokonn/src/build/main_node/install.log'\n"}
+[1.900141] (sensor_node) StdoutLine: {'line': b'Installing sensor_node script to /home/cannotflypig/robokonn/src/install/sensor_node/lib/sensor_node\n'}
+[1.900910] (motor_node) StdoutLine: {'line': b'Copying ../build/motor_node/motor_node.egg-info to /home/cannotflypig/robokonn/src/install/motor_node/lib/python3.10/site-packages/motor_node-0.0.0-py3.10.egg-info\n'}
+[1.900998] (sensor_node) StdoutLine: {'line': b"writing list of installed files to '/home/cannotflypig/robokonn/src/build/sensor_node/install.log'\n"}
+[1.902500] (motor_node) StdoutLine: {'line': b'running install_scripts\n'}
+[1.906200] (-) TimerEvent: {}
+[1.915657] (camera_node) StdoutLine: {'line': b'Installing camera_node script to /home/cannotflypig/robokonn/src/install/camera_node/lib/camera_node\n'}
+[1.916058] (camera_node) StdoutLine: {'line': b"writing list of installed files to '/home/cannotflypig/robokonn/src/build/camera_node/install.log'\n"}
+[1.925541] (motor_node) StdoutLine: {'line': b'Installing motor_node script to /home/cannotflypig/robokonn/src/install/motor_node/lib/motor_node\n'}
+[1.926286] (motor_node) StdoutLine: {'line': b"writing list of installed files to '/home/cannotflypig/robokonn/src/build/motor_node/install.log'\n"}
+[1.932260] (main_node) CommandEnded: {'returncode': 0}
+[1.942343] (interfaces) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[1.948453] (interfaces) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[1.949114] (interfaces) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[1.950017] (interfaces) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[1.953386] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[1.980387] (main_node) JobEnded: {'identifier': 'main_node', 'rc': 0}
+[1.982536] (sensor_node) CommandEnded: {'returncode': 0}
+[2.006888] (-) TimerEvent: {}
+[2.022191] (sensor_node) JobEnded: {'identifier': 'sensor_node', 'rc': 0}
+[2.024069] (camera_node) CommandEnded: {'returncode': 0}
+[2.062405] (camera_node) JobEnded: {'identifier': 'camera_node', 'rc': 0}
+[2.063422] (motor_node) CommandEnded: {'returncode': 0}
+[2.084265] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[2.093499] (interfaces) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[2.094146] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[2.094447] (interfaces) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[2.106476] (interfaces) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[2.106961] (motor_node) JobEnded: {'identifier': 'motor_node', 'rc': 0}
+[2.107328] (-) TimerEvent: {}
+[2.207585] (-) TimerEvent: {}
+[2.251138] (interfaces) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter \n'}
+[2.307688] (-) TimerEvent: {}
+[2.354760] (interfaces) StdoutLine: {'line': b'-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)\n'}
+[2.361807] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[2.373009] (interfaces) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[2.407833] (-) TimerEvent: {}
+[2.508262] (-) TimerEvent: {}
+[2.568413] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[2.608405] (-) TimerEvent: {}
+[2.708706] (-) TimerEvent: {}
+[2.809039] (-) TimerEvent: {}
+[2.820349] (interfaces) StdoutLine: {'line': b'-- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)\n'}
+[2.909149] (-) TimerEvent: {}
+[2.965261] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[3.009289] (-) TimerEvent: {}
+[3.109665] (-) TimerEvent: {}
+[3.167436] (interfaces) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[3.209787] (-) TimerEvent: {}
+[3.310101] (-) TimerEvent: {}
+[3.380086] (interfaces) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") \n'}
+[3.381924] (interfaces) StdoutLine: {'line': b'-- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)\n'}
+[3.410271] (-) TimerEvent: {}
+[3.510661] (-) TimerEvent: {}
+[3.611003] (-) TimerEvent: {}
+[3.711348] (-) TimerEvent: {}
+[3.778641] (interfaces) StdoutLine: {'line': b'-- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") \n'}
+[3.778914] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[3.779020] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10\n'}
+[3.779123] (interfaces) StdoutLine: {'line': b'-- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so\n'}
+[3.792985] (interfaces) StdoutLine: {'line': b'-- Found PythonExtra: .so  \n'}
+[3.811464] (-) TimerEvent: {}
+[3.856078] (interfaces) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.8 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[3.883591] (interfaces) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.885228] (interfaces) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.888480] (interfaces) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.911595] (-) TimerEvent: {}
+[3.926858] (interfaces) StdoutLine: {'line': b'-- Generating done\n'}
+[3.929533] (interfaces) StdoutLine: {'line': b'-- Build files have been written to: /home/cannotflypig/robokonn/src/build/interfaces\n'}
+[3.934319] (interfaces) CommandEnded: {'returncode': 0}
+[3.936006] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'build'}
+[3.936204] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/cannotflypig/robokonn/src/build/interfaces', '--', '-j16', '-l16'], 'cwd': '/home/cannotflypig/robokonn/src/build/interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cannotflypig'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{51855cb2-8cce-5362-8f54-464b92b32386}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/cannotflypig'), ('OLDPWD', '/home/cannotflypig/robokonn'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cannotflypig'), ('NAME', 'DESKTOP-53NAE0H'), ('WSL_INTEROP', '/run/WSL/362_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/docum/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/docum/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('WT_SESSION', '2a123500-b564-484d-9ffc-6e7d03232b56'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/cannotflypig/robokonn/src/build/interfaces'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[3.961962] (interfaces) StdoutLine: {'line': b'[  2%] \x1b[34m\x1b[1mGenerating C code for ROS interfaces\x1b[0m\n'}
+[3.970219] (interfaces) StdoutLine: {'line': b'[  5%] \x1b[34m\x1b[1mGenerating C++ code for ROS interfaces\x1b[0m\n'}
+[3.974877] (interfaces) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_copy_interfaces\n'}
+[4.011713] (-) TimerEvent: {}
+[4.112064] (-) TimerEvent: {}
+[4.204533] (interfaces) StdoutLine: {'line': b'running egg_info\n'}
+[4.205035] (interfaces) StdoutLine: {'line': b'creating interfaces.egg-info\n'}
+[4.205478] (interfaces) StdoutLine: {'line': b'writing interfaces.egg-info/PKG-INFO\n'}
+[4.205680] (interfaces) StdoutLine: {'line': b'writing dependency_links to interfaces.egg-info/dependency_links.txt\n'}
+[4.205930] (interfaces) StdoutLine: {'line': b'writing top-level names to interfaces.egg-info/top_level.txt\n'}
+[4.206141] (interfaces) StdoutLine: {'line': b"writing manifest file 'interfaces.egg-info/SOURCES.txt'\n"}
+[4.208042] (interfaces) StdoutLine: {'line': b"reading manifest file 'interfaces.egg-info/SOURCES.txt'\n"}
+[4.208484] (interfaces) StdoutLine: {'line': b"writing manifest file 'interfaces.egg-info/SOURCES.txt'\n"}
+[4.212160] (-) TimerEvent: {}
+[4.233207] (interfaces) StdoutLine: {'line': b'[  5%] Built target ament_cmake_python_build_interfaces_egg\n'}
+[4.304643] (interfaces) StdoutLine: {'line': b'[  5%] Built target interfaces__cpp\n'}
+[4.311681] (interfaces) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.311875] (interfaces) StdoutLine: {'line': b'[ 10%] \x1b[34m\x1b[1mGenerating C++ type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.312230] (interfaces) StdoutLine: {'line': b'[ 12%] \x1b[34m\x1b[1mGenerating C++ introspection for ROS interfaces\x1b[0m\n'}
+[4.312404] (-) TimerEvent: {}
+[4.342679] (interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c.o\x1b[0m\n'}
+[4.342894] (interfaces) StdoutLine: {'line': b'[ 17%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/going_camera_data__functions.c.o\x1b[0m\n'}
+[4.398014] (interfaces) StdoutLine: {'line': b'[ 20%] \x1b[32m\x1b[1mLinking C shared library libinterfaces__rosidl_generator_c.so\x1b[0m\n'}
+[4.412545] (-) TimerEvent: {}
+[4.501734] (interfaces) StdoutLine: {'line': b'[ 20%] Built target interfaces__rosidl_generator_c\n'}
+[4.508897] (interfaces) StdoutLine: {'line': b'[ 23%] \x1b[34m\x1b[1mGenerating C introspection for ROS interfaces\x1b[0m\n'}
+[4.509634] (interfaces) StdoutLine: {'line': b'[ 25%] \x1b[34m\x1b[1mGenerating C type support for eProsima Fast-RTPS\x1b[0m\n'}
+[4.509788] (interfaces) StdoutLine: {'line': b'[ 28%] \x1b[34m\x1b[1mGenerating C type support dispatch for ROS interfaces\x1b[0m\n'}
+[4.512649] (-) TimerEvent: {}
+[4.612997] (-) TimerEvent: {}
+[4.620624] (interfaces) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/going_camera_data__type_support.cpp.o\x1b[0m\n'}
+[4.621149] (interfaces) StdoutLine: {'line': b'[ 33%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/interfaces/srv/distance_sensor_data__type_support.cpp.o\x1b[0m\n'}
+[4.647859] (interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/srv/detail/going_camera_data__type_support.cpp.o\x1b[0m\n'}
+[4.648013] (interfaces) StdoutLine: {'line': b'[ 38%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/interfaces/srv/detail/distance_sensor_data__type_support.cpp.o\x1b[0m\n'}
+[4.672121] (interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/srv/detail/dds_fastrtps/distance_sensor_data__type_support.cpp.o\x1b[0m\n'}
+[4.672344] (interfaces) StdoutLine: {'line': b'[ 43%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/interfaces/srv/detail/dds_fastrtps/going_camera_data__type_support.cpp.o\x1b[0m\n'}
+[4.713126] (-) TimerEvent: {}
+[4.813497] (-) TimerEvent: {}
+[4.828596] (interfaces) StdoutLine: {'line': b'[ 46%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/srv/going_camera_data__type_support.cpp.o\x1b[0m\n'}
+[4.829171] (interfaces) StdoutLine: {'line': b'[ 48%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/interfaces/srv/distance_sensor_data__type_support.cpp.o\x1b[0m\n'}
+[4.860486] (interfaces) StdoutLine: {'line': b'[ 51%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_c.so\x1b[0m\n'}
+[4.889773] (interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/srv/detail/distance_sensor_data__type_support.c.o\x1b[0m\n'}
+[4.890012] (interfaces) StdoutLine: {'line': b'[ 56%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/going_camera_data__type_support_c.cpp.o\x1b[0m\n'}
+[4.890897] (interfaces) StdoutLine: {'line': b'[ 58%] \x1b[32mBuilding CXX object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/interfaces/srv/detail/distance_sensor_data__type_support_c.cpp.o\x1b[0m\n'}
+[4.891033] (interfaces) StdoutLine: {'line': b'[ 61%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/interfaces/srv/detail/going_camera_data__type_support.c.o\x1b[0m\n'}
+[4.913642] (-) TimerEvent: {}
+[4.928940] (interfaces) StdoutLine: {'line': b'[ 64%] \x1b[32m\x1b[1mLinking C shared library libinterfaces__rosidl_typesupport_introspection_c.so\x1b[0m\n'}
+[4.959962] (interfaces) StdoutLine: {'line': b'[ 66%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_cpp.so\x1b[0m\n'}
+[5.013758] (-) TimerEvent: {}
+[5.087022] (interfaces) StdoutLine: {'line': b'[ 66%] Built target interfaces__rosidl_typesupport_c\n'}
+[5.094079] (interfaces) StdoutLine: {'line': b'[ 69%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_introspection_cpp.so\x1b[0m\n'}
+[5.113902] (-) TimerEvent: {}
+[5.150891] (interfaces) StdoutLine: {'line': b'[ 69%] Built target interfaces__rosidl_typesupport_introspection_c\n'}
+[5.168992] (interfaces) StdoutLine: {'line': b'[ 71%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_cpp.so\x1b[0m\n'}
+[5.176823] (interfaces) StdoutLine: {'line': b'[ 71%] Built target interfaces__rosidl_typesupport_cpp\n'}
+[5.214019] (-) TimerEvent: {}
+[5.219146] (interfaces) StdoutLine: {'line': b'[ 71%] Built target interfaces__rosidl_typesupport_introspection_cpp\n'}
+[5.264476] (interfaces) StdoutLine: {'line': b'[ 74%] \x1b[32m\x1b[1mLinking CXX shared library libinterfaces__rosidl_typesupport_fastrtps_c.so\x1b[0m\n'}
+[5.314133] (-) TimerEvent: {}
+[5.414473] (-) TimerEvent: {}
+[5.448520] (interfaces) StdoutLine: {'line': b'[ 74%] Built target interfaces__rosidl_typesupport_fastrtps_cpp\n'}
+[5.467226] (interfaces) StdoutLine: {'line': b'[ 74%] Built target interfaces__rosidl_typesupport_fastrtps_c\n'}
+[5.479145] (interfaces) StdoutLine: {'line': b'[ 74%] Built target interfaces\n'}
+[5.492307] (interfaces) StdoutLine: {'line': b'[ 76%] \x1b[34m\x1b[1mGenerating Python code for ROS interfaces\x1b[0m\n'}
+[5.514576] (-) TimerEvent: {}
+[5.614891] (-) TimerEvent: {}
+[5.715199] (-) TimerEvent: {}
+[5.815499] (-) TimerEvent: {}
+[5.881598] (interfaces) StdoutLine: {'line': b'[ 76%] Built target interfaces__py\n'}
+[5.892825] (interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/srv/_going_camera_data_s.c.o\x1b[0m\n'}
+[5.893040] (interfaces) StdoutLine: {'line': b'[ 82%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_generator_py.dir/rosidl_generator_py/interfaces/srv/_distance_sensor_data_s.c.o\x1b[0m\n'}
+[5.915611] (-) TimerEvent: {}
+[5.968532] (interfaces) StdoutLine: {'line': b'[ 84%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/libinterfaces__rosidl_generator_py.so\x1b[0m\n'}
+[6.015728] (-) TimerEvent: {}
+[6.068429] (interfaces) StdoutLine: {'line': b'[ 84%] Built target interfaces__rosidl_generator_py\n'}
+[6.080955] (interfaces) StdoutLine: {'line': b'[ 87%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o\x1b[0m\n'}
+[6.082962] (interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c.o\x1b[0m\n'}
+[6.083127] (interfaces) StdoutLine: {'line': b'[ 92%] \x1b[32mBuilding C object CMakeFiles/interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o\x1b[0m\n'}
+[6.115858] (-) TimerEvent: {}
+[6.171078] (interfaces) StdoutLine: {'line': b'[ 94%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.171334] (interfaces) StdoutLine: {'line': b'[ 97%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.172475] (interfaces) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking C shared library rosidl_generator_py/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\x1b[0m\n'}
+[6.215977] (-) TimerEvent: {}
+[6.249704] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_introspection_c__pyext\n'}
+[6.250697] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_c__pyext\n'}
+[6.252027] (interfaces) StdoutLine: {'line': b'[100%] Built target interfaces__rosidl_typesupport_fastrtps_c__pyext\n'}
+[6.259163] (interfaces) CommandEnded: {'returncode': 0}
+[6.301952] (interfaces) JobProgress: {'identifier': 'interfaces', 'progress': 'install'}
+[6.307006] (interfaces) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/cannotflypig/robokonn/src/build/interfaces'], 'cwd': '/home/cannotflypig/robokonn/src/build/interfaces', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'cannotflypig'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('WT_PROFILE_ID', '{51855cb2-8cce-5362-8f54-464b92b32386}'), ('MOTD_SHOWN', 'update-motd'), ('HOME', '/home/cannotflypig'), ('OLDPWD', '/home/cannotflypig/robokonn'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu'), ('WAYLAND_DISPLAY', 'wayland-0'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'cannotflypig'), ('NAME', 'DESKTOP-53NAE0H'), ('WSL_INTEROP', '/run/WSL/362_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA NvDLISR:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn/:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit/:/mnt/c/Program Files/dotnet/:/mnt/c/Users/docum/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/docum/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin'), ('WT_SESSION', '2a123500-b564-484d-9ffc-6e7d03232b56'), ('XDG_RUNTIME_DIR', '/run/user/1000/'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('PWD', '/home/cannotflypig/robokonn/src/build/interfaces'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('WSLENV', 'WT_SESSION:WT_PROFILE_ID:'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[6.313195] (interfaces) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[6.313888] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/ament_index/resource_index/rosidl_interfaces/interfaces\n'}
+[6.314100] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces\n'}
+[6.314490] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv\n'}
+[6.314655] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail\n'}
+[6.314823] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__functions.c\n'}
+[6.315085] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__functions.h\n'}
+[6.315391] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__functions.c\n'}
+[6.315523] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__struct.h\n'}
+[6.315766] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__functions.h\n'}
+[6.316194] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__type_support.h\n'}
+[6.316301] (-) TimerEvent: {}
+[6.316924] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__type_support.h\n'}
+[6.317117] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__struct.h\n'}
+[6.317222] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/distance_sensor_data.h\n'}
+[6.317328] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/going_camera_data.h\n'}
+[6.317476] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/msg\n'}
+[6.317636] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/msg/rosidl_generator_c__visibility_control.h\n'}
+[6.317882] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/environment/library_path.sh\n'}
+[6.317977] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/environment/library_path.dsv\n'}
+[6.318133] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_generator_c.so\n'}
+[6.318582] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_generator_c.so" to ""\n'}
+[6.318734] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces\n'}
+[6.318895] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv\n'}
+[6.319101] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail\n'}
+[6.319217] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__rosidl_typesupport_fastrtps_c.h\n'}
+[6.319311] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__rosidl_typesupport_fastrtps_c.h\n'}
+[6.319399] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/msg\n'}
+[6.319484] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[6.319703] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so\n'}
+[6.319882] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[6.320057] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces\n'}
+[6.320399] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv\n'}
+[6.320697] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail\n'}
+[6.320789] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__type_support.c\n'}
+[6.320866] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__rosidl_typesupport_introspection_c.h\n'}
+[6.320940] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__type_support.c\n'}
+[6.321013] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__rosidl_typesupport_introspection_c.h\n'}
+[6.321223] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/msg\n'}
+[6.321319] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[6.321398] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so\n'}
+[6.321474] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so" to ""\n'}
+[6.321551] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so\n'}
+[6.321625] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so" to ""\n'}
+[6.321698] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces\n'}
+[6.321942] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv\n'}
+[6.322050] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail\n'}
+[6.322296] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__struct.hpp\n'}
+[6.322377] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__traits.hpp\n'}
+[6.322450] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__struct.hpp\n'}
+[6.322521] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__builder.hpp\n'}
+[6.322592] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__traits.hpp\n'}
+[6.322661] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__builder.hpp\n'}
+[6.322731] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/going_camera_data.hpp\n'}
+[6.322800] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/distance_sensor_data.hpp\n'}
+[6.322869] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces\n'}
+[6.322991] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv\n'}
+[6.323058] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail\n'}
+[6.323557] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.323657] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/dds_fastrtps\n'}
+[6.324180] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[6.324266] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/msg\n'}
+[6.324321] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[6.324369] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so\n'}
+[6.324430] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[6.324479] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces\n'}
+[6.324701] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv\n'}
+[6.324798] (interfaces) StdoutLine: {'line': b'-- Up-to-date: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail\n'}
+[6.324949] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.325103] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__rosidl_typesupport_introspection_cpp.hpp\n'}
+[6.325405] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__type_support.cpp\n'}
+[6.325489] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__type_support.cpp\n'}
+[6.325576] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so\n'}
+[6.325664] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[6.325755] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so\n'}
+[6.325852] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so" to ""\n'}
+[6.325945] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/environment/pythonpath.sh\n'}
+[6.326196] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/environment/pythonpath.dsv\n'}
+[6.326296] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info\n'}
+[6.326383] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[6.327223] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[6.327364] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[6.327463] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[6.327549] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces\n'}
+[6.327692] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv\n'}
+[6.328053] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_distance_sensor_data_s.c\n'}
+[6.328435] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_distance_sensor_data.py\n'}
+[6.328528] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/__init__.py\n'}
+[6.328701] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_going_camera_data.py\n'}
+[6.328869] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_going_camera_data_s.c\n'}
+[6.329036] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[6.329247] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/libinterfaces__rosidl_generator_py.so\n'}
+[6.329410] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.329558] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[6.329842] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/__init__.py\n'}
+[6.329903] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.329953] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.330001] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c\n'}
+[6.357248] (interfaces) StdoutLine: {'line': b"Listing '/home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces'...\n"}
+[6.357475] (interfaces) StdoutLine: {'line': b"Compiling '/home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/__init__.py'...\n"}
+[6.357546] (interfaces) StdoutLine: {'line': b"Listing '/home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv'...\n"}
+[6.357597] (interfaces) StdoutLine: {'line': b"Compiling '/home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/__init__.py'...\n"}
+[6.357646] (interfaces) StdoutLine: {'line': b"Compiling '/home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_distance_sensor_data.py'...\n"}
+[6.357699] (interfaces) StdoutLine: {'line': b"Compiling '/home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_going_camera_data.py'...\n"}
+[6.362660] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.363069] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[6.363384] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.363599] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[6.363808] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[6.363988] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/cannotflypig/robokonn/src/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[6.364157] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_generator_py.so\n'}
+[6.364302] (interfaces) StdoutLine: {'line': b'-- Set runtime path of "/home/cannotflypig/robokonn/src/install/interfaces/lib/libinterfaces__rosidl_generator_py.so" to ""\n'}
+[6.364540] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/srv/GoingCameraData.idl\n'}
+[6.364688] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/srv/DistanceSensorData.idl\n'}
+[6.364804] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/srv/GoingCameraData.srv\n'}
+[6.364926] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/srv/GoingCameraData_Request.msg\n'}
+[6.365138] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/srv/GoingCameraData_Response.msg\n'}
+[6.365307] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/srv/DistanceSensorData.srv\n'}
+[6.365453] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/srv/DistanceSensorData_Request.msg\n'}
+[6.365634] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/srv/DistanceSensorData_Response.msg\n'}
+[6.365766] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/ament_index/resource_index/package_run_dependencies/interfaces\n'}
+[6.366196] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/ament_index/resource_index/parent_prefix_path/interfaces\n'}
+[6.366329] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/environment/ament_prefix_path.sh\n'}
+[6.366529] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/environment/ament_prefix_path.dsv\n'}
+[6.366758] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/environment/path.sh\n'}
+[6.366897] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/environment/path.dsv\n'}
+[6.367177] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/local_setup.bash\n'}
+[6.367403] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/local_setup.sh\n'}
+[6.367529] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/local_setup.zsh\n'}
+[6.367645] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/local_setup.dsv\n'}
+[6.367782] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/package.dsv\n'}
+[6.367986] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/ament_index/resource_index/packages/interfaces\n'}
+[6.368170] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport.cmake\n'}
+[6.368230] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport-noconfig.cmake\n'}
+[6.368401] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[6.368524] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[6.368689] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport.cmake\n'}
+[6.368854] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[6.369043] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport.cmake\n'}
+[6.369129] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[6.369283] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cppExport.cmake\n'}
+[6.369534] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[6.369711] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[6.369895] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[6.370046] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[6.370319] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport.cmake\n'}
+[6.370543] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[6.370602] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport.cmake\n'}
+[6.370936] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport-noconfig.cmake\n'}
+[6.371230] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/rosidl_cmake-extras.cmake\n'}
+[6.371468] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[6.371674] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[6.371808] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[6.371950] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[6.372112] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[6.372264] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[6.372390] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/interfacesConfig.cmake\n'}
+[6.372510] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/cmake/interfacesConfig-version.cmake\n'}
+[6.372649] (interfaces) StdoutLine: {'line': b'-- Installing: /home/cannotflypig/robokonn/src/install/interfaces/share/interfaces/package.xml\n'}
+[6.374368] (interfaces) CommandEnded: {'returncode': 0}
+[6.416535] (-) TimerEvent: {}
+[6.517195] (-) TimerEvent: {}
+[6.545610] (interfaces) JobEnded: {'identifier': 'interfaces', 'rc': 0}
+[6.547003] (-) EventReactorShutdown: {}

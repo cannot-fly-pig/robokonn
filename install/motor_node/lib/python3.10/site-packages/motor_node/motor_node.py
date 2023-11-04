@@ -5,10 +5,14 @@ from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 from std_msgs.msg import String
 import numpy as np
 from interfaces.srv import GoingCameraData
+from interfaces.srv import BackingCameraData
 from interfaces.srv import DistanceSensorData
 #import RPi.GPIO as GPIO
 import time
 import math
+
+
+PI = math.pi
 
 
 class MotorNode(Node):
@@ -17,15 +21,19 @@ class MotorNode(Node):
         self.client_cb_group = MutuallyExclusiveCallbackGroup()
         self.timer_cb_group = MutuallyExclusiveCallbackGroup()
 
-        self.gap = None
-        self.distance = None
+        self.pos = ''
+        self.gap = -10
+        self.degree = -10
+        self.distance = -10
         self.task = 'standby'
         self.max_gap = 10
 
+        self.pub = self.create_publisher(String, 'motor_node', 10)
         self.sub = self.create_subscription(String, 'main_node', self.mainCallback, 10, callback_group=self.client_cb_group)
         self.timer_period = 1
         self.timer = self.create_timer(self.timer_period, self.timerCallback, callback_group=self.timer_cb_group)
         self.going_camera_client = self.create_client(GoingCameraData, 'going_camera_data')
+        self.backing_camera_client = self.create_client(BackingCameraData, 'backing_camera_data')
         self.distance_sensor_client = self.create_client(DistanceSensorData, 'distance_sensor_data')
 
         while not self.going_camera_client.wait_for_service(timeout_sec=1):
@@ -35,6 +43,7 @@ class MotorNode(Node):
             self.get_logger().info('waiting for sensor client...')
 
         self.goging_request = GoingCameraData.Request()
+        self.backing_request = BackingCameraData.Request()
         self.distance_request = DistanceSensorData.Request()
 
     def mainCallback(self, msg):
@@ -46,11 +55,32 @@ class MotorNode(Node):
             print('gap is: ')
             print(result.gap)
             self.gap = result.gap
+            #self.goToGoal()
+            self.finishTask()
+        if self.task == 'putBaggage':
+            self.finishTask()
+        if self.task == 'turn':
+            self.halfTurn()
+            self.finishTask()
+        if self.task == 'back':
+            result = self.sendRequest(client=self.backing_camera_client, request=self.backing_request)
+            print('pos is: ')
+            print(result.pos)
+            print('degree is: ')
+            print(result.degree)
+            print('gap is: ')
+            print(result.gap)
+            self.pos = result.pos
+            self.degree = result.degree
+            self.gap = result.gap
             result = self.sendRequest(client=self.distance_sensor_client, request=self.distance_request)
             print('distance is: ')
             print(result.distance)
             self.distance = result.distance
-            #self.goToGoal(self)
+            #self.backFromGoal()
+            self.finishTask()
+        if self.task == 'takeBaggage':
+            self.finishTask()
 
     def sendRequest(self, client, request):
         self.future = client.call_async(request)
@@ -58,52 +88,72 @@ class MotorNode(Node):
             None
         return self.future.result()
 
+    def finishTask(self):
+        msg = String()
+        msg.data = 'fin'
+        self.pub.publish(msg)
+
+    def halfTurn(self):
+        #self.moveMotor(self.culcInvertKinematics(0, 0, PI/4), 4000)
+        None
 
     def goToGoal(self):
         run_time = 300
-        while self.gap > self.max_gap:
-            wList = self.culcInvertKinematics(self.gap/(run_time /1000), 0, 0)
-            for i, w in enumerate(wList):
-                #TODO 非同期にしたほうが良さそう？
-                self.moveMotor(w, run_time, i)
+        while math.abs(self.gap) > self.max_gap:
+            #self.moveMotor(self.culcInvertKinematics(min(self.gap, 0.3), 0, 0), run_time)
+            None
+        
+        while self.distance > self.max_distance:
+            #self.moveMotor(self.culcInvertKinematics(0, min(self.distance, 0.3), 0), run_time)
+            None
 
     def culcInvertKinematics(self, vx, vy, wz):
-    #[frontleft, frontright, rearleft, rearright]
-        r = 50
-        lx = 10
-        ly = 10
+        #[frontleft, frontright, rearleft, rearright]
+        r = 0.05
+        lx = 0.13
+        ly = 0.12
         mat = (1/r)* np.matrix([[1, -1, -(lx+ly)],
-                                [1, 1, (lx+ly)],
-                                [1, 1, -(lx+ly)],
-                                [1, -1, (lx+ly)]])
+                        [1, 1, (lx+ly)],
+                        [1, 1, -(lx+ly)],
+                        [1, -1, (lx+ly)]])
 
         w = np.dot(mat, np.array([vx, vy, wz]))
         w  = w * 180 / 3.14
 
-        return w[0]
+        return w.tolist()[0]
 
-    def moveMotor(self, w, t, n):
+    def moveMotor(self, wList, ms):
+        t = ms / 1000
         step_deg = 1.8
+        ping_offset = 18
+        GPIOList = []
+
+        for i in range(4):
+            w = wList[i]
 
         if w > 0 :
-            ping = n
+            ping = ping_offset + i * 2
         else:
-            ping = n+1
+            ping = ping_offset + i * 2 + 1
             w *= -1
 
         step = math.floor(w * t / step_deg)
-        interval = t / (step - 1) - 4
+        hz = step / t
+        print(hz)
+        GPIOList.append(GPIO.PWM(ping, hz))
 
-        for i in step:
-            self.sendPulse(ping)
-            time.sleep(interval / 1000)
+        for pi in GPIOList:
+            print(pi)
+            pi.start(50)
 
-    def sendPulse(self, n):
-        GPIO.output(n, 1)
-        time.sleep(2 / 1000)
-        GPIO.output(n, 0)
-        time.sleep(2 / 1000)
-        
+        time.sleep(t)
+
+        for pi in GPIOList:
+            pi.stop()
+
+        GPIO.setmode ( GPIO.BCM )
+        for i in range(18, 26):
+            GPIO.setup (i, GPIO.OUT)
 
 def main():
     rclpy.init()

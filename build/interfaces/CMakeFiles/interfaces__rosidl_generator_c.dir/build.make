@@ -83,6 +83,7 @@ rosidl_generator_c/interfaces/srv/going_camera_data.h: /opt/ros/humble/share/ros
 rosidl_generator_c/interfaces/srv/going_camera_data.h: /opt/ros/humble/share/rosidl_generator_c/resource/msg__type_support.h.em
 rosidl_generator_c/interfaces/srv/going_camera_data.h: /opt/ros/humble/share/rosidl_generator_c/resource/srv__type_support.h.em
 rosidl_generator_c/interfaces/srv/going_camera_data.h: rosidl_adapter/interfaces/srv/GoingCameraData.idl
+rosidl_generator_c/interfaces/srv/going_camera_data.h: rosidl_adapter/interfaces/srv/BackingCameraData.idl
 rosidl_generator_c/interfaces/srv/going_camera_data.h: rosidl_adapter/interfaces/srv/DistanceSensorData.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cannotflypig/robokonn/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C code for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_c/cmake/../../../lib/rosidl_generator_c/rosidl_generator_c --generator-arguments-file /home/cannotflypig/robokonn/build/interfaces/rosidl_generator_c__arguments.json
@@ -95,6 +96,18 @@ rosidl_generator_c/interfaces/srv/detail/going_camera_data__struct.h: rosidl_gen
 
 rosidl_generator_c/interfaces/srv/detail/going_camera_data__type_support.h: rosidl_generator_c/interfaces/srv/going_camera_data.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/going_camera_data__type_support.h
+
+rosidl_generator_c/interfaces/srv/backing_camera_data.h: rosidl_generator_c/interfaces/srv/going_camera_data.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/backing_camera_data.h
+
+rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.h: rosidl_generator_c/interfaces/srv/going_camera_data.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.h
+
+rosidl_generator_c/interfaces/srv/detail/backing_camera_data__struct.h: rosidl_generator_c/interfaces/srv/going_camera_data.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/backing_camera_data__struct.h
+
+rosidl_generator_c/interfaces/srv/detail/backing_camera_data__type_support.h: rosidl_generator_c/interfaces/srv/going_camera_data.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/backing_camera_data__type_support.h
 
 rosidl_generator_c/interfaces/srv/distance_sensor_data.h: rosidl_generator_c/interfaces/srv/going_camera_data.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/distance_sensor_data.h
@@ -110,6 +123,9 @@ rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__type_support.h: r
 
 rosidl_generator_c/interfaces/srv/detail/going_camera_data__functions.c: rosidl_generator_c/interfaces/srv/going_camera_data.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/going_camera_data__functions.c
+
+rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c: rosidl_generator_c/interfaces/srv/going_camera_data.h
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c
 
 rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c: rosidl_generator_c/interfaces/srv/going_camera_data.h
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c
@@ -128,10 +144,24 @@ CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/going_camera_data__functions.c.s"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cannotflypig/robokonn/build/interfaces/rosidl_generator_c/interfaces/srv/detail/going_camera_data__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/going_camera_data__functions.c.s
 
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.o: rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cannotflypig/robokonn/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.o -c /home/cannotflypig/robokonn/build/interfaces/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c
+
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/cannotflypig/robokonn/build/interfaces/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c > CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.i
+
+CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/cannotflypig/robokonn/build/interfaces/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.s
+
 CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/flags.make
 CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c.o: rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c
 CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c.o: CMakeFiles/interfaces__rosidl_generator_c.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cannotflypig/robokonn/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cannotflypig/robokonn/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c.o"
 	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c.o -MF CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c.o.d -o CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c.o -c /home/cannotflypig/robokonn/build/interfaces/rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c
 
 CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c.i: cmake_force
@@ -145,18 +175,20 @@ CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/
 # Object files for target interfaces__rosidl_generator_c
 interfaces__rosidl_generator_c_OBJECTS = \
 "CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/going_camera_data__functions.c.o" \
+"CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.o" \
 "CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c.o"
 
 # External object files for target interfaces__rosidl_generator_c
 interfaces__rosidl_generator_c_EXTERNAL_OBJECTS =
 
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/going_camera_data__functions.c.o
+libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c.o
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c.o
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/build.make
 libinterfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librosidl_runtime_c.so
 libinterfaces__rosidl_generator_c.so: /opt/ros/humble/lib/librcutils.so
 libinterfaces__rosidl_generator_c.so: CMakeFiles/interfaces__rosidl_generator_c.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cannotflypig/robokonn/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C shared library libinterfaces__rosidl_generator_c.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cannotflypig/robokonn/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking C shared library libinterfaces__rosidl_generator_c.so"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/interfaces__rosidl_generator_c.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -167,6 +199,11 @@ CMakeFiles/interfaces__rosidl_generator_c.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/interfaces__rosidl_generator_c.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/interfaces__rosidl_generator_c.dir/clean
 
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/backing_camera_data.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.c
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/backing_camera_data__functions.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/backing_camera_data__struct.h
+CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/backing_camera_data__type_support.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.c
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__functions.h
 CMakeFiles/interfaces__rosidl_generator_c.dir/depend: rosidl_generator_c/interfaces/srv/detail/distance_sensor_data__struct.h

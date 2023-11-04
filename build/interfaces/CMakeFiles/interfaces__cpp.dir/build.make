@@ -70,6 +70,10 @@ CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/going_camera_dat
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/going_camera_data__builder.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/going_camera_data__struct.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/going_camera_data__traits.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/backing_camera_data.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/backing_camera_data__builder.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/backing_camera_data__struct.hpp
+CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/backing_camera_data__traits.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/distance_sensor_data.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/distance_sensor_data__builder.hpp
 CMakeFiles/interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/distance_sensor_data__struct.hpp
@@ -91,6 +95,7 @@ rosidl_generator_cpp/interfaces/srv/going_camera_data.hpp: /opt/ros/humble/share
 rosidl_generator_cpp/interfaces/srv/going_camera_data.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__struct.hpp.em
 rosidl_generator_cpp/interfaces/srv/going_camera_data.hpp: /opt/ros/humble/share/rosidl_generator_cpp/resource/srv__traits.hpp.em
 rosidl_generator_cpp/interfaces/srv/going_camera_data.hpp: rosidl_adapter/interfaces/srv/GoingCameraData.idl
+rosidl_generator_cpp/interfaces/srv/going_camera_data.hpp: rosidl_adapter/interfaces/srv/BackingCameraData.idl
 rosidl_generator_cpp/interfaces/srv/going_camera_data.hpp: rosidl_adapter/interfaces/srv/DistanceSensorData.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cannotflypig/robokonn/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating C++ code for ROS interfaces"
 	/usr/bin/python3.10 /opt/ros/humble/share/rosidl_generator_cpp/cmake/../../../lib/rosidl_generator_cpp/rosidl_generator_cpp --generator-arguments-file /home/cannotflypig/robokonn/build/interfaces/rosidl_generator_cpp__arguments.json
@@ -103,6 +108,18 @@ rosidl_generator_cpp/interfaces/srv/detail/going_camera_data__struct.hpp: rosidl
 
 rosidl_generator_cpp/interfaces/srv/detail/going_camera_data__traits.hpp: rosidl_generator_cpp/interfaces/srv/going_camera_data.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/going_camera_data__traits.hpp
+
+rosidl_generator_cpp/interfaces/srv/backing_camera_data.hpp: rosidl_generator_cpp/interfaces/srv/going_camera_data.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/backing_camera_data.hpp
+
+rosidl_generator_cpp/interfaces/srv/detail/backing_camera_data__builder.hpp: rosidl_generator_cpp/interfaces/srv/going_camera_data.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/backing_camera_data__builder.hpp
+
+rosidl_generator_cpp/interfaces/srv/detail/backing_camera_data__struct.hpp: rosidl_generator_cpp/interfaces/srv/going_camera_data.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/backing_camera_data__struct.hpp
+
+rosidl_generator_cpp/interfaces/srv/detail/backing_camera_data__traits.hpp: rosidl_generator_cpp/interfaces/srv/going_camera_data.hpp
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/backing_camera_data__traits.hpp
 
 rosidl_generator_cpp/interfaces/srv/distance_sensor_data.hpp: rosidl_generator_cpp/interfaces/srv/going_camera_data.hpp
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/distance_sensor_data.hpp
@@ -117,6 +134,10 @@ rosidl_generator_cpp/interfaces/srv/detail/distance_sensor_data__traits.hpp: ros
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_cpp/interfaces/srv/detail/distance_sensor_data__traits.hpp
 
 interfaces__cpp: CMakeFiles/interfaces__cpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/backing_camera_data.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/backing_camera_data__builder.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/backing_camera_data__struct.hpp
+interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/backing_camera_data__traits.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/distance_sensor_data__builder.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/distance_sensor_data__struct.hpp
 interfaces__cpp: rosidl_generator_cpp/interfaces/srv/detail/distance_sensor_data__traits.hpp

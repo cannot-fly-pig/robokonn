@@ -1,0 +1,32 @@
+[1.468s] Invoking command in '/home/cannotflypig/robokonn/src/main_node': PYTHONPATH=/home/cannotflypig/robokonn/build/main_node/prefix_override:/home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_node build --build-base /home/cannotflypig/robokonn/build/main_node/build install --record /home/cannotflypig/robokonn/build/main_node/install.log --single-version-externally-managed
+[1.693s] running egg_info
+[1.693s] creating ../../build/main_node/main_node.egg-info
+[1.695s] writing ../../build/main_node/main_node.egg-info/PKG-INFO
+[1.695s] writing dependency_links to ../../build/main_node/main_node.egg-info/dependency_links.txt
+[1.695s] writing entry points to ../../build/main_node/main_node.egg-info/entry_points.txt
+[1.695s] writing requirements to ../../build/main_node/main_node.egg-info/requires.txt
+[1.697s] writing top-level names to ../../build/main_node/main_node.egg-info/top_level.txt
+[1.698s] writing manifest file '../../build/main_node/main_node.egg-info/SOURCES.txt'
+[1.700s] reading manifest file '../../build/main_node/main_node.egg-info/SOURCES.txt'
+[1.700s] writing manifest file '../../build/main_node/main_node.egg-info/SOURCES.txt'
+[1.701s] running build
+[1.701s] running build_py
+[1.701s] creating /home/cannotflypig/robokonn/build/main_node/build
+[1.701s] creating /home/cannotflypig/robokonn/build/main_node/build/lib
+[1.701s] creating /home/cannotflypig/robokonn/build/main_node/build/lib/main_node
+[1.701s] copying main_node/main_node.py -> /home/cannotflypig/robokonn/build/main_node/build/lib/main_node
+[1.701s] /usr/lib/python3/dist-packages/setuptools/command/install.py:34: SetuptoolsDeprecationWarning: setup.py install is deprecated. Use build and pip and other standards-based tools.
+[1.702s]   warnings.warn(
+[1.702s] copying main_node/__init__.py -> /home/cannotflypig/robokonn/build/main_node/build/lib/main_node
+[1.702s] running install
+[1.702s] running install_lib
+[1.704s] copying /home/cannotflypig/robokonn/build/main_node/build/lib/main_node/main_node.py -> /home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages/main_node
+[1.704s] byte-compiling /home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages/main_node/main_node.py to main_node.cpython-310.pyc
+[1.704s] running install_data
+[1.704s] running install_egg_info
+[1.705s] removing '/home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages/main_node-0.0.0-py3.10.egg-info' (and everything under it)
+[1.705s] Copying ../../build/main_node/main_node.egg-info to /home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages/main_node-0.0.0-py3.10.egg-info
+[1.706s] running install_scripts
+[1.728s] Installing main_node script to /home/cannotflypig/robokonn/install/main_node/lib/main_node
+[1.728s] writing list of installed files to '/home/cannotflypig/robokonn/build/main_node/install.log'
+[1.751s] Invoked command in '/home/cannotflypig/robokonn/src/main_node' returned '0': PYTHONPATH=/home/cannotflypig/robokonn/build/main_node/prefix_override:/home/cannotflypig/robokonn/install/main_node/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/main_node build --build-base /home/cannotflypig/robokonn/build/main_node/build install --record /home/cannotflypig/robokonn/build/main_node/install.log --single-version-externally-managed

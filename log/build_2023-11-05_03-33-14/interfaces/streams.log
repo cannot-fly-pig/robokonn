@@ -1,0 +1,201 @@
+[0.488s] Invoking command in '/home/cannotflypig/robokonn/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/install/sensor_node:/home/cannotflypig/robokonn/install/motor_node:/home/cannotflypig/robokonn/install/main_node:/home/cannotflypig/robokonn/install/camera_node:/opt/ros/humble /usr/bin/cmake --build /home/cannotflypig/robokonn/build/interfaces -- -j16 -l16
+[1.407s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_generator_c[0m
+[1.408s] [  2%] Built target interfaces__cpp
+[1.409s] [ 12%] Built target interfaces__rosidl_generator_c
+[1.409s] [ 12%] Built target ament_cmake_python_copy_interfaces
+[1.409s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_cpp[0m
+[1.409s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_cpp[0m
+[1.409s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_cpp[0m
+[1.409s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_c[0m
+[1.410s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_c[0m
+[1.410s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_c[0m
+[1.410s] [ 23%] Built target interfaces__rosidl_typesupport_introspection_cpp
+[1.410s] [ 34%] Built target interfaces__rosidl_typesupport_cpp
+[1.411s] [ 55%] Built target interfaces__rosidl_typesupport_fastrtps_cpp
+[1.412s] [ 55%] Built target interfaces__rosidl_typesupport_fastrtps_c
+[1.412s] [ 76%] Built target interfaces__rosidl_typesupport_introspection_c
+[1.412s] [ 76%] Built target interfaces__rosidl_typesupport_c
+[1.413s] [ 76%] Built target interfaces
+[1.413s] [ 78%] Built target interfaces__py
+[1.413s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_generator_py[0m
+[1.413s] [ 87%] Built target interfaces__rosidl_generator_py
+[1.414s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_fastrtps_c__pyext[0m
+[1.414s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_introspection_c__pyext[0m
+[1.415s] [35m[1mConsolidate compiler generated dependencies of target interfaces__rosidl_typesupport_c__pyext[0m
+[1.416s] [ 91%] Built target interfaces__rosidl_typesupport_introspection_c__pyext
+[1.416s] [ 95%] Built target interfaces__rosidl_typesupport_fastrtps_c__pyext
+[1.416s] [100%] Built target interfaces__rosidl_typesupport_c__pyext
+[1.417s] running egg_info
+[1.420s] writing interfaces.egg-info/PKG-INFO
+[1.420s] writing dependency_links to interfaces.egg-info/dependency_links.txt
+[1.420s] writing top-level names to interfaces.egg-info/top_level.txt
+[1.420s] reading manifest file 'interfaces.egg-info/SOURCES.txt'
+[1.421s] writing manifest file 'interfaces.egg-info/SOURCES.txt'
+[1.421s] [100%] Built target ament_cmake_python_build_interfaces_egg
+[1.421s] Invoked command in '/home/cannotflypig/robokonn/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/install/sensor_node:/home/cannotflypig/robokonn/install/motor_node:/home/cannotflypig/robokonn/install/main_node:/home/cannotflypig/robokonn/install/camera_node:/opt/ros/humble /usr/bin/cmake --build /home/cannotflypig/robokonn/build/interfaces -- -j16 -l16
+[1.486s] Invoking command in '/home/cannotflypig/robokonn/build/interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/install/sensor_node:/home/cannotflypig/robokonn/install/motor_node:/home/cannotflypig/robokonn/install/main_node:/home/cannotflypig/robokonn/install/camera_node:/opt/ros/humble /usr/bin/cmake --install /home/cannotflypig/robokonn/build/interfaces
+[1.493s] -- Install configuration: ""
+[1.494s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/ament_index/resource_index/rosidl_interfaces/interfaces
+[1.494s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces
+[1.494s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv
+[1.494s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail
+[1.494s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__functions.c
+[1.494s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/backing_camera_data__struct.h
+[1.495s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/backing_camera_data__functions.c
+[1.495s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/backing_camera_data__type_support.h
+[1.495s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__functions.h
+[1.495s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__functions.c
+[1.495s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__struct.h
+[1.495s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__functions.h
+[1.496s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__type_support.h
+[1.496s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__type_support.h
+[1.497s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__struct.h
+[1.497s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/backing_camera_data__functions.h
+[1.497s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/backing_camera_data.h
+[1.497s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/distance_sensor_data.h
+[1.498s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/going_camera_data.h
+[1.498s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/msg
+[1.498s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/msg/rosidl_generator_c__visibility_control.h
+[1.498s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/environment/library_path.sh
+[1.498s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/environment/library_path.dsv
+[1.498s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/lib/libinterfaces__rosidl_generator_c.so
+[1.499s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces
+[1.499s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv
+[1.499s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail
+[1.499s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__rosidl_typesupport_fastrtps_c.h
+[1.499s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/backing_camera_data__rosidl_typesupport_fastrtps_c.h
+[1.499s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__rosidl_typesupport_fastrtps_c.h
+[1.499s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/msg
+[1.499s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_c.so
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__type_support.c
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__rosidl_typesupport_introspection_c.h
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/backing_camera_data__rosidl_typesupport_introspection_c.h
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/backing_camera_data__type_support.c
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__type_support.c
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__rosidl_typesupport_introspection_c.h
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/msg
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_c.so
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/lib/libinterfaces__rosidl_typesupport_c.so
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/backing_camera_data__traits.hpp
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__struct.hpp
+[1.500s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__traits.hpp
+[1.501s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__struct.hpp
+[1.501s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/backing_camera_data__struct.hpp
+[1.501s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__builder.hpp
+[1.501s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__traits.hpp
+[1.501s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/backing_camera_data__builder.hpp
+[1.501s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__builder.hpp
+[1.501s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/going_camera_data.hpp
+[1.501s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/backing_camera_data.hpp
+[1.501s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/distance_sensor_data.hpp
+[1.501s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces
+[1.501s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv
+[1.502s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail
+[1.502s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__rosidl_typesupport_fastrtps_cpp.hpp
+[1.502s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/dds_fastrtps
+[1.502s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/backing_camera_data__rosidl_typesupport_fastrtps_cpp.hpp
+[1.502s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__rosidl_typesupport_fastrtps_cpp.hpp
+[1.502s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/msg
+[1.502s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.502s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/lib/libinterfaces__rosidl_typesupport_fastrtps_cpp.so
+[1.502s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces
+[1.502s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv
+[1.503s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail
+[1.503s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/backing_camera_data__rosidl_typesupport_introspection_cpp.hpp
+[1.503s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__rosidl_typesupport_introspection_cpp.hpp
+[1.503s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__rosidl_typesupport_introspection_cpp.hpp
+[1.503s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/distance_sensor_data__type_support.cpp
+[1.503s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/going_camera_data__type_support.cpp
+[1.503s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/include/interfaces/interfaces/srv/detail/backing_camera_data__type_support.cpp
+[1.503s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/lib/libinterfaces__rosidl_typesupport_introspection_cpp.so
+[1.503s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/lib/libinterfaces__rosidl_typesupport_cpp.so
+[1.503s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/environment/pythonpath.sh
+[1.503s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/environment/pythonpath.dsv
+[1.503s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info
+[1.503s] -- Installing: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[1.503s] -- Installing: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[1.504s] -- Installing: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[1.504s] -- Installing: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[1.504s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces
+[1.504s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv
+[1.504s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_distance_sensor_data_s.c
+[1.504s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_backing_camera_data.py
+[1.504s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_backing_camera_data_s.c
+[1.504s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_distance_sensor_data.py
+[1.505s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/__init__.py
+[1.505s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_going_camera_data.py
+[1.505s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv/_going_camera_data_s.c
+[1.505s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.505s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/libinterfaces__rosidl_generator_py.so
+[1.505s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.505s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[1.505s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/__init__.py
+[1.505s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.505s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.506s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
+[1.529s] Listing '/home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces'...
+[1.529s] Listing '/home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/srv'...
+[1.534s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.534s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.534s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/local/lib/python3.10/dist-packages/interfaces/interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.535s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/lib/libinterfaces__rosidl_generator_py.so
+[1.535s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/srv/GoingCameraData.idl
+[1.536s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/srv/BackingCameraData.idl
+[1.536s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/srv/DistanceSensorData.idl
+[1.536s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/srv/GoingCameraData.srv
+[1.536s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/srv/GoingCameraData_Request.msg
+[1.536s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/srv/GoingCameraData_Response.msg
+[1.537s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/srv/BackingCameraData.srv
+[1.537s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/srv/BackingCameraData_Request.msg
+[1.537s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/srv/BackingCameraData_Response.msg
+[1.537s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/srv/DistanceSensorData.srv
+[1.538s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/srv/DistanceSensorData_Request.msg
+[1.538s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/srv/DistanceSensorData_Response.msg
+[1.538s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/ament_index/resource_index/package_run_dependencies/interfaces
+[1.538s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/ament_index/resource_index/parent_prefix_path/interfaces
+[1.538s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/environment/ament_prefix_path.sh
+[1.538s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/environment/ament_prefix_path.dsv
+[1.538s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/environment/path.sh
+[1.538s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/environment/path.dsv
+[1.538s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/local_setup.bash
+[1.539s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/local_setup.sh
+[1.539s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/local_setup.zsh
+[1.539s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/local_setup.dsv
+[1.539s] -- Installing: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/package.dsv
+[1.539s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/ament_index/resource_index/packages/interfaces
+[1.539s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport.cmake
+[1.539s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cExport-noconfig.cmake
+[1.539s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[1.539s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[1.539s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport.cmake
+[1.539s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[1.540s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport.cmake
+[1.540s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[1.540s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_cppExport.cmake
+[1.541s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[1.541s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[1.541s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[1.541s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[1.541s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport.cmake
+[1.541s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[1.542s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport.cmake
+[1.543s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/export_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[1.543s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/rosidl_cmake-extras.cmake
+[1.543s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[1.543s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[1.543s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[1.543s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[1.544s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[1.545s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[1.545s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/interfacesConfig.cmake
+[1.545s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/cmake/interfacesConfig-version.cmake
+[1.545s] -- Up-to-date: /home/cannotflypig/robokonn/install/interfaces/share/interfaces/package.xml
+[1.546s] Invoked command in '/home/cannotflypig/robokonn/build/interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/cannotflypig/robokonn/install/sensor_node:/home/cannotflypig/robokonn/install/motor_node:/home/cannotflypig/robokonn/install/main_node:/home/cannotflypig/robokonn/install/camera_node:/opt/ros/humble /usr/bin/cmake --install /home/cannotflypig/robokonn/build/interfaces

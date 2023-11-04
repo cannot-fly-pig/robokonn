@@ -4,6 +4,7 @@
   "template_dir": "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource",
   "idl_tuples": [
     "/home/cannotflypig/robokonn/build/interfaces/rosidl_adapter/interfaces:srv/GoingCameraData.idl",
+    "/home/cannotflypig/robokonn/build/interfaces/rosidl_adapter/interfaces:srv/BackingCameraData.idl",
     "/home/cannotflypig/robokonn/build/interfaces/rosidl_adapter/interfaces:srv/DistanceSensorData.idl"
   ],
   "target_dependencies": [
@@ -16,6 +17,7 @@
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__rosidl_typesupport_fastrtps_c.h.em",
     "/opt/ros/humble/share/rosidl_typesupport_fastrtps_c/resource/srv__type_support_c.cpp.em",
     "/home/cannotflypig/robokonn/build/interfaces/rosidl_adapter/interfaces/srv/GoingCameraData.idl",
+    "/home/cannotflypig/robokonn/build/interfaces/rosidl_adapter/interfaces/srv/BackingCameraData.idl",
     "/home/cannotflypig/robokonn/build/interfaces/rosidl_adapter/interfaces/srv/DistanceSensorData.idl"
   ]
 }

@@ -1,3 +1,7 @@
+srv/BackingCameraData.idl
+srv/BackingCameraData.srv
+srv/BackingCameraData_Request.msg
+srv/BackingCameraData_Response.msg
 srv/DistanceSensorData.idl
 srv/DistanceSensorData.srv
 srv/DistanceSensorData_Request.msg

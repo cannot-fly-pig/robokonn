@@ -70,9 +70,11 @@ interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/_interf
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_going_camera_data.py
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_backing_camera_data.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_distance_sensor_data.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/__init__.py
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_going_camera_data_s.c
+interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_backing_camera_data_s.c
 interfaces__py/CMakeFiles/interfaces__py: rosidl_generator_py/interfaces/srv/_distance_sensor_data_s.c
 
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/lib/rosidl_generator_py/rosidl_generator_py
@@ -89,6 +91,7 @@ rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c:
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv_pkg_typesupport_entry_point.c.em
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: /opt/ros/humble/share/rosidl_generator_py/resource/_srv.py.em
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/srv/GoingCameraData.idl
+rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/srv/BackingCameraData.idl
 rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c: rosidl_adapter/interfaces/srv/DistanceSensorData.idl
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/cannotflypig/robokonn/build/interfaces/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Python code for ROS interfaces"
 	cd /home/cannotflypig/robokonn/build/interfaces/interfaces__py && /usr/bin/python3 /opt/ros/humble/share/rosidl_generator_py/cmake/../../../lib/rosidl_generator_py/rosidl_generator_py --generator-arguments-file /home/cannotflypig/robokonn/build/interfaces/rosidl_generator_py__arguments.json --typesupport-impls "rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c;rosidl_typesupport_c"
@@ -102,6 +105,9 @@ rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_c.c: rosidl_g
 rosidl_generator_py/interfaces/srv/_going_camera_data.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_going_camera_data.py
 
+rosidl_generator_py/interfaces/srv/_backing_camera_data.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_backing_camera_data.py
+
 rosidl_generator_py/interfaces/srv/_distance_sensor_data.py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_distance_sensor_data.py
 
@@ -111,6 +117,9 @@ rosidl_generator_py/interfaces/srv/__init__.py: rosidl_generator_py/interfaces/_
 rosidl_generator_py/interfaces/srv/_going_camera_data_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_going_camera_data_s.c
 
+rosidl_generator_py/interfaces/srv/_backing_camera_data_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_backing_camera_data_s.c
+
 rosidl_generator_py/interfaces/srv/_distance_sensor_data_s.c: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 	@$(CMAKE_COMMAND) -E touch_nocreate rosidl_generator_py/interfaces/srv/_distance_sensor_data_s.c
 
@@ -119,6 +128,8 @@ interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesuppo
 interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
 interfaces__py: rosidl_generator_py/interfaces/_interfaces_s.ep.rosidl_typesupport_introspection_c.c
 interfaces__py: rosidl_generator_py/interfaces/srv/__init__.py
+interfaces__py: rosidl_generator_py/interfaces/srv/_backing_camera_data.py
+interfaces__py: rosidl_generator_py/interfaces/srv/_backing_camera_data_s.c
 interfaces__py: rosidl_generator_py/interfaces/srv/_distance_sensor_data.py
 interfaces__py: rosidl_generator_py/interfaces/srv/_distance_sensor_data_s.c
 interfaces__py: rosidl_generator_py/interfaces/srv/_going_camera_data.py
