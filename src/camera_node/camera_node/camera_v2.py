@@ -6,7 +6,7 @@ import threading
 import rclpy
 from rclpy.node import Node
 
-from team6_msgs.msg import Goal, Back, Direction
+from interfaces.msg import Goal, Back, Direction
 
 
 class Camera(Node):
