@@ -24,7 +24,7 @@ class Camera(Node):
 
         self.subscription = self.create_subscription(
             Direction,
-            'direction_pub',
+            'main_node',
             self.callback_sub,
             10)
         self.subscription
@@ -45,8 +45,8 @@ class Camera(Node):
         self.get_logger().info('Pos, degree, diff: "%s %s %s"' % (msg.pos,msg.degree,msg.diff))
 
     def callback_sub(self, msg):
-            self.direction = msg.direction
-            self.get_logger().info('Subscribing direction : "%s"' % msg.direction)
+            self.direction = msg.data
+            self.get_logger().info('Subscribing direction : "%s"' % msg.data)
 
 
 def main(args=None):
@@ -127,7 +127,7 @@ def main(args=None):
         print("start loop")
         while(True):
             #Goal Script
-            while(camera.direction == "goal"):
+            while(camera.direction == "go"):
                 count = 0
                 flag = 0
 
