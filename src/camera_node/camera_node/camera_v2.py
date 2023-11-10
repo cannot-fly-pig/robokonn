@@ -6,7 +6,7 @@ import threading
 import rclpy
 from rclpy.node import Node
 
-from team6_msgs.msg import Goal, Back, Direction
+from interfaces.msg import Goal, Back, Direction
 
 
 class Camera(Node):
@@ -24,7 +24,7 @@ class Camera(Node):
 
         self.subscription = self.create_subscription(
             Direction,
-            'direction_pub',
+            'main_node',
             self.callback_sub,
             10)
         self.subscription
@@ -45,8 +45,8 @@ class Camera(Node):
         self.get_logger().info('Pos, degree, diff: "%s %s %s"' % (msg.pos,msg.degree,msg.diff))
 
     def callback_sub(self, msg):
-            self.direction = msg.direction
-            self.get_logger().info('Subscribing direction : "%s"' % msg.direction)
+            self.direction = msg.data
+            self.get_logger().info('Subscribing direction : "%s"' % msg.data)
 
 
 def main(args=None):
@@ -99,9 +99,9 @@ def main(args=None):
     kernel_h = np.ones((1,30), np.uint8)
 
     #back 検出する輪郭の最小ｙ座標
-    y_min = int(height*3/4) 
-    x_min = int(width/3)
-    x_max = int(width*2/3)
+    y_min = int(height/2) 
+    x_min = 0
+    x_max = width
 
     ######FPS#######
     fps = 0
@@ -127,7 +127,7 @@ def main(args=None):
         print("start loop")
         while(True):
             #Goal Script
-            while(camera.direction == "goal"):
+            while(camera.direction == "go"):
                 count = 0
                 flag = 0
 
@@ -138,8 +138,8 @@ def main(args=None):
                 
                 edgeMonoFrame = cv2.resize(edgeMonoFrame, (640, 400)) #２値化画像サイズ　実装時削除
                 _, edgeMonoFrame = cv2.threshold(edgeMonoFrame, 125, 255, cv2.THRESH_BINARY) # 2値化
-                edgeMonoFrame = cv2.morphologyEx(edgeMonoFrame, cv2.MORPH_OPEN, kernel_3) # モルフォロジー変換
-                edgeMonoFrame = cv2.morphologyEx(edgeMonoFrame, cv2.MORPH_CLOSE, kernel_2) # モルフォロジー変換
+                #edgeMonoFrame = cv2.morphologyEx(edgeMonoFrame, cv2.MORPH_OPEN, kernel_3) # モルフォロジー変換
+                #edgeMonoFrame = cv2.morphologyEx(edgeMonoFrame, cv2.MORPH_CLOSE, kernel_2) # モルフォロジー変換
                 edgeMonoFrame = cv2.dilate(edgeMonoFrame, kernel_1, iterations=1) # 膨張処理　
 
 
@@ -200,7 +200,7 @@ def main(args=None):
                 gray = inMono.getCvFrame()
                 
                 #黒抽出
-                gray = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 51, 11)
+                gray = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 151, 11)
 
                 
                 
@@ -214,9 +214,9 @@ def main(args=None):
                 contours_h, _ = cv2.findContours(gray_h[y_min:, x_min:x_max], cv2.RETR_LIST, cv2.CHAIN_APPROX_TC89_L1)
 
 
-                contours_v = list(filter(lambda x: cv2.contourArea(x) > 100 and cv2.contourArea(x) < 0.1*((height-y_min)*width)
+                contours_v = list(filter(lambda x: cv2.contourArea(x) > 300 and cv2.contourArea(x) < 0.3*((height-y_min)*(x_max-x_min))
                                         and 1.5*cv2.boundingRect(x)[2] < cv2.boundingRect(x)[3], contours_v)) #輪郭の条件
-                contours_h = list(filter(lambda x: cv2.contourArea(x) > 100 and cv2.contourArea(x) < 0.05*((height-y_min)*width)
+                contours_h = list(filter(lambda x: cv2.contourArea(x) > 100 and cv2.contourArea(x) < 0.3*((height-y_min)*(x_max-x_min))
                                         and cv2.boundingRect(x)[2] > 3*cv2.boundingRect(x)[3], contours_h)) #輪郭の条件
                 
                 cv2.line(mono, (0, y_min), (width, y_min), (0, 0, 0), 2) # 検出範囲
@@ -237,43 +237,49 @@ def main(args=None):
                     rect_v = cv2.minAreaRect(contour_v)
                     box_v = cv2.boxPoints(rect_v)
                     box_v = np.int0(box_v)
-                    if (cv2.contourArea(contour_v) / cv2.contourArea(box_v)) > 0.7:
-                        cv2.drawContours(mono, [box_v], 0, (0, 0, 0), 2)
-
-                        for contour_h in contours_h: # 水平方向
-                            contour_h[:, :, 1] += y_min
-                            contour_h[:, :, 0] += x_min
-                            rect_h = cv2.minAreaRect(contour_h)
-                            box_h = cv2.boxPoints(rect_h)
-                            box_h = np.int0(box_h)
-                            if (cv2.contourArea(contour_h) / cv2.contourArea(box_h)) > 0.2:
-                                cv2.drawContours(mono, [box_h], 0, (0, 0, 0), 2)
-                                retval, intersectionRegion = cv2.rotatedRectangleIntersection(rect_v, rect_h) # 縦横ラインの交点
-                                #print(intersectionRegion)
-                                if intersectionRegion is not None:
-                                    for xy in intersectionRegion:
-                                        #rgb_v = cv2.circle(rgb_v, (int(xy[0][0]), int(xy[0][1])), 2, (0, 255, 255), 2)
-                                        if (rect_h[0][0] + rect_h[1][0]/2 - 15) <= xy[0][0]: # ラインの右中左判定
-                                            pos = "right"
-                                            degree = round(rect_v[2], 2)
-                                            diff = int(rect_v[0][0])-int(width/2)
-                                            cv2.putText(mono, "R:"+str(degree)+"deg, diff"+str(diff), (int(rect_v[0][0]), int(rect_v[0][1]-(rect_v[1][1]/2)-5)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
-                                            camera.callback_back_pub(pos, degree, diff)
-                                            #print("left")
-                                        elif (rect_h[0][0] + rect_h[1][0]/2 - 15 > xy[0][0]) and (rect_h[0][0] - rect_h[1][0]/2 + 15 < xy[0][0]):
-                                            pos = "center"
-                                            degree = round(rect_v[2], 2)
-                                            diff = int(rect_v[0][0])-int(width/2)
-                                            cv2.putText(mono, "C:"+str(degree)+"deg, diff"+str(diff), (int(rect_v[0][0]), int(rect_v[0][1]-(rect_v[1][1]/2)-5)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
-                                            camera.callback_back_pub(pos, degree, diff)
-                                            #print("center")
-                                        elif (rect_h[0][0] - rect_h[1][0]/2 + 15 >= xy[0][0]):
-                                            pos = "left"
-                                            degree = round(rect_v[2], 2)
-                                            diff = int(rect_v[0][0])-int(width/2)
-                                            cv2.putText(mono, "L:"+str(degree)+"deg, diff"+str(diff), (int(rect_v[0][0]), int(rect_v[0][1]-int(rect_v[1][1]/2)-5)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
-                                            camera.callback_back_pub(pos, degree, diff)
-                                            #print("right")
+                    if cv2.contourArea(box_v) != 0:
+                        if (cv2.contourArea(contour_v) / cv2.contourArea(box_v)) > 0.2:
+                            cv2.drawContours(mono, [box_v], 0, (0, 0, 0), 2)
+ 
+                            for contour_h in contours_h: # 水平方向
+                                contour_h[:, :, 1] += y_min
+                                contour_h[:, :, 0] += x_min
+                                rect_h = cv2.minAreaRect(contour_h)
+                                box_h = cv2.boxPoints(rect_h)
+                                box_h = np.int0(box_h)
+                                if rect_h[1][0] > rect_h[1][1]:
+                                    h_long_side = rect_h[1][0]
+                                else:
+                                    h_long_side = rect_h[1][1]
+                                if cv2.contourArea(box_h) != 0:
+                                    if (cv2.contourArea(contour_h) / cv2.contourArea(box_h)) > 0.2:
+                                        cv2.drawContours(mono, [box_h], 0, (0, 0, 0), 2)
+                                        retval, intersectionRegion = cv2.rotatedRectangleIntersection(rect_v, rect_h) # 縦横ラインの交点
+                                        #print(intersectionRegion)
+                                        if intersectionRegion is not None:
+                                            for xy in intersectionRegion:
+                                                #rgb_v = cv2.circle(rgb_v, (int(xy[0][0]), int(xy[0][1])), 2, (0, 255, 255), 2)
+                                                if (rect_h[0][0] + h_long_side/2 - 30) <= xy[0][0]: # ラインの右中左判定
+                                                    pos = "right"
+                                                    degree = round(rect_v[2], 2)
+                                                    diff = int(rect_v[0][0])-int(width/2)
+                                                    cv2.putText(mono, "R:"+str(degree)+"deg, diff"+str(diff), (int(rect_v[0][0]), int(rect_v[0][1]-(rect_v[1][1]/2)-5)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
+                                                    camera.callback_back_pub(pos, degree, diff)
+                                                    #print("left")
+                                                elif (rect_h[0][0] + h_long_side/2 - 30 > xy[0][0]) and (rect_h[0][0] - h_long_side/2 + 30 < xy[0][0]):
+                                                    pos = "center"
+                                                    degree = round(rect_v[2], 2)
+                                                    diff = int(rect_v[0][0])-int(width/2)
+                                                    cv2.putText(mono, "C:"+str(degree)+"deg, diff"+str(diff), (int(rect_v[0][0]), int(rect_v[0][1]-(rect_v[1][1]/2)-5)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
+                                                    camera.callback_back_pub(pos, degree, diff)
+                                                    #print("center")
+                                                elif (rect_h[0][0] - h_long_side/2 + 30 >= xy[0][0]):
+                                                    pos = "left"
+                                                    degree = round(rect_v[2], 2)
+                                                    diff = int(rect_v[0][0])-int(width/2)
+                                                    cv2.putText(mono, "L:"+str(degree)+"deg, diff"+str(diff), (int(rect_v[0][0]), int(rect_v[0][1]-int(rect_v[1][1]/2)-5)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
+                                                    camera.callback_back_pub(pos, degree, diff)
+                                                    #print("right")
 
             
                 #########FPS#########

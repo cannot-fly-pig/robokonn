@@ -8,6 +8,7 @@ endif()
 # find dependencies
 find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
 
 set(srv_files
   "srv/GoingCameraData.srv"
@@ -15,7 +16,11 @@ set(srv_files
   "srv/DistanceSensorData.srv"
 )
 rosidl_generate_interfaces(${PROJECT_NAME}
+  "msg/Goal.msg"
+  "msg/Back.msg"
+  "msg/Direction.msg"
   ${srv_files}
+  DEPENDENCIES std_msgs
 )
 
 if(BUILD_TESTING)
