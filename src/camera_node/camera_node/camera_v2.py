@@ -7,6 +7,7 @@ import rclpy
 from rclpy.node import Node
 
 from interfaces.msg import Goal, Back, Direction
+from std_msgs.msg import String
 
 
 class Camera(Node):
@@ -23,7 +24,7 @@ class Camera(Node):
         self.direction = None
 
         self.subscription = self.create_subscription(
-            Direction,
+            String,
             'main_node',
             self.callback_sub,
             10)
@@ -89,14 +90,14 @@ def main(args=None):
     control.out.link(monoLeft.inputControl)
 
     #kernel for the goal script
-    kernel_1 = np.ones((10,10), np.uint8)
-    kernel_2 = np.ones((25,25), np.uint8)
+    kernel_1 = np.ones((5,5), np.uint8)
+    kernel_2 = np.ones((10,10), np.uint8)
     kernel_3 = np.ones((3,3), np.uint8)
 
     #kernel for the back script
-    kernel_v = np.ones((10,1), np.uint8)
+    kernel_v = np.ones((15,1), np.uint8)
     kernel_v2 = np.ones((1,5), np.uint8)
-    kernel_h = np.ones((1,30), np.uint8)
+    kernel_h = np.ones((1,50), np.uint8)
 
     #back 検出する輪郭の最小ｙ座標
     y_min = int(height/2) 
@@ -200,7 +201,7 @@ def main(args=None):
                 gray = inMono.getCvFrame()
                 
                 #黒抽出
-                gray = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 151, 11)
+                gray = cv2.adaptiveThreshold(gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY_INV, 451, 11)
 
                 
                 
@@ -259,27 +260,27 @@ def main(args=None):
                                         if intersectionRegion is not None:
                                             for xy in intersectionRegion:
                                                 #rgb_v = cv2.circle(rgb_v, (int(xy[0][0]), int(xy[0][1])), 2, (0, 255, 255), 2)
-                                                if (rect_h[0][0] + h_long_side/2 - 30) <= xy[0][0]: # ラインの右中左判定
+                                                if (rect_h[0][0] + h_long_side/2 - 80) <= xy[0][0]: # ラインの右中左判定
                                                     pos = "right"
                                                     degree = round(rect_v[2], 2)
                                                     diff = int(rect_v[0][0])-int(width/2)
                                                     cv2.putText(mono, "R:"+str(degree)+"deg, diff"+str(diff), (int(rect_v[0][0]), int(rect_v[0][1]-(rect_v[1][1]/2)-5)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
                                                     camera.callback_back_pub(pos, degree, diff)
-                                                    #print("left")
-                                                elif (rect_h[0][0] + h_long_side/2 - 30 > xy[0][0]) and (rect_h[0][0] - h_long_side/2 + 30 < xy[0][0]):
+                                                    #print("right")
+                                                elif (rect_h[0][0] + h_long_side/2 - 80 > xy[0][0]) and (rect_h[0][0] - h_long_side/2 + 80 < xy[0][0]):
                                                     pos = "center"
                                                     degree = round(rect_v[2], 2)
                                                     diff = int(rect_v[0][0])-int(width/2)
                                                     cv2.putText(mono, "C:"+str(degree)+"deg, diff"+str(diff), (int(rect_v[0][0]), int(rect_v[0][1]-(rect_v[1][1]/2)-5)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
                                                     camera.callback_back_pub(pos, degree, diff)
                                                     #print("center")
-                                                elif (rect_h[0][0] - h_long_side/2 + 30 >= xy[0][0]):
+                                                elif (rect_h[0][0] - h_long_side/2 + 80 >= xy[0][0]):
                                                     pos = "left"
                                                     degree = round(rect_v[2], 2)
                                                     diff = int(rect_v[0][0])-int(width/2)
                                                     cv2.putText(mono, "L:"+str(degree)+"deg, diff"+str(diff), (int(rect_v[0][0]), int(rect_v[0][1]-int(rect_v[1][1]/2)-5)), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 0, 0), 2)
                                                     camera.callback_back_pub(pos, degree, diff)
-                                                    #print("right")
+                                                    #print("left")
 
             
                 #########FPS#########
