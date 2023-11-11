@@ -7,13 +7,12 @@ import numpy as np
 from interfaces.srv import GoingCameraData
 from interfaces.srv import BackingCameraData
 from interfaces.srv import DistanceSensorData
+from interfaces.msg import Goal, Back, Direction
 #import RPi.GPIO as GPIO
 import time
 import math
 
-
 PI = math.pi
-
 
 class MotorNode(Node):
     def __init__(self):
@@ -22,40 +21,50 @@ class MotorNode(Node):
         self.timer_cb_group = MutuallyExclusiveCallbackGroup()
 
         self.pos = ''
-        self.gap = -10
+        self.diff = -10
         self.degree = -10
         self.distance = -10
         self.task = 'standby'
-        self.max_gap = 10
+        self.max_diff = 10
 
-        self.pub = self.create_publisher(String, 'motor_node', 10)
-        self.sub = self.create_subscription(String, 'main_node', self.mainCallback, 10, callback_group=self.client_cb_group)
+        self.subscription_goal = self.create_subscription(
+            Goal,                                
+            'goal_pub',
+            self.goalCallback,
+            10)
+        self.subscription_goal
+
+        self.subscription_back = self.create_subscription(
+            Back,                                
+            'back_pub',
+            self.backCallback,
+            10)
+        self.subscription_back
+
+        self.subscription_distance = self.create_subscription(
+            Direction,                                   
+            'direction_pub',
+            self.distanceCallback,
+            10)
+        self.subscription_distance
+
         self.timer_period = 1
         self.timer = self.create_timer(self.timer_period, self.timerCallback, callback_group=self.timer_cb_group)
-        self.going_camera_client = self.create_client(GoingCameraData, 'going_camera_data')
-        self.backing_camera_client = self.create_client(BackingCameraData, 'backing_camera_data')
-        self.distance_sensor_client = self.create_client(DistanceSensorData, 'distance_sensor_data')
 
-        while not self.going_camera_client.wait_for_service(timeout_sec=1):
-            self.get_logger().info('waiting for going camera client...')
+    def goalCallback(self, msg):
+        self.diff = msg.diff
+        
+    def backCallback(self, msg):
+        self.diff = msg.diff
+        self.pos = msg.pos
+        self.degree = msg.degree
 
-        while not self.distance_sensor_client.wait_for_service(timeout_sec=1):
-            self.get_logger().info('waiting for sensor client...')
-
-        self.goging_request = GoingCameraData.Request()
-        self.backing_request = BackingCameraData.Request()
-        self.distance_request = DistanceSensorData.Request()
-
-    def mainCallback(self, msg):
-        self.task = msg.data
+    def distanceCallback(self, msg):
+        self.distance = msg.distance
 
     def timerCallback(self):
         if self.task == 'go':
-            result = self.sendRequest(client=self.going_camera_client, request=self.goging_request)
-            print('gap is: ')
-            print(result.gap)
-            self.gap = result.gap
-            #self.goToGoal()
+            self.goToGoal()
             self.finishTask()
         if self.task == 'putBaggage':
             self.finishTask()
@@ -63,30 +72,10 @@ class MotorNode(Node):
             self.halfTurn()
             self.finishTask()
         if self.task == 'back':
-            result = self.sendRequest(client=self.backing_camera_client, request=self.backing_request)
-            print('pos is: ')
-            print(result.pos)
-            print('degree is: ')
-            print(result.degree)
-            print('gap is: ')
-            print(result.gap)
-            self.pos = result.pos
-            self.degree = result.degree
-            self.gap = result.gap
-            result = self.sendRequest(client=self.distance_sensor_client, request=self.distance_request)
-            print('distance is: ')
-            print(result.distance)
-            self.distance = result.distance
-            #self.backFromGoal()
+            self.backFromGoal()
             self.finishTask()
         if self.task == 'takeBaggage':
             self.finishTask()
-
-    def sendRequest(self, client, request):
-        self.future = client.call_async(request)
-        while not self.future.done():
-            None
-        return self.future.result()
 
     def finishTask(self):
         msg = String()
@@ -94,24 +83,46 @@ class MotorNode(Node):
         self.pub.publish(msg)
 
     def halfTurn(self):
-        #self.moveMotor(self.culcInvertKinematics(0, 0, PI/4), 4000)
-        None
+        w = self.culcInvertKinematics(0, 0, PI/2)
+        self.moveMotor(w, 2)
 
     def goToGoal(self):
         run_time = 300
-        while math.abs(self.gap) > self.max_gap:
-            #self.moveMotor(self.culcInvertKinematics(min(self.gap, 0.3), 0, 0), run_time)
-            None
-        
-        while self.distance > self.max_distance:
-            #self.moveMotor(self.culcInvertKinematics(0, min(self.distance, 0.3), 0), run_time)
-            None
+
+        while math.abs(self.distance) > self.max_distance:
+            w = self.culcInvertKinematics(max(self.distance, 0.1), 0, 0)
+            self.moveMotor(w, run_time)
+
+        while math.abs(self.diff) > self.max_diff:
+            if self.diff > 0:
+                w = self.culcInvertKinematics(0, min(-1*self.diff, -0.1), 0)
+            else:
+                w = self.culcInvertKinematics(0, max(self.diff, 0.1), 0)
+
+            self.moveMotor(w, run_time)
+
+    def backFromGoal(self):
+        run_time = 300
+
+        while self.pos != 'center':
+            w = self.culcInvertKinematics(0, 0.3, 0)
+            self.moveMotor(w, run_time)
+
+        while self.distance > 0.2:
+            w = self.culcInvertKinematics(0.2, 0, 0)
+            self.moveMotor(w, run_time)
+
+            deg = self.degree / 180 * PI * (-1)
+            if abs(deg) > PI / 15:
+                w = self.culcInvertKinematics(0, 0, deg)
+                self.moveMotor(w, 1)
+
 
     def culcInvertKinematics(self, vx, vy, wz):
         #[frontleft, frontright, rearleft, rearright]
         r = 0.05
-        lx = 0.13
-        ly = 0.12
+        lx = 0.092
+        ly = 0.14
         mat = (1/r)* np.matrix([[1, -1, -(lx+ly)],
                         [1, 1, (lx+ly)],
                         [1, 1, -(lx+ly)],

@@ -1,3 +1,11 @@
+msg/Back.idl
+msg/Back.msg
+msg/Direction.idl
+msg/Direction.msg
+msg/Distance.idl
+msg/Distance.msg
+msg/Goal.idl
+msg/Goal.msg
 srv/BackingCameraData.idl
 srv/BackingCameraData.srv
 srv/BackingCameraData_Request.msg

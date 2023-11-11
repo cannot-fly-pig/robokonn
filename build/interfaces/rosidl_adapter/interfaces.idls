@@ -1,3 +1,7 @@
+/home/cannotflypig/robokonn/build/interfaces/rosidl_adapter/interfaces:msg/Goal.idl
+/home/cannotflypig/robokonn/build/interfaces/rosidl_adapter/interfaces:msg/Back.idl
+/home/cannotflypig/robokonn/build/interfaces/rosidl_adapter/interfaces:msg/Direction.idl
+/home/cannotflypig/robokonn/build/interfaces/rosidl_adapter/interfaces:msg/Distance.idl
 /home/cannotflypig/robokonn/build/interfaces/rosidl_adapter/interfaces:srv/GoingCameraData.idl
 /home/cannotflypig/robokonn/build/interfaces/rosidl_adapter/interfaces:srv/BackingCameraData.idl
 /home/cannotflypig/robokonn/build/interfaces/rosidl_adapter/interfaces:srv/DistanceSensorData.idl
