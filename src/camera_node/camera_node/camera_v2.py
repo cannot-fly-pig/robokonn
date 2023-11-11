@@ -33,7 +33,8 @@ class Camera(Node):
     
     def callback_goal_pub(self, diff):
         msg = Goal()
-        msg.diff = diff  # ここにズレを代入
+        msg.diff = diff
+        #msg.diff = self.i         #test code
         self.goal_publisher.publish(msg)
         self.get_logger().info('Publishing diff : "%s"' % msg.diff)
 
@@ -42,6 +43,9 @@ class Camera(Node):
         msg.pos = pos
         msg.degree = degree
         msg.diff = diff
+        #msg.pos = right           #test code
+        #msg.degree = self.i*0.1   #test code
+        #msg.diff = self.i+50      #test code
         self.back_publisher.publish(msg)
         self.get_logger().info('Pos, degree, diff: "%s %s %s"' % (msg.pos,msg.degree,msg.diff))
 
@@ -165,7 +169,11 @@ def main(args=None):
                         camera.callback_goal_pub(diff)
                         rect_num += 1 # 見つけた長方形の数
                 rect_num = 0
+
                 
+                #diff = 0                           #test code
+                #camera.callback_goal_pub(diff)     #test code
+
                 #########FPS#########
                 if f_count == fmax_count:
                     end = time.time()
@@ -282,7 +290,11 @@ def main(args=None):
                                                     camera.callback_back_pub(pos, degree, diff)
                                                     #print("left")
 
-            
+                #pos = "right"                               #test code
+                #degree = 0                                  #test code
+                #diff = 0                                    #test code
+                #camera.callback_back_pub(pos, degree, diff) #test code
+
                 #########FPS#########
                 if f_count == fmax_count:
                     end = time.time()
