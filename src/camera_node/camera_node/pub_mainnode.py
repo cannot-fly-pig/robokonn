@@ -26,7 +26,7 @@ class MainNodeTest(Node):
             self.pub_count = 0
         msg.data = self.taskList[self.taskIndex]
         self.pub.publish(msg)
-        print(self.task)
+        print(self.taskList[self.taskIndex])
         self.pub_count += 1
             
 
