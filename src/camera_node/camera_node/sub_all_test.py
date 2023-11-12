@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 
-from team6_msgs.msg import Goal, Back
+from interfaces.msg import Goal, Back
 from std_msgs.msg import String     
 
 
