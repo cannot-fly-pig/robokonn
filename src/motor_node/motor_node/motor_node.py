@@ -1,12 +1,12 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
-from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
+from rclpy.callback_groups import MutuallyExclusive_callbackGroup
 from std_msgs.msg import String
 import numpy as np
 from interfaces.msg import Goal, Back, Direction
 
-import RPi.GPIO as GPIO
+from RPI import GPIO
 import time
 import math
 
@@ -16,8 +16,8 @@ PI = math.pi
 class MotorNode(Node):
     def __init__(self):
         super().__init__("motor_node")
-        self.client_cb_group = MutuallyExclusiveCallbackGroup()
-        self.timer_cb_group = MutuallyExclusiveCallbackGroup()
+        self.client_cb_group = MutuallyExclusive_callbackGroup()
+        self.timer_cb_group = MutuallyExclusive_callbackGroup()
 
         self.pos = ""
         self.diff = -10
@@ -27,92 +27,92 @@ class MotorNode(Node):
         self.max_diff = 10
 
         self.subscription_goal = self.create_subscription(
-            Goal, "goal_pub", self.goalCallback, 10
+            Goal, "goal_pub", self.goal_callback, 10
         )
         self.subscription_goal
 
         self.subscription_back = self.create_subscription(
-            Back, "back_pub", self.backCallback, 10
+            Back, "back_pub", self.back_callback, 10
         )
         self.subscription_back
 
         self.subscription_distance = self.create_subscription(
-            Direction, "direction_pub", self.distanceCallback, 10
+            Direction, "direction_pub", self.distance_callback, 10
         )
         self.subscription_distance
 
         self.timer_period = 1
         self.timer = self.create_timer(
-            self.timer_period, self.timerCallback, callback_group=self.timer_cb_group
+            self.timer_period, self.timer_callback, callback_group=self.timer_cb_group
         )
 
-    def goalCallback(self, msg):
+    def goal_callback(self, msg):
         self.diff = msg.diff
 
-    def backCallback(self, msg):
+    def back_callback(self, msg):
         self.diff = msg.diff
         self.pos = msg.pos
         self.degree = msg.degree
 
-    def distanceCallback(self, msg):
+    def distance_callback(self, msg):
         self.distance = msg.distance
 
-    def timerCallback(self):
+    def timer_callback(self):
         if self.task == "go":
-            self.goToGoal()
-            self.finishTask()
+            self.go_to_goal()
+            self.finish_task()
         if self.task == "putBaggage":
-            self.finishTask()
+            self.finish_task()
         if self.task == "turn":
-            self.halfTurn()
-            self.finishTask()
+            self.half_turn()
+            self.finish_task()
         if self.task == "back":
-            self.backFromGoal()
-            self.finishTask()
+            self.back_from_goal()
+            self.finish_task()
         if self.task == "takeBaggage":
-            self.finishTask()
+            self.finish_task()
 
-    def finishTask(self):
+    def finish_task(self):
         msg = String()
         msg.data = "fin"
         self.pub.publish(msg)
 
-    def halfTurn(self):
-        w = self.culcInvertKinematics(0, 0, PI / 2)
-        self.moveMotor(w, 2)
+    def half_turn(self):
+        w = self.culc_invert_kinematics(0, 0, PI / 2)
+        self.move_motor(w, 2)
 
-    def goToGoal(self):
+    def go_to_goal(self):
         run_time = 300
 
         while math.abs(self.distance) > self.max_distance:
-            w = self.culcInvertKinematics(max(self.distance, 0.1), 0, 0)
-            self.moveMotor(w, run_time)
+            w = self.culc_invert_kinematics(max(self.distance, 0.1), 0, 0)
+            self.move_motor(w, run_time)
 
         while math.abs(self.diff) > self.max_diff:
             if self.diff > 0:
-                w = self.culcInvertKinematics(0, min(-1 * self.diff, -0.1), 0)
+                w = self.culc_invert_kinematics(0, min(-1 * self.diff, -0.1), 0)
             else:
-                w = self.culcInvertKinematics(0, max(self.diff, 0.1), 0)
+                w = self.culc_invert_kinematics(0, max(self.diff, 0.1), 0)
 
-            self.moveMotor(w, run_time)
+            self.move_motor(w, run_time)
 
-    def backFromGoal(self):
+    def back_from_goal(self):
         run_time = 300
 
         while self.pos != "center":
-            w = self.culcInvertKinematics(0, 0.3, 0)
-            self.moveMotor(w, run_time)
+            w = self.culc_invert_kinematics(0, 0.3, 0)
+            self.move_motor(w, run_time)
 
         while self.distance > 0.2:
-            w = self.culcInvertKinematics(0.2, 0, 0)
-            self.moveMotor(w, run_time)
+            w = self.culc_invert_kinematics(0.2, 0, 0)
+            self.move_motor(w, run_time)
 
             deg = self.degree / 180 * PI * (-1)
             if abs(deg) > PI / 15:
-                w = self.culcInvertKinematics(0, 0, deg)
-                self.moveMotor(w, 1)
+                w = self.culc_invert_kinematics(0, 0, deg)
+                self.move_motor(w, 1)
 
-    def culcInvertKinematics(self, vx, vy, wz):
+    def culc_invert_kinematics(self, vx, vy, wz):
         # [frontleft, frontright, rearleft, rearright]
         r = 0.05
         lx = 0.092
@@ -131,14 +131,14 @@ class MotorNode(Node):
 
         return w.tolist()[0]
 
-    def moveMotor(self, wList, ms):
+    def move_motor(self, w_list, ms):
         t = ms / 1000
         step_deg = 1.8
         ping_offset = 18
-        GPIOList = []
+        gpio_list = []
 
         for i in range(4):
-            w = wList[i]
+            w = w_list[i]
 
         if w > 0:
             ping = ping_offset + i * 2
@@ -149,15 +149,15 @@ class MotorNode(Node):
         step = math.floor(w * t / step_deg)
         hz = step / t
         print(hz)
-        GPIOList.append(GPIO.PWM(ping, hz))
+        gpio_list.append(GPIO.PWM(ping, hz))
 
-        for pi in GPIOList:
+        for pi in gpio_list:
             print(pi)
             pi.start(50)
 
         time.sleep(t)
 
-        for pi in GPIOList:
+        for pi in gpio_list:
             pi.stop()
 
         GPIO.setmode(GPIO.BCM)

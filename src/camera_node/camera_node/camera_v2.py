@@ -67,28 +67,28 @@ def main(args=None):
     pipeline = dai.Pipeline()
 
     # create nodes
-    monoLeft = pipeline.create(dai.node.MonoCamera)
-    edgeDetectorMono = pipeline.create(dai.node.EdgeDetector)
-    xout_edgeMono = pipeline.create(dai.node.XLinkOut)
+    mono_left = pipeline.create(dai.node.MonoCamera)
+    edge_detector_mono = pipeline.create(dai.node.EdgeDetector)
+    xout_edge_mono = pipeline.create(dai.node.XLinkOut)
     xout_mono = pipeline.create(dai.node.XLinkOut)
     control = pipeline.create(dai.node.XLinkIn)
 
-    xout_edgeMono.setStreamName("edge_mono")
+    xout_edge_mono.setStreamName("edge_mono")
     xout_mono.setStreamName("mono")
     control.setStreamName("control")
 
     # configure color camera
-    monoLeft.setResolution(dai.MonoCameraProperties.SensorResolution.THE_400_P)
-    monoLeft.setBoardSocket(dai.CameraBoardSocket.LEFT)
-    height = monoLeft.getResolutionHeight()
-    width = monoLeft.getResolutionWidth()
+    mono_left.setResolution(dai.MonoCameraProperties.SensorResolution.THE_400_P)
+    mono_left.setBoardSocket(dai.CameraBoardSocket.LEFT)
+    height = mono_left.getResolutionHeight()
+    width = mono_left.getResolutionWidth()
     sum_pixel = height * width
 
     # linking
-    monoLeft.out.link(edgeDetectorMono.inputImage)
-    edgeDetectorMono.outputImage.link(xout_edgeMono.input)
-    monoLeft.out.link(xout_mono.input)
-    control.out.link(monoLeft.inputControl)
+    mono_left.out.link(edge_detector_mono.inputImage)
+    edge_detector_mono.outputImage.link(xout_edge_mono.input)
+    mono_left.out.link(xout_mono.input)
+    control.out.link(mono_left.inputControl)
 
     # kernel for the goal script
     kernel_1 = np.ones((5, 5), np.uint8)
@@ -107,7 +107,7 @@ def main(args=None):
 
     # FPS
     fps = 0
-    tenF_time = 0
+    tenf_time = 0
     f_count = 0
     fmax_count = 10
     start = time.time()
@@ -115,7 +115,7 @@ def main(args=None):
 
     with dai.Device(pipeline) as device:
         # in/out queues
-        q_edgeMono = device.getOutputQueue(name="edge_mono", maxSize=4, blocking=False)
+        q_edge_mono = device.getOutputQueue(name="edge_mono", maxSize=4, blocking=False)
         q_mono = device.getOutputQueue(name="mono", maxSize=4, blocking=False)
         q_control = device.getInputQueue(name="control", maxSize=4, blocking=False)
 
@@ -131,24 +131,24 @@ def main(args=None):
                 count = 0
                 flag = 0
 
-                edgeMono = q_edgeMono.get()
+                edge_mono = q_edge_mono.get()
 
-                edgeMonoFrame = edgeMono.getCvFrame()
+                edge_mono_frame = edge_mono.getCvFrame()
 
-                edgeMonoFrame = cv2.resize(edgeMonoFrame, (640, 400))  # ２値化画像サイズ　実装時削除
-                _, edgeMonoFrame = cv2.threshold(
-                    edgeMonoFrame, 125, 255, cv2.THRESH_BINARY
+                edge_mono_frame = cv2.resize(edge_mono_frame, (640, 400))  # ２値化画像サイズ　実装時削除
+                _, edge_mono_frame = cv2.threshold(
+                    edge_mono_frame, 125, 255, cv2.THRESH_BINARY
                 )  # 2値化
-                # edgeMonoFrame = cv2.morphologyEx(edgeMonoFrame, cv2.MORPH_OPEN, kernel_3) 
+                # edge_mono_frame = cv2.morphologyEx(edge_mono_frame, cv2.MORPH_OPEN, kernel_3) 
                 # # モルフォロジー変換
-                # edgeMonoFrame = cv2.morphologyEx(edgeMonoFrame, cv2.MORPH_CLOSE, kernel_2)
+                # edge_mono_frame = cv2.morphologyEx(edge_mono_frame, cv2.MORPH_CLOSE, kernel_2)
                 # # モルフォロジー変換
-                edgeMonoFrame = cv2.dilate(
-                    edgeMonoFrame, kernel_1, iterations=1
+                edge_mono_frame = cv2.dilate(
+                    edge_mono_frame, kernel_1, iterations=1
                 )  # 膨張処理
 
                 contours, hierarchy = cv2.findContours(
-                    edgeMonoFrame, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_TC89_L1
+                    edge_mono_frame, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_TC89_L1
                 )
 
                 contours = [
@@ -174,13 +174,13 @@ def main(args=None):
                 rect_num = 0
                 for contour in contours:
                     x, y, w, h = cv2.boundingRect(contour)
-                    rectRatio = cv2.contourArea(contour) / (w * h)
-                    hwRatio = h / w
+                    rect_ratio = cv2.contourArea(contour) / (w * h)
+                    hw_ratio = h / w
                     if (
-                        rectRatio > 0.8
+                        rect_ratio > 0.8
                         and h * w < (height * width) * 0.65
-                        and hwRatio > 0.6
-                        and hwRatio < 1
+                        and hw_ratio > 0.6
+                        and hw_ratio < 1
                         and x > 20
                         and (x + w) < (width - 20)
                         and y > 20
@@ -198,19 +198,19 @@ def main(args=None):
                 # FPS
                 if f_count == fmax_count:
                     end = time.time()
-                    tenF_time = end - start
-                    fps = fmax_count / (tenF_time)
+                    tenf_time = end - start
+                    fps = fmax_count / (tenf_time)
                     start = time.time()
                     f_count = 0
                     print("FPS : ", str(round(fps, 1)))
 
                 f_count += 1
                 cv2.putText(
-                    edgeMonoFrame,
+                    edge_mono_frame,
                     "FPS: "
                     + str(round(fps, 1))
                     + " time: "
-                    + str(round(tenF_time, 3))
+                    + str(round(tenf_time, 3))
                     + "s",
                     (10, 18),
                     cv2.FONT_HERSHEY_SIMPLEX,
@@ -220,7 +220,7 @@ def main(args=None):
                 )
                 #####################
 
-                cv2.imshow("edge mono", edgeMonoFrame)
+                cv2.imshow("edge mono", edge_mono_frame)
 
                 if cv2.waitKey(1) == ord("q"):
                     break
@@ -234,10 +234,10 @@ def main(args=None):
                 count = 0
                 flag = 0
 
-                inMono = q_mono.get()
+                in_mono = q_mono.get()
 
-                mono = inMono.getCvFrame()
-                gray = inMono.getCvFrame()
+                mono = in_mono.getCvFrame()
+                gray = in_mono.getCvFrame()
 
                 # 黒抽出
                 gray = cv2.adaptiveThreshold(
@@ -323,14 +323,20 @@ def main(args=None):
                                         cv2.drawContours(mono, [box_h], 0, (0, 0, 0), 2)
                                         (
                                             retval,
-                                            intersectionRegion,
+                                            intersection_region,
                                         ) = cv2.rotatedRectangleIntersection(
                                             rect_v, rect_h
                                         )  # 縦横ラインの交点
-                                        # print(intersectionRegion)
-                                        if intersectionRegion is not None:
-                                            for xy in intersectionRegion:
-                                                # rgb_v = cv2.circle(rgb_v, (int(xy[0][0]), int(xy[0][1])), 2, (0, 255, 255), 2)
+                                        # print(intersection_region)
+                                        if intersection_region is not None:
+                                            for xy in intersection_region:
+                                                # rgb_v = cv2.circle(
+                                                #           rgb_v,
+                                                #           (int(xy[0][0]),
+                                                #           int(xy[0][1])),
+                                                #           2,
+                                                #           (0, 255, 255), 2
+                                                #           )
                                                 if (
                                                     rect_h[0][0] + h_long_side / 2 - 80
                                                 ) <= xy[0][

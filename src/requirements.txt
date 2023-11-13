@@ -4,3 +4,6 @@ pytest==6.2.5
 setuptools==59.6.0
 smbus==1.1.post2
 std_msgs==0.0.1
+flake8
+black
+pep8-naming
