@@ -7,3 +7,4 @@ std_msgs==0.0.1
 flake8
 black
 pep8-naming
+pre-commit
