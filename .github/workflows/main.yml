@@ -21,10 +21,9 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@v3
-
-      - name: move directory
-        run: cd ${{ github.workspace }}
-
+        with:
+          ref: ${{ github.ref }}
+        
       - name: Install dependencies
         run: |
           rosdep update && 
