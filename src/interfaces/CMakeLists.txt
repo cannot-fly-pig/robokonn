@@ -10,17 +10,14 @@ find_package(ament_cmake REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 
-set(srv_files
-  "srv/GoingCameraData.srv"
-  "srv/BackingCameraData.srv"
-  "srv/DistanceSensorData.srv"
-)
+
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Goal.msg"
   "msg/Back.msg"
   "msg/Direction.msg"
   "msg/Distance.msg"
-  ${srv_files}
+  "msg/Task.msg"
+  "msg/Finish.msg"
   DEPENDENCIES std_msgs
 )
 

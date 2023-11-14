@@ -6,7 +6,12 @@ from std_msgs.msg import String
 import numpy as np
 from interfaces.msg import Goal, Back, Direction
 
-from RPI import GPIO
+try:
+    import RPI.GPIO as GPIO
+except ImportError:
+    import Mock.GPIO as GPIO
+
+
 import time
 import math
 
@@ -43,7 +48,9 @@ class MotorNode(Node):
 
         self.timer_period = 1
         self.timer = self.create_timer(
-            self.timer_period, self.timer_callback, callback_group=self.timer_cb_group
+            self.timer_period,
+            self.timer_callback,
+            callback_group=self.timer_cb_group,
         )
 
     def goal_callback(self, msg):
@@ -90,7 +97,9 @@ class MotorNode(Node):
 
         while math.abs(self.diff) > self.max_diff:
             if self.diff > 0:
-                w = self.culc_invert_kinematics(0, min(-1 * self.diff, -0.1), 0)
+                w = self.culc_invert_kinematics(
+                    0, min(-1 * self.diff, -0.1), 0
+                )
             else:
                 w = self.culc_invert_kinematics(0, max(self.diff, 0.1), 0)
 

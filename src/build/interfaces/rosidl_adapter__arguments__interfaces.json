@@ -1,8 +1,0 @@
-{
-  "package_name": "interfaces",
-  "non_idl_tuples": [
-    "/home/cannotflypig/robokonn/src/interfaces:srv/GoingCameraData.srv",
-    "/home/cannotflypig/robokonn/src/interfaces:srv/BackingCameraData.srv",
-    "/home/cannotflypig/robokonn/src/interfaces:srv/DistanceSensorData.srv"
-  ]
-}
