@@ -15,4 +15,4 @@ repos:
         name: test
         entry: pytest -q --show-capture all -s
         language: system
-        files: 'test*.py'
+        files: ^test_.*_node\.py
