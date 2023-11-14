@@ -1,1 +1,4 @@
-float64 distance
+float64 top_left
+float64 top_right
+float64 bottom_left
+float64 bottom_right

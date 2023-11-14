@@ -3,7 +3,11 @@ from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import MutuallyExclusive_callbackGroup
 
-import pigpio
+try:
+    import pigpio
+except ImportError:
+    None
+
 from interfaces.srv import Distance
 
 
@@ -18,30 +22,33 @@ class SensorNode(Node):
             0.04, self.timer_callback, callback_group=self.timer_cb_group
         )
         self.pub = self.create_publisher(Distance, "direction_node", 10)
-        # self.bus=smbus.SMBus(1)
-        self.address_gpy2 = 0x40
-        self.register_gpyu = 0x5E
-        self.register_gpys = 0x5F
+        try:
+            self.pi = pigpio.pi()
+        except ModuleNotFoundError:
+            self.pi = None
 
     def timer_callback(self):
-        pi = pigpio.pi()
         sensor_addresses = [0x40, 0x50, 0x60, 0x70]
         distance = []
         for address in sensor_addresses:
-            distance.append(self.read_distance(pi, address))
+            distance.append(self.read_distance(address))
 
         self.distance = min(distance)
         msg = Distance()
-        msg.distance = self.distance
+        msg.top_left = self.distance[0]
+        msg.top_right = self.distance[1]
+        msg.bottom_left = self.distance[2]
+        msg.bottom_right = self.distance[3]
         self.pub.publish(msg)
 
-    def read_distance(self, pi, sensor_address):
+    def read_distance(self, sensor_address):
         register = 0x81
         byte = 2
-        sensor = pi.i2c_open(1, sensor_address)
-        b, d = pi.i2c_read_i2c_block_data(sensor, register, byte)
-        ans = ((d[0] * 16 + d[1]) / 16) / 4 / 100
-        self.distance = ans
+        sensor = self.pi.i2c_open(1, sensor_address)
+        _b, d = self.pi.i2c_read_i2c_block_data(sensor, register, byte)
+        distance = ((d[0] * 16 + d[1]) / 16) / 4 / 100
+
+        return distance
 
 
 def main():
