@@ -21,7 +21,7 @@ class SensorNode(Node):
         self.timer = self.create_timer(
             0.04, self.timer_callback, callback_group=self.timer_cb_group
         )
-        self.pub = self.create_publisher(Distance, "direction_node", 10)
+        self.pub = self.create_publisher(Distance, "sensor_node", 10)
         try:
             self.pi = pigpio.pi()
         except ModuleNotFoundError:
