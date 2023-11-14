@@ -1,2 +1,0 @@
-Invoking command in '/home/cannotflypig/robokonn/src/build/mecanum_gazebo': /usr/bin/cmake /home/cannotflypig/robokonn/src/mecanum_gazebo -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/cannotflypig/robokonn/src/install/mecanum_gazebo
-Invoked command in '/home/cannotflypig/robokonn/src/build/mecanum_gazebo' returned '1': /usr/bin/cmake /home/cannotflypig/robokonn/src/mecanum_gazebo -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/home/cannotflypig/robokonn/src/install/mecanum_gazebo

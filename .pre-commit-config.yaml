@@ -9,3 +9,10 @@ repos:
     hooks:
       - id: flake8
         args: ["--ignore", "E203,E501,W503"]
+  - repo: local
+    hooks:
+      - id: test
+        name: test
+        entry: pytest -q --show-capture all -s
+        language: system
+        files: ^test_.*_node\.py

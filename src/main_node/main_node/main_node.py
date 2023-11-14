@@ -1,44 +1,41 @@
 import rclpy
 from rclpy.node import Node
-from std_msgs.msg import String
-from RPI import GPIO
+from interfaces.msg import Finish, Task
 
 
 class MainNode(Node):
     def __init__(self):
-        super().__init__('main_node')
-        self.pub = self.create_publisher(String, 'main_node', 10)
-        self.sub = self.create_subscription(String, 'motor_node', self.sub_callback, 10)
-        button_pin = 12
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setup(button_pin, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-        GPIO.add_event_detect(
-            button_pin,
-            GPIO.FALLING,
-            callback=self.button_callback,
-            bouncetime=200
+        super().__init__("main_node")
+        self.pub = self.create_publisher(Task, "main_node", 10)
+        self.sub = self.create_subscription(
+            Finish, "motor_node", self.sub_callback, 10
         )
 
-        self.taskIndex = 0
-        self.taskList = ['takeBaggage', 'turn', 'go', 'putBaggage', 'turn', 'back']
-        self.task = 'standby'
-        self.timer = self.create_timer(1, self.send_task)
+        self.task_index = 0
+        self.task_list = [
+            "takeBaggage",
+            "turn",
+            "go",
+            "putBaggage",
+            "turn",
+            "back",
+        ]
+        self.task = self.task_list[self.task_index]
+        self.timer = self.create_timer(0.1, self.send_task)
 
     def send_task(self):
-        if self.task != 'standby':
-            msg = String()
-            msg.data = self.task
+        if self.task != "standby":
+            msg = Task()
+            msg.task = self.task
             self.pub.publish(msg)
             print(self.task)
 
     def sub_callback(self, msg):
-        self.taskIndex += 1
-        if self.taskIndex >= len(self.taskList):
-            self.taskIndex = 0
-        self.task = self.taskList[self.taskIndex]
+        self.task_index += 1
+        if self.task_index >= len(self.task_list):
+            self.task_index = 0
 
-    def button_callback(self, channel):
-        self.task = self.taskList[self.taskIndex]
+        self.task = self.task_list[self.task_index]
 
 
 def main():
@@ -48,5 +45,5 @@ def main():
     node.send_task()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
