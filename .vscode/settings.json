@@ -4,6 +4,6 @@
     "--config=.flake8"
   ],
   "[python]": {
-    "editor.defaultFormatter": "ms-python.flake8"
+    "editor.defaultFormatter": "ms-python.black-formatter"
   }
 }

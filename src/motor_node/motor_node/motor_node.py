@@ -18,6 +18,36 @@ import math
 PI = math.pi
 
 
+class MotorController:
+    def __init__(self, forward_ping, back_ping):
+        self.forward_ping = forward_ping
+        self.back_ping = back_ping
+
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(forward_ping, GPIO.OUT)
+        GPIO.setup(back_ping, GPIO.OUT)
+
+    def move_motor(self, w, ms):
+        t = ms / 1000
+        step_deg = 1.8
+
+        if w > 0:
+            ping = self.forward_ping
+        elif w < 0:
+            ping = self.back_ping
+            w *= -1
+
+        step = math.floor(w * t / step_deg)
+        hz = step / t
+        print(hz)
+
+        self.pi = GPIO.PWM(ping, hz)
+        self.pi.start(50)
+
+    def stop_motor(self):
+        self.pi.stop()
+
+
 class MotorNode(Node):
     def __init__(self):
         super().__init__("motor_node")
@@ -27,9 +57,15 @@ class MotorNode(Node):
         self.pos = ""
         self.diff = -10
         self.degree = -10
-        self.distance = -10
+        self.distance = {}
         self.task = "standby"
-        self.max_diff = 10
+        self.max_diff = 20
+        self.motor = [
+            MotorController(21, 20),
+            MotorController(18, 19),
+            MotorController(25, 24),
+            MotorController(23, 22),
+        ]
 
         self.pub = self.create_publisher(Finish, "motor_node", 10)
 
@@ -64,10 +100,21 @@ class MotorNode(Node):
         self.degree = msg.degree
 
     def distance_callback(self, msg):
-        self.top_left = msg.top_left
-        self.top_right = msg.top_right
-        self.bottom_left = msg.bottom_left
-        self.bottom_right = msg.bottom_right
+        self.distance.top_left = msg.top_left
+        self.distance.top_right = msg.top_right
+        self.distance.bottom_left = msg.bottom_left
+        self.distance.bottom_right = msg.bottom_right
+        self.distance.average = np.average(
+            filter(
+                lambda x: x != 9999,
+                [
+                    msg.top_left,
+                    msg.top_right,
+                    msg.bottom_left,
+                    msg.bottom_right,
+                ],
+            )
+        )
 
     def timer_callback(self):
         if self.task == "go":
@@ -90,15 +137,17 @@ class MotorNode(Node):
         self.pub.publish(msg)
 
     def half_turn(self):
-        w = self.culc_invert_kinematics(0, 0, PI / 2)
-        self.move_motor(w, 2)
+        w = self.culc_invert_kinematics(0, 0, PI)
+        self.move_to(w, 2000)
 
     def go_to_goal(self):
         run_time = 300
 
-        while math.abs(self.distance) > self.max_distance:
-            w = self.culc_invert_kinematics(max(self.distance, 0.1), 0, 0)
-            self.move_motor(w, run_time)
+        while self.distance.average > self.max_distance:
+            w = self.culc_invert_kinematics(
+                max(self.distance.average, 0.1), 0, 0
+            )
+            self.move_to(w, run_time)
 
         while math.abs(self.diff) > self.max_diff:
             if self.diff > 0:
@@ -108,23 +157,23 @@ class MotorNode(Node):
             else:
                 w = self.culc_invert_kinematics(0, max(self.diff, 0.1), 0)
 
-            self.move_motor(w, run_time)
+            self.move_to(w, run_time)
 
     def back_from_goal(self):
         run_time = 300
 
         while self.pos != "center":
             w = self.culc_invert_kinematics(0, 0.3, 0)
-            self.move_motor(w, run_time)
+            self.move_to(w, run_time)
 
         while self.distance > 0.2:
             w = self.culc_invert_kinematics(0.2, 0, 0)
-            self.move_motor(w, run_time)
+            self.move_to(w, run_time)
 
             deg = self.degree / 180 * PI * (-1)
             if abs(deg) > PI / 15:
                 w = self.culc_invert_kinematics(0, 0, deg)
-                self.move_motor(w, 1)
+                self.move_to(w, 1000)
 
     def culc_invert_kinematics(self, vx, vy, wz):
         # [frontleft, frontright, rearleft, rearright]
@@ -145,38 +194,16 @@ class MotorNode(Node):
 
         return w.tolist()[0]
 
-    def move_motor(self, w_list, ms):
+    def move_to(self, w_list, ms):
         t = ms / 1000
-        step_deg = 1.8
-        ping_offset = 18
-        gpio_list = []
 
         for i in range(4):
-            w = w_list[i]
-
-        if w > 0:
-            ping = ping_offset + i * 2
-        else:
-            ping = ping_offset + i * 2 + 1
-            w *= -1
-
-        step = math.floor(w * t / step_deg)
-        hz = step / t
-        print(hz)
-        gpio_list.append(GPIO.PWM(ping, hz))
-
-        for pi in gpio_list:
-            print(pi)
-            pi.start(50)
+            self.motor[i].move_motor(w_list[i], ms)
 
         time.sleep(t)
 
-        for pi in gpio_list:
-            pi.stop()
-
-        GPIO.setmode(GPIO.BCM)
-        for i in range(18, 26):
-            GPIO.setup(i, GPIO.OUT)
+        for i in range(4):
+            self.motor[i].stop()
 
 
 def main():
