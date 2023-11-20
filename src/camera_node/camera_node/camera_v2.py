@@ -6,8 +6,7 @@ import threading
 import rclpy
 from rclpy.node import Node
 
-from interfaces.msg import Goal, Back
-from std_msgs.msg import String
+from interfaces.msg import Goal, Back, Task
 
 
 class Camera(Node):
@@ -23,7 +22,7 @@ class Camera(Node):
         self.direction = None
 
         self.subscription = self.create_subscription(
-            String, "main_node", self.callback_sub, 10
+            Task, "main_node", self.callback_sub, 10
         )
         self.subscription
 
@@ -48,8 +47,8 @@ class Camera(Node):
         )
 
     def callback_sub(self, msg):
-        self.direction = msg.data
-        self.get_logger().info('Subscribing direction : "%s"' % msg.data)
+        self.direction = msg.task
+        self.get_logger().info('Subscribing direction : "%s"' % msg.task)
 
 
 def main(args=None):
@@ -78,7 +77,9 @@ def main(args=None):
     control.setStreamName("control")
 
     # configure color camera
-    mono_left.setResolution(dai.MonoCameraProperties.SensorResolution.THE_400_P)
+    mono_left.setResolution(
+        dai.MonoCameraProperties.SensorResolution.THE_400_P
+    )
     mono_left.setBoardSocket(dai.CameraBoardSocket.LEFT)
     height = mono_left.getResolutionHeight()
     width = mono_left.getResolutionWidth()
@@ -115,9 +116,13 @@ def main(args=None):
 
     with dai.Device(pipeline) as device:
         # in/out queues
-        q_edge_mono = device.getOutputQueue(name="edge_mono", maxSize=4, blocking=False)
+        q_edge_mono = device.getOutputQueue(
+            name="edge_mono", maxSize=4, blocking=False
+        )
         q_mono = device.getOutputQueue(name="mono", maxSize=4, blocking=False)
-        q_control = device.getInputQueue(name="control", maxSize=4, blocking=False)
+        q_control = device.getInputQueue(
+            name="control", maxSize=4, blocking=False
+        )
 
         # set focus position
         ctrl = dai.CameraControl()
@@ -135,11 +140,13 @@ def main(args=None):
 
                 edge_mono_frame = edge_mono.getCvFrame()
 
-                edge_mono_frame = cv2.resize(edge_mono_frame, (640, 400))  # ２値化画像サイズ　実装時削除
+                edge_mono_frame = cv2.resize(
+                    edge_mono_frame, (640, 400)
+                )  # ２値化画像サイズ　実装時削除
                 _, edge_mono_frame = cv2.threshold(
                     edge_mono_frame, 125, 255, cv2.THRESH_BINARY
                 )  # 2値化
-                # edge_mono_frame = cv2.morphologyEx(edge_mono_frame, cv2.MORPH_OPEN, kernel_3) 
+                # edge_mono_frame = cv2.morphologyEx(edge_mono_frame, cv2.MORPH_OPEN, kernel_3)
                 # # モルフォロジー変換
                 # edge_mono_frame = cv2.morphologyEx(edge_mono_frame, cv2.MORPH_CLOSE, kernel_2)
                 # # モルフォロジー変換
@@ -249,16 +256,24 @@ def main(args=None):
                     11,
                 )
 
-                gray_v = cv2.morphologyEx(gray, cv2.MORPH_OPEN, kernel_v)  # 垂直方向の抽出
+                gray_v = cv2.morphologyEx(
+                    gray, cv2.MORPH_OPEN, kernel_v
+                )  # 垂直方向の抽出
                 gray_v = cv2.morphologyEx(gray_v, cv2.MORPH_OPEN, kernel_v2)
 
-                gray_h = cv2.morphologyEx(gray, cv2.MORPH_OPEN, kernel_h)  # 水平方向の抽出
+                gray_h = cv2.morphologyEx(
+                    gray, cv2.MORPH_OPEN, kernel_h
+                )  # 水平方向の抽出
 
                 contours_v, _ = cv2.findContours(
-                    gray_v[y_min:, x_min:x_max], cv2.RETR_LIST, cv2.CHAIN_APPROX_TC89_L1
+                    gray_v[y_min:, x_min:x_max],
+                    cv2.RETR_LIST,
+                    cv2.CHAIN_APPROX_TC89_L1,
                 )
                 contours_h, _ = cv2.findContours(
-                    gray_h[y_min:, x_min:x_max], cv2.RETR_LIST, cv2.CHAIN_APPROX_TC89_L1
+                    gray_h[y_min:, x_min:x_max],
+                    cv2.RETR_LIST,
+                    cv2.CHAIN_APPROX_TC89_L1,
                 )
 
                 contours_v = list(
@@ -266,7 +281,8 @@ def main(args=None):
                         lambda x: cv2.contourArea(x) > 300
                         and cv2.contourArea(x)
                         < 0.3 * ((height - y_min) * (x_max - x_min))
-                        and 1.5 * cv2.boundingRect(x)[2] < cv2.boundingRect(x)[3],
+                        and 1.5 * cv2.boundingRect(x)[2]
+                        < cv2.boundingRect(x)[3],
                         contours_v,
                     )
                 )  # 輪郭の条件
@@ -275,12 +291,15 @@ def main(args=None):
                         lambda x: cv2.contourArea(x) > 100
                         and cv2.contourArea(x)
                         < 0.3 * ((height - y_min) * (x_max - x_min))
-                        and cv2.boundingRect(x)[2] > 3 * cv2.boundingRect(x)[3],
+                        and cv2.boundingRect(x)[2]
+                        > 3 * cv2.boundingRect(x)[3],
                         contours_h,
                     )
                 )  # 輪郭の条件
 
-                cv2.line(mono, (0, y_min), (width, y_min), (0, 0, 0), 2)  # 検出範囲
+                cv2.line(
+                    mono, (0, y_min), (width, y_min), (0, 0, 0), 2
+                )  # 検出範囲
                 cv2.line(mono, (x_min, y_min), (x_min, height), (0, 0, 0), 2)
                 cv2.line(mono, (x_max, y_min), (x_max, height), (0, 0, 0), 2)
                 cv2.line(
@@ -302,7 +321,9 @@ def main(args=None):
                     box_v = cv2.boxPoints(rect_v)
                     box_v = np.int0(box_v)
                     if cv2.contourArea(box_v) != 0:
-                        if (cv2.contourArea(contour_v) / cv2.contourArea(box_v)) > 0.2:
+                        if (
+                            cv2.contourArea(contour_v) / cv2.contourArea(box_v)
+                        ) > 0.2:
                             cv2.drawContours(mono, [box_v], 0, (0, 0, 0), 2)
 
                             for contour_h in contours_h:  # 水平方向
@@ -320,7 +341,9 @@ def main(args=None):
                                         cv2.contourArea(contour_h)
                                         / cv2.contourArea(box_h)
                                     ) > 0.2:
-                                        cv2.drawContours(mono, [box_h], 0, (0, 0, 0), 2)
+                                        cv2.drawContours(
+                                            mono, [box_h], 0, (0, 0, 0), 2
+                                        )
                                         (
                                             retval,
                                             intersection_region,
@@ -338,15 +361,19 @@ def main(args=None):
                                                 #           (0, 255, 255), 2
                                                 #           )
                                                 if (
-                                                    rect_h[0][0] + h_long_side / 2 - 80
+                                                    rect_h[0][0]
+                                                    + h_long_side / 2
+                                                    - 80
                                                 ) <= xy[0][
                                                     0
                                                 ]:  # ラインの右中左判定
                                                     pos = "right"
-                                                    degree = round(rect_v[2], 2)
-                                                    diff = int(rect_v[0][0]) - int(
-                                                        width / 2
+                                                    degree = round(
+                                                        rect_v[2], 2
                                                     )
+                                                    diff = int(
+                                                        rect_v[0][0]
+                                                    ) - int(width / 2)
                                                     cv2.putText(
                                                         mono,
                                                         "R:"
@@ -357,7 +384,12 @@ def main(args=None):
                                                             int(rect_v[0][0]),
                                                             int(
                                                                 rect_v[0][1]
-                                                                - (rect_v[1][1] / 2)
+                                                                - (
+                                                                    rect_v[1][
+                                                                        1
+                                                                    ]
+                                                                    / 2
+                                                                )
                                                                 - 5
                                                             ),
                                                         ),
@@ -371,17 +403,23 @@ def main(args=None):
                                                     )
                                                     # print("right")
                                                 elif (
-                                                    rect_h[0][0] + h_long_side / 2 - 80
+                                                    rect_h[0][0]
+                                                    + h_long_side / 2
+                                                    - 80
                                                     > xy[0][0]
                                                 ) and (
-                                                    rect_h[0][0] - h_long_side / 2 + 80
+                                                    rect_h[0][0]
+                                                    - h_long_side / 2
+                                                    + 80
                                                     < xy[0][0]
                                                 ):
                                                     pos = "center"
-                                                    degree = round(rect_v[2], 2)
-                                                    diff = int(rect_v[0][0]) - int(
-                                                        width / 2
+                                                    degree = round(
+                                                        rect_v[2], 2
                                                     )
+                                                    diff = int(
+                                                        rect_v[0][0]
+                                                    ) - int(width / 2)
                                                     cv2.putText(
                                                         mono,
                                                         "C:"
@@ -392,7 +430,12 @@ def main(args=None):
                                                             int(rect_v[0][0]),
                                                             int(
                                                                 rect_v[0][1]
-                                                                - (rect_v[1][1] / 2)
+                                                                - (
+                                                                    rect_v[1][
+                                                                        1
+                                                                    ]
+                                                                    / 2
+                                                                )
                                                                 - 5
                                                             ),
                                                         ),
@@ -406,14 +449,18 @@ def main(args=None):
                                                     )
                                                     # print("center")
                                                 elif (
-                                                    rect_h[0][0] - h_long_side / 2 + 80
+                                                    rect_h[0][0]
+                                                    - h_long_side / 2
+                                                    + 80
                                                     >= xy[0][0]
                                                 ):
                                                     pos = "left"
-                                                    degree = round(rect_v[2], 2)
-                                                    diff = int(rect_v[0][0]) - int(
-                                                        width / 2
+                                                    degree = round(
+                                                        rect_v[2], 2
                                                     )
+                                                    diff = int(
+                                                        rect_v[0][0]
+                                                    ) - int(width / 2)
                                                     cv2.putText(
                                                         mono,
                                                         "L:"
@@ -424,7 +471,12 @@ def main(args=None):
                                                             int(rect_v[0][0]),
                                                             int(
                                                                 rect_v[0][1]
-                                                                - int(rect_v[1][1] / 2)
+                                                                - int(
+                                                                    rect_v[1][
+                                                                        1
+                                                                    ]
+                                                                    / 2
+                                                                )
                                                                 - 5
                                                             ),
                                                         ),

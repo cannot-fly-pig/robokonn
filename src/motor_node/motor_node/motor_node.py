@@ -4,7 +4,7 @@ from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import MutuallyExclusive_callbackGroup
 from std_msgs.msg import String
 import numpy as np
-from interfaces.msg import Goal, Back, Direction
+from interfaces.msg import Goal, Back, Task, Finish, Distance
 
 try:
     import RPI.GPIO as GPIO
@@ -31,27 +31,29 @@ class MotorNode(Node):
         self.task = "standby"
         self.max_diff = 10
 
-        self.subscription_goal = self.create_subscription(
-            Goal, "goal_pub", self.goal_callback, 10
-        )
-        self.subscription_goal
+        self.pub = self.create_publisher(Finish, "motor_node", 10)
 
-        self.subscription_back = self.create_subscription(
-            Back, "back_pub", self.back_callback, 10
+        self.main_sub = self.create_subscription(
+            Task, "main_node", self.main_callback
         )
-        self.subscription_back
-
-        self.subscription_distance = self.create_subscription(
-            Direction, "direction_pub", self.distance_callback, 10
+        self.distance_sub = self.create_subscription(
+            Distance, "sensor_node", self.distance_callback
         )
-        self.subscription_distance
-
+        self.goal_sub = self.create_subscription(
+            Goal, "goal_pub", self.goal_callback
+        )
+        self.back_sub = self.create_subscription(
+            Back, "back_pub", self.back_callback
+        )
         self.timer_period = 1
         self.timer = self.create_timer(
             self.timer_period,
             self.timer_callback,
             callback_group=self.timer_cb_group,
         )
+
+    def main_callback(self, msg):
+        self.task = msg.task
 
     def goal_callback(self, msg):
         self.diff = msg.diff
@@ -62,7 +64,10 @@ class MotorNode(Node):
         self.degree = msg.degree
 
     def distance_callback(self, msg):
-        self.distance = msg.distance
+        self.top_left = msg.top_left
+        self.top_right = msg.top_right
+        self.bottom_left = msg.bottom_left
+        self.bottom_right = msg.bottom_right
 
     def timer_callback(self):
         if self.task == "go":
@@ -81,7 +86,7 @@ class MotorNode(Node):
 
     def finish_task(self):
         msg = String()
-        msg.data = "fin"
+        msg.finish = "fin"
         self.pub.publish(msg)
 
     def half_turn(self):
