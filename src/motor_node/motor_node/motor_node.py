@@ -2,7 +2,6 @@ import rclpy
 from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import MutuallyExclusive_callbackGroup
-from std_msgs.msg import String
 import numpy as np
 from interfaces.msg import Goal, Back, Task, Finish, Distance
 
@@ -132,7 +131,7 @@ class MotorNode(Node):
             self.finish_task()
 
     def finish_task(self):
-        msg = String()
+        msg = Finish()
         msg.finish = "fin"
         self.pub.publish(msg)
 
