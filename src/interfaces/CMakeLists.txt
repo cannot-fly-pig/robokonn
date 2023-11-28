@@ -14,7 +14,6 @@ find_package(std_msgs REQUIRED)
 rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Goal.msg"
   "msg/Back.msg"
-  "msg/Direction.msg"
   "msg/Distance.msg"
   "msg/Task.msg"
   "msg/Finish.msg"

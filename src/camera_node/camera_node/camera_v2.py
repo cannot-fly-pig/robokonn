@@ -92,7 +92,7 @@ def main(args=None):
     control.out.link(mono_left.inputControl)
 
     # kernel for the goal script
-    kernel_1 = np.ones((5, 5), np.uint8)
+    kernel_1 = np.ones((10, 10), np.uint8)
     # kernel_2 = np.ones((10, 10), np.uint8)
     # kernel_3 = np.ones((3, 3), np.uint8)
 
@@ -198,6 +198,8 @@ def main(args=None):
                         camera.callback_goal_pub(diff)
                         rect_num += 1  # 見つけた長方形の数
                 rect_num = 0
+                if len(contours) == 0: #未検出時
+                    camera.callback_goal_pub(-1000)
 
                 # diff = 0                           #test code
                 # camera.callback_goal_pub(diff)     #test code
@@ -489,6 +491,8 @@ def main(args=None):
                                                         pos, degree, diff
                                                     )
                                                     # print("left")
+                if len(contours_v) == 0: # 未検出時
+                    camera.callback_back_pub("None", -1000.0, -1000)
 
                 # pos = "right"                               #test code
                 # degree = 0                                  #test code
