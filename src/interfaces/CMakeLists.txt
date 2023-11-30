@@ -17,6 +17,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/Distance.msg"
   "msg/Task.msg"
   "msg/Finish.msg"
+  "srv/Arm.srv"
   DEPENDENCIES std_msgs
 )
 
