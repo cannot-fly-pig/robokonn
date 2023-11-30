@@ -53,7 +53,7 @@ class ArmNode(Node):
 
     def server_callback(self, req, res):
         length = req.length
-        r = 1
+        r = 0.01
         w = length / (r * 2 * PI)
         self.motor.move_motor(w, 1000)
         time.sleep(1)
