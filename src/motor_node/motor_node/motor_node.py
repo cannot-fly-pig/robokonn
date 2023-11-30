@@ -4,6 +4,7 @@ from rclpy.executors import MultiThreadedExecutor
 from rclpy.callback_groups import MutuallyExclusive_callbackGroup
 import numpy as np
 from interfaces.msg import Goal, Back, Task, Finish, Distance
+from interfaces.srv import Arm
 
 try:
     import RPI.GPIO as GPIO
@@ -58,7 +59,7 @@ class MotorNode(Node):
         self.degree = -10
         self.distance = {}
         self.task = "standby"
-        self.max_diff = 20
+        self.max_diff = 0.05
         self.motor = [
             MotorController(21, 20),
             MotorController(18, 19),
@@ -86,6 +87,7 @@ class MotorNode(Node):
             self.timer_callback,
             callback_group=self.timer_cb_group,
         )
+        self.cli = self.create_client(Arm, "arm_node")
 
     def main_callback(self, msg):
         self.task = msg.task
@@ -128,6 +130,7 @@ class MotorNode(Node):
             self.back_from_goal()
             self.finish_task()
         if self.task == "takeBaggage":
+            self.take_baggage()
             self.finish_task()
 
     def finish_task(self):
@@ -142,7 +145,7 @@ class MotorNode(Node):
     def go_to_goal(self):
         run_time = 300
 
-        while self.distance.average > self.max_distance:
+        while self.distance.average > 0.2:
             w = self.culc_invert_kinematics(
                 max(self.distance.average, 0.1), 0, 0
             )
@@ -165,7 +168,7 @@ class MotorNode(Node):
             w = self.culc_invert_kinematics(0, 0.3, 0)
             self.move_to(w, run_time)
 
-        while self.distance > 0.2:
+        while self.distance.average > 0.2:
             w = self.culc_invert_kinematics(0.2, 0, 0)
             self.move_to(w, run_time)
 
@@ -173,6 +176,36 @@ class MotorNode(Node):
             if abs(deg) > PI / 15:
                 w = self.culc_invert_kinematics(0, 0, deg)
                 self.move_to(w, 1000)
+
+        deg = self.degree / 180 * PI * (-1)
+        w = self.culc_invert_kinematics(0, 0, deg)
+        self.move_to(w, 1000)
+
+    def take_baggage(self):
+        run_time = 300
+
+        while self.distance.average > 0.1:
+            w = self.culc_invert_kinematics(0.05, 0, 0)
+            self.move_to(w, run_time)
+
+    def put_baggage(self):
+        self.req = Arm.Request()
+        self.req.length = 0.16
+        self.cli.call_async(self.req)
+
+        w = self.culc_invert_kinematics(0.1, 0, 0)
+        self.move_to(w, 1800)
+
+        self.req = Arm.Request()
+        self.req.length = 0.025
+        self.cli.call_async(self.req)
+
+        w = self.culc_invert_kinematics(-0.1, 0, 0)
+        self.move_to(w, 1800)
+
+        self.req = Arm.Request()
+        self.req.length = -0.185
+        self.cli.call_async(self.req)
 
     def culc_invert_kinematics(self, vx, vy, wz):
         # [frontleft, frontright, rearleft, rearright]
