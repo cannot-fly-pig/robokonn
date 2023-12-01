@@ -1,7 +1,7 @@
 import rclpy
 from rclpy.node import Node
 from rclpy.executors import MultiThreadedExecutor
-from rclpy.callback_groups import MutuallyExclusive_callbackGroup
+from rclpy.callback_groups import MutuallyExclusiveCallbackGroup
 import numpy as np
 from interfaces.msg import Goal, Back, Task, Finish, Distance
 from interfaces.srv import Arm
@@ -51,13 +51,19 @@ class MotorController:
 class MotorNode(Node):
     def __init__(self):
         super().__init__("motor_node")
-        self.client_cb_group = MutuallyExclusive_callbackGroup()
-        self.timer_cb_group = MutuallyExclusive_callbackGroup()
+        self.client_cb_group = MutuallyExclusiveCallbackGroup()
+        self.timer_cb_group = MutuallyExclusiveCallbackGroup()
 
         self.pos = ""
         self.diff = -10
         self.degree = -10
-        self.distance = {}
+        self.distance = {
+            "top_left": -9999,
+            "top_right": -9999,
+            "bottom_left": -9999,
+            "bottom_right": -9999,
+            "average": -9999,
+        }
         self.task = "standby"
         self.max_diff = 0.05
         self.motor = [
@@ -70,16 +76,16 @@ class MotorNode(Node):
         self.pub = self.create_publisher(Finish, "motor_node", 10)
 
         self.main_sub = self.create_subscription(
-            Task, "main_node", self.main_callback
+            Task, "main_node", self.main_callback, 10
         )
         self.distance_sub = self.create_subscription(
-            Distance, "sensor_node", self.distance_callback
+            Distance, "sensor_node", self.distance_callback, 10
         )
         self.goal_sub = self.create_subscription(
-            Goal, "goal_pub", self.goal_callback
+            Goal, "goal_pub", self.goal_callback, 10
         )
         self.back_sub = self.create_subscription(
-            Back, "back_pub", self.back_callback
+            Back, "back_pub", self.back_callback, 10
         )
         self.timer_period = 1
         self.timer = self.create_timer(
@@ -87,7 +93,9 @@ class MotorNode(Node):
             self.timer_callback,
             callback_group=self.timer_cb_group,
         )
-        self.cli = self.create_client(Arm, "arm_node")
+        self.cli = self.create_client(
+            Arm, "arm_node", callback_group=self.client_cb_group
+        )
 
     def main_callback(self, msg):
         self.task = msg.task
@@ -101,21 +109,24 @@ class MotorNode(Node):
         self.degree = msg.degree
 
     def distance_callback(self, msg):
-        self.distance.top_left = msg.top_left
-        self.distance.top_right = msg.top_right
-        self.distance.bottom_left = msg.bottom_left
-        self.distance.bottom_right = msg.bottom_right
-        self.distance.average = np.average(
-            filter(
-                lambda x: x != 9999,
-                [
-                    msg.top_left,
-                    msg.top_right,
-                    msg.bottom_left,
-                    msg.bottom_right,
-                ],
+        self.distance["top_left"] = msg.top_left
+        self.distance["top_right"] = msg.top_right
+        self.distance["bottom_left"] = msg.bottom_left
+        self.distance["bottom_right"] = msg.bottom_right
+        self.distance["average"] = np.average(
+            list(
+                filter(
+                    lambda x: x != 9999,
+                    [
+                        msg.top_left,
+                        msg.top_right,
+                        msg.bottom_left,
+                        msg.bottom_right,
+                    ],
+                )
             )
         )
+        print(self.distance["average"])
 
     def timer_callback(self):
         if self.task == "go":
@@ -145,9 +156,9 @@ class MotorNode(Node):
     def go_to_goal(self):
         run_time = 300
 
-        while self.distance.average > 0.2:
+        while self.distance["average"] > 0.2:
             w = self.culc_invert_kinematics(
-                max(self.distance.average, 0.1), 0, 0
+                max(self.distance["average"], 0.1), 0, 0
             )
             self.move_to(w, run_time)
 
@@ -168,7 +179,7 @@ class MotorNode(Node):
             w = self.culc_invert_kinematics(0, 0.3, 0)
             self.move_to(w, run_time)
 
-        while self.distance.average > 0.2:
+        while self.distance["average"] > 0.2:
             w = self.culc_invert_kinematics(0.2, 0, 0)
             self.move_to(w, run_time)
 
@@ -182,9 +193,12 @@ class MotorNode(Node):
         self.move_to(w, 1000)
 
     def take_baggage(self):
+        while self.distance["average"] == -9999:
+            None
+
         run_time = 300
 
-        while self.distance.average > 0.1:
+        while self.distance["average"] > 0.1:
             w = self.culc_invert_kinematics(0.05, 0, 0)
             self.move_to(w, run_time)
 
@@ -235,7 +249,7 @@ class MotorNode(Node):
         time.sleep(t)
 
         for i in range(4):
-            self.motor[i].stop()
+            self.motor[i].stop_motor()
 
 
 def main():
