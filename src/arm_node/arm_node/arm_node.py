@@ -4,7 +4,7 @@ from rclpy.executors import MultiThreadedExecutor
 from interfaces.srv import Arm
 
 try:
-    import RPI.GPIO as GPIO
+    import RPi.GPIO as GPIO
 except ImportError:
     import Mock.GPIO as GPIO
 
@@ -54,9 +54,9 @@ class ArmNode(Node):
     def server_callback(self, req, res):
         length = req.length
         r = 0.01
-        w = length / (r * 2 * PI)
-        self.motor.move_motor(w, 1000)
-        time.sleep(1)
+        w = length / (r * 2 * PI) * 360 / 10
+        self.motor.move_motor(w, 10000)
+        time.sleep(10)
         self.motor.stop_motor()
         res.finish = "finish"
 
