@@ -7,7 +7,7 @@ from interfaces.msg import Goal, Back, Task, Finish, Distance
 from interfaces.srv import Arm
 
 try:
-    import RPI.GPIO as GPIO
+    import RPi.GPIO as GPIO
 except ImportError:
     import Mock.GPIO as GPIO
 
@@ -156,12 +156,6 @@ class MotorNode(Node):
     def go_to_goal(self):
         run_time = 300
 
-        while self.distance["average"] > 0.2:
-            w = self.culc_invert_kinematics(
-                max(self.distance["average"], 0.1), 0, 0
-            )
-            self.move_to(w, run_time)
-
         while math.abs(self.diff) > self.max_diff:
             if self.diff > 0:
                 w = self.culc_invert_kinematics(
@@ -170,6 +164,12 @@ class MotorNode(Node):
             else:
                 w = self.culc_invert_kinematics(0, max(self.diff, 0.1), 0)
 
+            self.move_to(w, run_time)
+
+        while self.distance["average"] > 0.2:
+            w = self.culc_invert_kinematics(
+                max(self.distance["average"], 0.1), 0, 0
+            )
             self.move_to(w, run_time)
 
     def back_from_goal(self):
@@ -198,7 +198,7 @@ class MotorNode(Node):
 
         run_time = 300
 
-        while self.distance["average"] > 0.1:
+        while self.distance["bottom_left"] > 0.05:
             w = self.culc_invert_kinematics(0.05, 0, 0)
             self.move_to(w, run_time)
 
